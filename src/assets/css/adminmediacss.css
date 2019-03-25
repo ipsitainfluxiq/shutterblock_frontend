@@ -1,0 +1,1306 @@
+@media screen and (max-width: 1860px) {
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content h6 {
+        height: 40px;
+        width: 100vw;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .s_getmy_offers_information_container{
+        width: 100%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section_instruction {
+        width: 62%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section {
+        width: 45%;
+    }
+    .s_getmy_offers_information_left {
+        background-size: 56%;
+    }
+    .s_offer_right_content .s_getmyoffer_right_section_content {
+        width: 100%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 {
+        padding-left: 150px;
+        min-height: 125px;
+        background-size: 15%;
+        background-position: top left;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2 {
+        padding-left: 150px;
+        min-height: 125px;
+        background-position: top left;
+        background-size: 17%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3 {
+        padding-left: 150px;
+        background-position: top left;
+        min-height: 125px;
+        background-size: 15%;
+    }
+}
+
+@media screen and (max-width: 1760px) {
+    .s_offer_wrapper {
+        background-position: -10% top;
+        background-size: 75%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 {
+        background: url(../images/s_offerimage1.png) no-repeat;
+        background-size: 16%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2 {
+        background: url(../images/s_offerimage2.png) no-repeat;
+        background-size: 16%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3 {
+        background: url(../images/s_offerimage3.png) no-repeat;
+        background-size: 16%;
+    }
+    .s_offer_right_content {
+        margin-left: 55%;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li {
+        width: 19.95%!important;
+        margin-bottom: 15px!important;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li .s_getmyoffer_offerSection_main .s_getmyoffer_offerSection{
+        min-height:100px;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .s_getmyoffer_right_section_content .col-lg-2 img {
+        max-width: 100%;
+        min-height: 90%;
+    }
+
+    .s_getmyoffer_right_section_content .s_getmyoffer_right_section_content .s_getmyoffernew_section2{
+        height: 125px!important;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffer_right_section_content .s_getmyoffernew_section3{
+        height: 125px!important;
+    }
+}
+@media screen and (max-width: 1660px) {
+    .s_getmy_offers_information_left {
+        background-size: 56%;
+    }
+
+    /*.s_offer_container{*/
+    /*width:1440px;*/
+    /*}*/
+    /*.s_offer_wrapper {*/
+    /*background-size: 60%;*/
+    /*background-position: -3% bottom;*/
+    /*}*/
+    .col-lg-2 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+
+    .col-lg-10 {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+    .s_getmyoffer_right_section_content .col-lg-2 img {
+        max-width: 100%;
+        min-height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+
+    .s_getmyoffer_addpublisher_formsection {
+        padding: 0 10px;
+    }
+
+    .s_getmyoffer_addpublisher_formsection .col-sm-1 {
+        -ms-flex: 0 0 15%;
+        flex: 0 0 15%;
+        max-width: 15%;
+        padding: 0;
+    }
+
+    .s_getmyoffer_addpublisher_formsection .col-sm-11 {
+        -ms-flex: 0 0 85%;
+        flex: 0 0 85%;
+        max-width: 85%;
+        padding: 0;
+    }
+
+    .s_offer_right_content .s_getmyoffer_right_section_content p {
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 7px;
+    }
+}
+@media screen and (max-width: 1640px) {
+    .s_offer_wrapper {
+        background-position: -10% top;
+        background-size: 78%;
+    }
+
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 {
+        margin-left: 130px;
+        background-size: 21%;
+    }
+
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2 {
+        margin-left: 130px;
+        background-size: 23%
+    }
+
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3 {
+        margin-left: 130px;
+        background-size: 21%;
+    }
+
+    .s_offer_right_content {
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width: 1600px) {
+
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main .p_offertext{ height: 170px;}
+
+    .s_getmyoffer_adminpanel_inner_content_left {
+        width: 25%;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right {
+        width: 75%;
+    }
+    .s_getmyoffer_addpublisher {
+        padding: 10px 0;
+        min-height: 100vh;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main h2 {
+        font-size: 18px;
+        max-height: 22px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main h4 {
+        font-size: 16px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main .s_getmyoffer_offerSection {
+        min-height: 160px;
+    }
+    /*add user*/
+
+    .col-sm-1 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .col-sm-11 {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+    .s_offer_wrapper .s_offer_header h1{font-size: 58px;}
+    .s_offer_right_content {
+        margin-left: 50%;
+        width: 49%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 {
+        margin-left: 130px;
+        background-size: 18%; padding-left: 18%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2 {
+        margin-left: 130px;
+        background-size: 20%;  padding-left: 18%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3 {
+        margin-left: 130px;
+        background-size: 18%;  padding-left: 18%;
+    }
+    .s_offer_right_content .s_offer_right_header p{margin-left: 15%;}
+}
+@media screen and (max-width: 1540px){
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        margin-left: 0;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section_instruction {
+        width: 76%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section {
+        width: 55%;
+    }
+    .s_getmy_offers_information_left {
+        background-size: 60%;
+        padding-left: 50%;
+    }
+    .s_getmy_offers_information_form_section {
+        padding-bottom: 25px;
+    }
+    .s_getmyoffer_add_offer_wall_offer_info .s_getmyoffer_offerwall_infoPage_list label{
+        font-size: 14px;
+    }
+        .s_offer_wrapper {
+            background-position: -16% top;
+            background-size: 82%;
+        }
+}
+@media screen and (max-width: 1440px) {
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main .p_offertext{ height: 200px;}
+    .header-text { margin-top: 50px;}
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main p {
+        font-size: 16px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main .s_getmyoffer_offerSection{
+        min-height: 140px;
+        max-height: 140px;
+    }
+
+    .s_offer_right_content .s_offer_right_header p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .col-lg-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 20% !important;
+        flex: 0 0 20% !important;
+        max-width: 20% !important;
+    }
+
+    .col-lg-10 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 80% !important;
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+    }
+  /*  .s_offer_wrapper .s_offer_header{
+        width: 100%;
+    }*/
+    .s_offer_wrapper .s_offer_header h1 {
+        margin: 30px 0 20px 0;
+    }
+
+    .s_getmyoffer_logoutbutton {
+        top: 9%;
+        position: absolute;
+        right: 1%;
+    }
+
+    .s_getmyoffer_right_section_content .col-lg-10 h5 {
+        font-size: 15px;
+        margin-bottom: 7px;
+    }
+    .s_getmyoffer_right_section_content .col-lg-10 p {
+        font-size: 15px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    .s_offer_wrapper .s_getmyoffer_top_blockfooter_content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+.s_offer_wrapper {
+    background-position: -146% top;
+    background-size: 92%;
+}
+}
+
+
+@media screen and (max-width: 1360px) {
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main .p_view_offer{ font-size: 14px; padding: 6px 0;}
+
+
+    .s_main_spoff_wrapper img {
+        margin-bottom: -6%;
+    }
+
+    /*admin dashboard*/
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 33.3333%;
+    }
+    /*footer*/
+    .s_getmyofferfooter{
+        padding: 15px 100px;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        display: inline-block;
+        margin-left: 70px;
+        font-size: 60px;
+    }
+
+}
+@media screen and (max-width: 1300px) {
+    .s_offer_right_content .s_offer_right_header p {
+        width: 95% !important;
+    }
+}
+@media screen and (max-width: 1280px) {
+
+    .s_offer_wrapper {
+        background-position: -282% top;
+        background-size: 95%;
+    }
+ /*   .s_offer_container {
+        width: 1190px;
+    }*/
+  /*  .s_offer_wrapper {
+        background-size: 47%;
+    }*/
+    .col-lg-2 {
+        -ms-flex: 0 0 16.666667%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .s_offer_right_content .s_offer_right_header p{
+        margin-left: 0;
+    }
+    .col-lg-10 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    .s_getmyoffer_right_section_content .col-lg-2 img {
+        max-width: 108%;
+        min-height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+    .s_offer_right_header{margin-left: 0px;}
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main p {
+        font-size: 14px;
+    }
+
+    .s_getmyoffer_add_offer_wall_offer_info .s_getmyoffer_offerwall_infoPage_list label {
+        font-size: 14px;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        font-size: 55px;
+    }
+}
+@media screen and (max-width: 1199px) {
+
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        font-size: 70px; margin: 15px 0 2px 0 !important;
+    }
+    .s_getmyoffer_logoutbutton{
+        right:0px;
+    }
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .s_getmyofferfooter {
+        margin-bottom: 0px;
+    }
+   .s_main_spoff_wrapper .header-text{ margin: 40px 0 0 0; padding: 0 15px; font-size: 44px;}
+    .s_main_spoff_wrapper h2{padding: 0 15px;}
+    .s_getmy_offers_information_left {
+        background-size: 100%;
+        padding-left: 0;
+        background-position: center top;
+        padding-top: 100%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        display: block;
+        margin-left: 0;
+        margin: 25px 0;
+}
+
+    .s_getmy_offers_information_form_section .s_getmy_offers_information_quote {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+    /*Offer section*/
+    .s_offer_container {
+        width: 100%;
+    }
+    .s_offer_wrapper .s_offer_header {
+        display: block;
+        margin-bottom: 20px;
+    }
+    .s_offer_right_content {
+        margin-left: 0;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .s_offer_right_header {
+        margin-left: 0;
+        text-align: center;
+    }
+    .s_offer_wrapper .s_offer_header {
+        width:100%;
+    }
+    .s_offer_right_content .s_offer_right_header p {
+        font-family: 'HelveticaNeue';
+        font-size: 18px;
+        width: auto;
+        padding: 0 15px;
+        margin: 30px;
+    }
+    .s_getmyoffer_right_section_content .col-lg-2 img {
+        display: none;
+    }
+    .s_offer_wrapper {
+        background-size: 112%;
+        background-position: 0 0;
+        padding-top: 80%;
+        float: none;
+    }
+
+    .s_offer_wrapper .s_offer_header h1 {
+        margin: 30px 0 20px 0;
+        text-align: center;
+    }
+
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 { margin-left: 0px;}
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2 { margin-left: 0px;}
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3 { margin-left: 0px;}
+
+    .s_offer_right_content .s_offer_right_header h3{ margin-bottom: 0px;}
+
+    .s_offer_right_content .s_getmyoffer_right_section_content{ padding-bottom: 0px;}
+
+    .s_getmyoffer_right_section_content .col-lg-2 {
+        display: none;
+    }
+    .s_getmyoffer_right_section_content .col-lg-10 {
+        width: 100% !important;
+        margin: 0 auto;
+        text-align: center;
+        max-width: inherit !important;
+        display: block;
+        flex: inherit;
+    }
+    .s_getmyoffer_right_section_content .col-lg-10 label {display: block;}
+    .s_getmyoffer_right_section_content .col-lg-10 p:nth-last-child(1) {
+        margin-bottom: 30px;
+    }
+
+    .s_offer_right_content .s_offer_right_header p {
+        width: 100% !important;
+        margin: 0px!important;
+        margin-top: 25px!important;
+    }
+    .s_offer_wrapper .s_getmyoffer_top_blockfooter_content {
+        width: 100%;
+        text-align: center;
+        margin: 0px auto;
+        margin-bottom: 24px;
+    }
+
+    .s_offer_right_content .s_getmyoffer_right_section_content{ padding-right: 0px;}
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul{
+        margin:15px 0;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+        list-style: none;
+        float: none;
+        width: 20%;
+        display: inline-block;
+    }
+
+
+
+
+    /*PUBLISHER PAge*/
+    .s_getmyoffer_adminpanel_inner_content_left {
+        width: 100%;
+        float: none;
+        display: block;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right {
+        width: 100%;
+        display: block;
+        float: none;
+        border: none;
+    }
+    .s_getmyoffer_admin_leftpanel ul {
+        text-align: center;
+    }
+    .s_getmyoffer_admin_leftpanel ul li{
+       display: inline-block;
+    }
+    .s_getmyoffer_admin_leftpanel ul li:nth-child(1){
+        padding-left: 0 !important;
+    }
+    .s_getmyoffer_admin_leftpanel {
+        width: 100%;
+        height: auto;
+    }
+    .s_getmyoffer_addpublisher {
+        padding: 10px 0px;
+         min-height: inherit;
+    }
+    .s_getmyoffer_addpublisher .s_getmyoffer_addpublisher_formsection .form-group .col-sm-1 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .s_getmyoffer_addpublisher .s_getmyoffer_addpublisher_formsection .form-group .col-sm-11 {
+        -ms-flex: 0 0 80%;
+        flex: 0 0 80%;
+        max-width: 80%;
+    }
+
+
+    .s_getmyoffer_admin_leftpanel ul{ padding: 0 10px; margin-bottom: 0px;}
+
+    .s_getmyoffer_admin_leftpanel ul li:hover {  border-left:  none; margin-left: 0px;  }
+
+    .s_getmyoffer_admin_leftpanel ul li{ margin-left: 0px; padding: 0 10px!important;}
+    .s_getmyoffer_admin_leftpanel{ border: none; border-bottom: 1px solid #b5aeae; padding-bottom: 0px;}
+    .s_getmyofferfooter p{
+        font-size: 16px;
+    }
+    /*full page*/
+    .s_getmyoffer_adminpanel_inner{
+        display: block;
+    }
+
+    /*offerwall page*/
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul{
+        padding:0 8px;
+        padding-top: 10px;
+    }
+
+    /*offerwall page*/
+    .s_getmyoffer_add_offer_wall_offer_formsection{
+        width:100%;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1{
+        background: none;
+        padding: 15px 20px 0 15px;
+    }
+    .s_offer_right_content .s_getmyoffer_right_section_content{
+        text-align: center;
+    }
+    .s_getmyoffer_right_section_content label{
+        background: #61c7fb;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        color: #ffffff;
+        font-family: 'Helvetica';
+        font-size: 42px;
+        padding: 17px;
+        text-align: center;
+        margin-bottom: 20px;
+        border: 3px solid #68ccff;
+        box-shadow: 0px 0px 9px #7b7b7b;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section2{
+        background: none;
+        padding: 15px;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section3{
+        background: none;
+        padding: 15px;
+    }
+    .s_getmyoffer_right_section_content .s_getmyoffernew_section1 label, .s_getmyoffernew_section2 label, .s_getmyoffernew_section3 label{display: inline-block;}
+    .s_getmyofferTermsAndConditionsheadings .s_getmyoffer_image{
+        float: none;
+        text-align: center;
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1040px){
+
+    .s_getmyofferfooter {
+        background: #2b2b2b;
+        position: inherit;
+
+        padding: 15px 20px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .s_getmyoffer_inner_content .s_getmyoffer_login_button {
+        font-size: 50px;
+    }
+    .s_main_spoff_wrapper img {
+        margin-bottom: -8%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section_instruction {
+        width: 95%;
+    }
+    .s_getmyoffer_adminpanel {
+        padding: 75px;
+    }
+    .s_getmyofferfooter p {
+        font-size: 12px;
+    }
+    .s_getmyoffer_offerwall_itemlist .table{
+        font-size: 14px;
+    }
+
+    /*GET MY OFFER MODAL*/
+    .modalVideoUpload .s_getmyofferNewmodalbody {
+        background-position: center top;
+        height: auto;
+        background-size: 60%;
+        padding-top: 58%;
+    }
+    .modalVideoUpload .s_getmyofferNewmodalbody .modal-content_section {
+        float: none;
+        width: 91%;
+        margin: 0 auto;
+    }
+    .s_getmyofferNewmodalbody .form-group getmyofferstoday_verifycodecontent input{
+        border: 1px solid black;
+    }
+    .modalVideoUpload .s_getmyofferNewmodalbody .modal-content_section p {
+        text-align: center;
+    }
+    .modalVideoUpload .s_getmyofferNewmodalbody .modal-content_section .getmyofferstoday_verifycodecontent p {
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 868px) {
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li{
+        width: 25%!important;
+    }
+}
+@media screen and (max-width: 840px) { .s_getmyoffer_adminpanel { padding: 50px;}
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main h2 {
+        font-size: 18px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content .s_getmyoffer_offerSection_main h4{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .s_getmyoffer_login_wrapper {
+        width: 90%;
+        position: inherit;
+        padding:40px;
+        top: 0;
+        left:0;
+        transform: inherit;
+        right:0;
+
+    }
+    .s_getmyofferfooter p {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header-text {
+        margin: 30px 0 20px 0;
+        font-size: 44px;
+        padding: 0 15px;
+    }
+    .s_getmyoffer_inner_content h1 {
+        font-size: 65px;
+        width: 330px;
+    }
+    .s_getmyofferfooter .s_getmyofferfooter_right_content {
+        float: none;
+    }
+    .s_getmyofferfooter .s_getmyofferfooter_left_content {
+        float: none;
+    }
+    .s_main_spoff_wrapper img {
+        margin-bottom: -14%;
+    }
+
+    .s_getmyoffer_adminpanel {
+        padding: 20px;
+    }
+    .s_getmyofferfooter .s_getmyofferfooter_left_content{
+        width: 100%;
+        text-align: center;
+    }
+    .s_getmyofferfooter .s_getmyofferfooter_right_content{
+        width: 100%;
+        text-align: center;
+    }
+    .s_getmyofferfooter p{
+        margin-bottom: 5px;
+    }
+    .s_getmyofferfooter h2{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .s_getmyoffer_offerSection_main p {
+        font-size: 13px !important;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li .s_getmyoffer_offerSection_main .s_getmyoffer_offerSection {
+        min-height: 80px;
+        max-height: 80px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+        list-style: none;
+        width: 25%;
+    }
+    .s_getmyoffer_block2_footer{
+        text-align: center;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_block2_footer button{
+        float: none;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_creditButton h2 {
+        font-size: 24px;
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 668px) {
+    .s_getmy_offers_information_form_section .s_getmyoffer_header{font-size:60px;}
+    .s_getmyoffer_inner_content h1 {
+        font-size: 60px;
+        width: 275px;
+    }
+
+    .s_getmyoffer_inner_content {
+        background-position: right 4%;
+    }
+
+    .s_getmyoffer_inner_content .s_getmyoffer_login_button {
+        font-size: 45px;
+    }
+
+    .s_main_spoff_wrapper img {
+        margin-bottom: -15%;
+    }
+
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 50%;
+    }
+
+    /*admin header*/
+    .s_getmyoffer_admin_header {
+        height: auto;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 2px;
+    }
+
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user span:nth-child(1) {
+        margin-right: 40px;
+    }
+
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user span:nth-child(2) {
+        margin-right: 40px;
+        display: block;
+        width: 100%;
+        padding:10px 0;
+    }
+
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user .s_getmyoffer_user {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+    }
+    /*offerwall page*/
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul{
+        padding-bottom: 15px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li {
+        width: 33.33%!important;
+        margin-bottom: 0 !important;
+    }
+}
+@media screen and (max-width: 576px){
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        font-size: 52px;
+    }
+    .s_getmyoffer_inner_content .s_getmyoffer_login_button {
+        font-size: 40px;
+    }
+    .s_getmyoffer_login_wrapper {
+        padding: 15px;
+    }
+    .s_getmyoffer_inner_content h1 {
+        width: 230px;
+    }
+    .s_main_spoff_wrapper img {
+        margin-bottom: 0%;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section {
+        width: 80%;
+    }
+    .getmyofferstoday_head{
+        font-size: 38px;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_block2_header h1 {
+        font-size: 55px;
+    }
+
+    /*add user*/
+
+    .col-sm-1 {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .col-sm-11 {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+    .s_getmyoffer_addpublisher .s_getmyoffer_addpublisher_formsection .s_getmyoffer_addpublisher_submit {
+        text-align: center;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right{
+        padding: 20px;
+    }
+    /*bradcram*/
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlist .col-lg-12 .breadcrumb{
+        position: inherit;
+        float: none;
+        top:0;
+        right:0;
+    }
+    .content_header_block .breadcrumb a{margin-right: 5px; font-size: 18px;
+        padding:10px 0;}
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlistpage-header {
+        margin: 15px 0;
+    }
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content {
+        width:100%; margin: 0 auto;}
+    .s_getmyoffer_addpublisher{
+        padding-top: 0;
+    }
+        .s_getmyoffer_addpublisher .s_getmyoffer_addpublisher_header h1{
+            padding-bottom: 15px;
+            padding-left: 15px;
+        }
+    }
+@media screen and (max-width: 520px) {
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        font-size: 50px;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+        width: 33.3%;
+    }
+
+    .s_getmyoffer_adminpanel {
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+        width: 50%;
+    }
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main .p_offertext {
+        height: 150px;
+    }
+
+    .s_getmyoffer_logoutbutton button {
+
+        font-size: 14px;
+        padding: 8px 0 8px 29px;
+       width: 106px;
+        cursor: pointer;
+        background-size: 100%;
+        height: 40px;}
+
+    .s_getmy_offers_information_form_section .s_getmyoffer_header {
+        font-size: 48px;
+    }
+    .s_getmyoffer_admin_leftpanel ul li {
+        display: block;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_block2_header h1 {
+        font-size: 45px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 100%;
+    }
+    /*submit button
+    */
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlist_table button{
+        width: 100%;
+        padding: 6px 20px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li{
+        width: 50%!important;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall_button{
+        text-align: center;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall_button button{
+        float: none;
+    }
+}
+@media screen and (max-width: 430px) {
+    .s_main_spoff_wrapper .header-text {
+        font-size: 40px;
+    }
+    .s_main_spoff_wrapper h2 {
+        margin: 10px 0px 10px 0px;
+        font-size: 24px;
+    }
+
+}
+@media screen and (max-width: 400px) {
+
+    .s_main_spoff_wrapper .header-text {
+        font-size: 30px;
+    }
+    .s_main_spoff_wrapper h2 {
+        font-size: 18px;
+    }
+    .s_getmyoffer_logoutbutton {
+        right: 0px;
+        top: 2%;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+     width: 50%;
+    }
+    .s_getmyoffer_block2 .s_getmyoffer_block2_header h1 {
+        font-size: 40px;
+    }
+
+    /*offer page*/
+
+    .s_getmyoffer_adminpanel_inner_content_right .s_getmyoffer_offerwall .admin_dashboard_content ul li {
+        width: 100%!important;
+        margin-bottom: 0 !important;
+    }
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li {
+        width: 100%;
+    }
+
+    .s_getmyoffer_block2 .s_getmyoffer_offer_content ul li .s_getmyoffer_offerSection_main .p_offertext {
+        height: auto;
+    }
+}
+@media screen and (max-width: 365px){
+    .s_getmyoffer_inner_content h1 {
+        width: 235px;
+        font-size: 48px;
+    }
+    .s_getmyoffer_inner_content .s_getmyoffer_login_button {
+        font-size: 28px;
+    }
+    .s_getmyoffer_inner_content .s_getmyoffer_login_button img {
+        margin-right: 8px;
+        padding-top: 4px;
+    }
+    .header-text {
+        margin: 45px 0;
+        font-size: 34px;
+    }
+    .s_getmyoffers_form_inner_section .s_getmyoffer_button {
+        font-size: 20px;
+    }
+    .s_getmy_offers_information_form_section .s_getmy_offers_information_quote {
+        font-size: 32px;
+    }
+    .s_getmy_offers_information_form_section .s_getmyoffers_form_inner_section_instruction {
+        width: 90%;
+    }
+       .s_getmyoffer_inner_content h1 {
+        width: 235px;
+        font-size: 48px;
+    }
+    /**/
+    .s_getmyoffer_block2 .s_getmyoffer_block2_header h1 {
+        font-size: 36px;
+    }
+    .modalVideoUpload .s_getmyofferNewmodalbody .modal-content_section button{
+        width:230px;}
+    .modalVideoUpload .s_getmyofferNewmodalbody .modal-content_section {
+        width: 95%;
+    }
+}
+
+
+/*  shatter block new css*/
+@media screen and (max-width:1600px) {
+    .s_getmyoffer_admin_header {
+        height: 100px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_left {
+        width: 17%;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right {
+        width: 83%;
+    }
+    .s_getmyoffer_admin_leftpanel ul li {
+        padding-left: 20px!important;
+    }
+    .s_getmyoffer_admin_leftpanel ul li{
+        padding: 10px !important;}
+    .s_getmyoffer_admin_leftpanel ul li a{
+        padding: 15px;
+    }
+
+    /*listing page*/
+
+    .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+        width: 19.2%;
+    }
+}
+@media screen and (max-width:1540px) {
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 25%;
+        float: none;
+        display: inline-block;
+    }
+}
+  @media screen and (max-width:1280px) {
+      .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+          width: 24.3%;
+      }
+  }
+
+@media screen and (max-width:1199px) {
+    .s_getmyoffer_admin_header .admin_logo {
+        width: 23%;}
+    .s_getmyoffer_adminpanel_inner_content_left {
+        width: 100%;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right {
+        width: 100%;
+    }
+    .s_getmyoffer_admin_leftpanel ul li{
+        margin: 10px 0;
+    }
+    .s_getmyoffer_admin_leftpanel ul li:nth-child(1){
+        margin: 10px 0;
+        border-bottom:none;
+    }
+    .s_getmyoffer_adminpanel{
+        padding: 0;
+    }
+    .s_getmyoffer_admin_leftpanel ul li{padding: 0;}
+}
+@media screen and (max-width: 991px) {
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user span:nth-child(1) {
+        margin-right: 15px;
+    }
+    .dropdown-menu .divider{
+        border:none;
+    }
+    .s_getmyoffer_admin_header_user .s_getmyoffer_user_userlist {
+        left: -110px !important;
+    }
+    .navbar-nav .open .dropdown-menu li{
+        padding: 0!important;
+    }
+
+    .shatterBlock_Brandwrapper .inner_panel { width: 49.5%;}
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view {
+        margin-top: 4px;
+    }
+
+}
+
+@media screen and (max-width:840px) {
+    .s_getmyoffer_admin_header .admin_logo {
+        width: 100%;
+        float: none!important;
+    }
+    .s_getmyoffer_admin_header {
+        height: auto;
+    }
+    .navbar-nav .open .dropdown-menu li {
+        padding: 0px;
+    }
+    .s_getmyoffer_admin_leftpanel ul{
+        width:100%;
+    }
+    .s_getmyoffer_admin_leftpanel ul li{
+        display: block;
+        padding-top: 10px!important;
+    }
+    .s_getmyoffer_admin_leftpanel ul li a{
+        padding:0;
+    }
+    .s_getmyoffer_admin_header .admin_logo {
+        width: 100%;
+        float: none!important;
+    }
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user {
+        display: block;
+        text-align: center;
+        float: none;
+        margin-top: 0;
+    }
+    .s_getmyoffer_admin_header .s_getmyoffer_admin_header_user .s_getmyoffer_user {
+        margin: 5px auto;
+        margin-top: 15px;
+    }
+
+    .navbar-nav {
+        float: none;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .s_getmyoffer_admin_header_user .s_getmyoffer_user_userlist {
+        position: inherit;
+        top: 0px !important;
+        left: 0px !important;
+        will-change: inherit;
+        width: 100%;
+
+        left: 0 !important;
+    }
+    .nav>li>a {
+        padding: 0px;
+    }
+    .s_getmyoffer_admin_leftpanel ul {
+        padding: 10px;
+    }
+    .s_getmyoffer_admin_leftpanel ul li {
+        padding: 10px !important;
+        padding-bottom: 0px !important;
+        margin-bottom: 5px;
+    }
+
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlist .col-lg-12 .breadcrumb {
+        margin-bottom: 10px!important;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlist_table h3{margin-top: 5px;}
+
+    /*Offer Listing*/
+    .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+        width: 32.8%;
+    }
+    .toggle_button{display: block;
+        background: rebeccapurple;
+        color: #fff;
+        font-size: 20px;
+        padding: 0 10px;
+        border: none;
+    }
+    .toggle_button:focus{
+        outline: none;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 33.33%;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .s_getmyoffer_admin_leftpanel ul {
+        display: block;
+    }
+}
+@media screen and (max-width: 800px) {
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .s_getmyoffer_adminpanel .newblock1 .s_getmyoffer_savebutton {
+        font-size: 16px;
+        padding: 11px 20px 5px 20px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view {
+        margin-top: 2px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+        width: 49.6%;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .search1 {
+        width: 270px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .search1 {
+        width: 270px;
+        margin: 0 auto;
+        display: block;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view {
+        display: inline-flex;
+        float: none;
+        width: 100%;
+        margin: 8px 0 12px 0;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 668px) {
+.shatterBlock_Brandwrapper .inner_panel { width: 100%; margin-bottom: 10px;}
+
+    .shatterBlock_Brandwrapper {
+        width: 100%;
+        display: block;
+        flex-wrap: inherit;
+        justify-content: inherit;
+    }
+    .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+        width: 47.8%;
+        margin: 6px;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 50%;
+        float: none;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .s_getmyoffer_adminlist_table .Brand_offerlist_wrapper .inner_panel {
+        width: 100%;
+        float: none;
+        margin: 10px auto;
+        padding: 1px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right {
+        padding: 0!important;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlistpage-header {
+        margin: 0!important;
+    }
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminlist .page-header {
+        margin-bottom: 6px !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .s_getmyoffer_adminpanel .s_getmyoffer_adminpanel_inner .admin_dashboard_content ul li {
+        width: 100%;
+        float: none;
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 413px) {
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view {
+        display: inline-grid;
+        grid-gap: 4px;
+    }
+    .s_getmyoffer_adminpanel_inner_content_right .shatterblock1 .row_view button{
+        margin-right: 0;
+    }
+    .s_getmyoffer_adminpanel .newblock1 .s_getmyoffer_savebutton {
+        padding: 10px 20px;
+    }
+}
+@media screen and (max-width: 360px) {
+    .content_header_block .breadcrumb a {
+        font-size: 16px;
+    }
+}

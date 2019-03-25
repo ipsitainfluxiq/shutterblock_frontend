@@ -1,0 +1,1019 @@
+<!--<script type="text/javascript">
+    var $animation_elements = $('.animation-element');
+    var $window = $(window);
+
+    function check_if_in_view() {
+        var window_height = $window.height();
+        var window_top_position = $window.scrollTop();
+        var window_bottom_position = (window_top_position + window_height);
+
+        $.each($animation_elements, function() {
+            var $element = $(this);
+            var element_height = $element.outerHeight();
+            var element_top_position = $element.offset().top;
+            var element_bottom_position = (element_top_position + element_height);
+
+            //check to see if this current container is within viewport
+            if ((element_bottom_position >= window_top_position) &&
+                (element_top_position <= window_bottom_position)) {
+                $element.addClass('in-view');
+            } else {
+                $element.removeClass('in-view');
+            }
+        });
+    }
+
+    $window.on('scroll resize', check_if_in_view);
+    $window.trigger('scroll');
+</script>-->
+
+
+<div class="blankmenuiconblock innerhead1">
+  <app-header></app-header>
+  <div class="container-fluid innerhead1_header">
+    <div class="innerhead1_header_wrapper">
+      <div class="innerhead1toplogowrapper">
+        <img src="../assets/images/shatterproofmodelslogo.png" alt="Shatter Proof Models Logo">
+      </div>
+    </div>
+  </div>
+</div>
+<app-sidemenu></app-sidemenu>
+
+<div class="ourmodelsbannerblock">
+  <div class="ourmodelsbannertext">
+    <h1 class="headertitle">Meet The<br> Models/Talent</h1>
+  </div>
+</div>
+
+
+<div class="ourmodelsblock1">
+  <div class="ourmodelsblock1outside">
+      <div class="ourmodelsblock1wrapper">
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg11.jpg" alt="ourmodels image 11">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg12.jpg" alt="ourmodels image 12">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Sandra Sago</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 160lb | Bust: 36D<br>
+                  Waist: 28 | Hips: 45
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg19.jpg" alt="ourmodels image 19">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg20.jpg" alt="ourmodels image 20">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Brandi Lawrence</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 120 lb. | Bust: 34D<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg21.jpg" alt="ourmodels image 21">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg22.jpg" alt="ourmodels image 22">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Ashley Lucero</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'8 |<br>
+                  Weight: 115 lb. | Bust: 34DD<br>
+                  Waist: 23 | Hips: 34
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg57.jpg" alt="ourmodels image 57">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg58.jpg" alt="ourmodels image 58">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Alexa Ortiz</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'7 |<br>
+                  Weight: 120 lb. | Bust: 32DDD<br>
+                  Waist: 22 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg59.jpg" alt="ourmodels image 59">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg60.jpg" alt="ourmodels image 60">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Malorie Meza</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'2 |<br>
+                  Weight: 115 lb. | Bust: 34C<br>
+                  Waist: 22 | Hips: 32
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg15.jpg" alt="ourmodels image 15">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg16.jpg" alt="ourmodels image 16">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Angel Farwell</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'7 |<br>
+                  Weight: 135 lb. | Bust: 34DD<br>
+                  Waist: 24 | Hips: 42
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg61.jpg" alt="ourmodels image 61">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg62.jpg" alt="ourmodels image 62">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Sunshine Cambaros</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'2 |<br>
+                  Weight: 127 lb. | Bust: 34D<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg25.jpg" alt="ourmodels image 25">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg26.jpg" alt="ourmodels image 26">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Gia Golden</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 140 lb. | Bust: 34DD<br>
+                  Waist: 29 | Hips: 42
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg63.jpg" alt="ourmodels image 63">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg64.jpg" alt="ourmodels image 64">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Chanel</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'7 |<br>
+                  Weight: 155 lb. | Bust: 34DDD<br>
+                  Waist: 25 | Hips: 38
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg13.jpg" alt="ourmodels image 13">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg14.jpg" alt="ourmodels image 14">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Nessa Marie</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'4 |<br>
+                  Weight: 120 lb. | Bust: 34D<br>
+                  Waist: 28 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg27.jpg" alt="ourmodels image 27">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg28.jpg" alt="ourmodels image 28">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Whitney Dalynn</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'7 |<br>
+                  Weight: 130 lb. | Bust: 32D<br>
+                  Waist: 25 | Hips: 38
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg29.jpg" alt="ourmodels image 29">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg30.jpg" alt="ourmodels image 30">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Zayra Fuegos</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'4 |<br>
+                  Weight: 128 lb. | Bust: 34C<br>
+                  Waist: 26 | Hips: 38
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg31.jpg" alt="ourmodels image 31">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg32.jpg" alt="ourmodels image 32">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Chauntele Lovelyne</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'8 |<br>
+                  Weight: 128 lb. | Bust: 34DD<br>
+                  Waist: 27 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg51.jpg" alt="ourmodels image 51">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg52.jpg" alt="ourmodels image 52">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Wendy Crosby</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'4 |<br>
+                  Weight: 135 lb. | Bust: 34DD<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+       <!-- <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg65.jpg" alt="ourmodels image 65">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg66.jpg" alt="ourmodels image 66">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Wendy </h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'4 |<br>
+                  Weight: 135lb. | Bust: 34DD<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>-->
+
+
+        <!--<div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg67.jpg" alt="ourmodels image 67">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg68.jpg" alt="ourmodels image 68">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Vanessa </h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'2 |<br>
+                  Weight: 130lb. | Bust: 34DD<br>
+                  Waist: 25 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>-->
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg49.jpg" alt="ourmodels image 49">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg50.jpg" alt="ourmodels image 50">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Vanessa Pena</h1>
+              <div class="measure-div">
+                <!--<p>
+                  Height: 5'5 |<br>
+                  Weight: 135 lb. | Bust: 34D<br>
+                  Waist: 25 | Hips: 38
+                </p>-->
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg23.jpg" alt="ourmodels image 23">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg24.jpg" alt="ourmodels image 24">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Arrah Lynn</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'2 |<br>
+                  Weight: 130 lb. | Bust: 32DD<br>
+                  Waist: 25 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg3.jpg" alt="ourmodels image 1">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg4.jpg" alt="ourmodels image 2">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Ariel Roberts</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 125lb. | Bust: 38DD<br>
+                  Waist: 28 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg33.jpg" alt="ourmodels image 33">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg34.jpg" alt="ourmodels image 34">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Valeria</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'1 |<br>
+                  Weight: 126 lb. | Bust: 34G<br>
+                  Waist: 24 | Hips: 32
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg35.jpg" alt="ourmodels image 35">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg36.jpg" alt="ourmodels image 36">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Raquel Villareal</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'10 |<br>
+                  Weight: 136 lb. | Bust: 34DD<br>
+                  Waist: 29 | Hips: 43
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg17.jpg" alt="ourmodels image 17">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg18.jpg" alt="ourmodels image 18">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Anthia Mo</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 4'11 |<br>
+                  Weight: 99 lb. | Bust: 32C<br>
+                  Waist: 24 | Hips: 33
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg1.jpg" alt="ourmodels image 1">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg2.jpg" alt="ourmodels image 2">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Jean Copus</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 115 lb. | Bust: 34D<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="'/model-profile'">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg39.jpg" alt="ourmodels image 39">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg40.jpg" alt="ourmodels image 40">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Everly Lauren</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'0 |<br>
+                  Weight: 100 lb. | Bust: 32B<br>
+                  Waist: 24 | Hips: 33
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg5.jpg" alt="ourmodels image 5">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg6.jpg" alt="ourmodels image 6">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Sarah Rose</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 125 lb. | Bust: 36D<br>
+                  Waist: 26 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg37.jpg" alt="ourmodels image 37">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg38.jpg" alt="ourmodels image 38">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Fatima Gamez</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'0 |<br>
+                  Weight: 108 lb. | Bust: 32DD<br>
+                  Waist: 23 | Hips: 39
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg69.jpg" alt="ourmodels image 69">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg70.jpg" alt="ourmodels image 70">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Danica Cooper</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'9 |<br>
+                  Weight: 125 lb. | Bust: 32B<br>
+                  Waist: 25 | Hips: 40
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg41.jpg" alt="ourmodels image 41">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg42.jpg" alt="ourmodels image 42">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Lexus Ramos</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'3 |<br>
+                  Weight: 140 lb. | Bust: 36DD<br>
+                  Waist: 25 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg43.jpg" alt="ourmodels image 43">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg44.jpg" alt="ourmodels image 44">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Luna Selena</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'6 |<br>
+                  Weight: 135 lb. | Bust: 34B<br>
+                  Waist: 25 | Hips: 42
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg45.jpg" alt="ourmodels image 45">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg46.jpg" alt="ourmodels image 46">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Zoe Reana</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'57 |<br>
+                  Weight: 135 lb. | Bust: 34DD<br>
+                  Waist: 27 | Hips: 42
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg47.jpg" alt="ourmodels image 47">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg48.jpg" alt="ourmodels image 48">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Ashley Nicole</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 135 lb. | Bust: 34D<br>
+                  Waist: 25 | Hips: 38
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+        /*************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg7.jpg" alt="ourmodels image 7">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg8.jpg" alt="ourmodels image 8">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">JEAN COPUS</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 115lb | Bust: 34D<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile/']">See More</a>
+            </div>
+          </div>
+        </div>-->
+
+       <!-- <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg9.jpg" alt="ourmodels image 9">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg10.jpg" alt="ourmodels image 10">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">JEAN COPUS</h1>
+              <div class="measure-div">
+                <p>
+                  Height: 5'5 |<br>
+                  Weight: 115lb | Bust: 34D<br>
+                  Waist: 24 | Hips: 36
+                </p>
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg53.jpg" alt="ourmodels image 53">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg54.jpg" alt="ourmodels image 54">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Amber</h1>
+              <div class="measure-div">
+                &lt;!&ndash;<p>
+                  Height: 5'5 |<br>
+                  Weight: 135 lb. | Bust: 34D<br>
+                  Waist: 25 | Hips: 38
+                </p>&ndash;&gt;
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="ourmodelssingleblock">
+          <div class="ourmodelssingleimgblock">
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg55.jpg" alt="ourmodels image 55">
+            </div>
+            <div class="ourmodelssingleblockimg1">
+              <img src="../assets/images/ourmodelssingleblockimg56.jpg" alt="ourmodels image 56">
+            </div>
+          </div>
+          <div class="ourmodelssingleblockoverlay">
+            <div class="ourmodelssingleblockcontent">
+              <h1 class="title-div">Allison</h1>
+              <div class="measure-div">
+                &lt;!&ndash;<p>
+                  Height: 5'5 |<br>
+                  Weight: 135 lb. | Bust: 34D<br>
+                  Waist: 25 | Hips: 38
+                </p>&ndash;&gt;
+              </div>
+              <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
+            </div>
+          </div>
+        </div>-->
+
+
+        <div class="jointheteam text-center">
+          <a class="btngreen" [routerLink]="['/become-a-model']">Join The Team</a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
+
+

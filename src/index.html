@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"  ng-app="plunker">
+<head>
+  <meta charset="utf-8">
+  <title>Shatterblock</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/media.css" />
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/admin.css">
+  <link rel="stylesheet" href="assets/css/adminmediacss.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  <script type="text/javascript">
+
+      function menuonload() {
+          document.getElementsByClassName('closebtn')[0].style.visibility='hidden';
+          document.getElementsByClassName('newnavcls')[0].style.visibility='visible';
+      }
+      window.onload = menuonload;
+
+      function openNav() {
+          document.getElementById("newmySidenav").style.width = "368px";
+          document.getElementsByClassName('newnavcls')[0].style.visibility='hidden';
+          document.getElementsByClassName('closebtn')[0].style.visibility='visible';
+      }
+
+      function closeNav() {
+          document.getElementById("newmySidenav").style.width = "0";
+          document.getElementsByClassName('closebtn')[0].style.visibility='hidden';
+          document.getElementsByClassName('newnavcls')[0].style.visibility='visible';
+      }
+
+      function opensubsidemenu1() {
+          document.getElementById("subsidemenuDropdown1").classList.toggle("submenushow");
+      }
+      function opensubsidemenu() {
+          document.getElementById("subsidemenuDropdown").classList.toggle("submenushow");
+      }
+
+      window.onclick = function(event) {
+          if (!event.target.matches('.opensubsidemenu')) {
+              var dropdowns = document.getElementsByClassName("newsubsidemenu");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('submenushow')) {
+                      openDropdown.classList.remove('submenushow');
+                  }
+              }
+          }
+      }
+
+     /* $(document).load($(window).bind("resize", checkPosition));
+
+      function checkPosition() {
+
+          if (window.matchMedia('(max-width: 767px)').matches) {
+              document.getElementById("newmySidenav").style.width = "368px";
+
+          } else if (window.matchMedia('(max-width: 540px)').matches) {
+              document.getElementById("newmySidenav").style.width = "100%";
+
+          } else {
+              document.getElementById("newmySidenav").style.width = "368px";
+          }
+
+
+      }*/
+
+
+      /* JavaScript Media Queries */
+      if (matchMedia) {
+          const mq = window.matchMedia("(min-width: 540px)");
+          mq.addListener(WidthChange);
+          WidthChange(mq);
+      }
+
+      // media query change
+      function WidthChange(mq) {
+          const msg = (mq.matches ? "more" : "less") + " than 540 pixels";
+          if( document.getElementById("newmySidenav")!=null)
+          document.getElementById("newmySidenav").style.width = "80%";
+
+      }
+
+
+
+      /*$('#mybutton').on('click', function(){
+          $('html, body').animate({scrollTop: $("#div_id").offset().top}, 'slow');
+      });*/
+      /*
+      let posval=$('.blocklink').position();   //position of 'blocking'
+            console.log('posval');
+            console.log(posval);
+            console.log(posval.top);
+            console.log(parseInt(posval.top));
+            $('.blockmodalc').css('top',parseInt(posval.top)-200);
+      */
+
+
+
+  </script>
+
+</head>
+<body>
+
+<div class="newwrapper">
+  <app-root>
+    <div style="width:100vw; height:100vh; display:table-cell; vertical-align:middle; text-align:center;">
+
+      <img src="assets/images/shaterblockLogo.png"  alt="#" style="margin:0 auto; display: block; margin-bottom:30px; max-width: 280px;"/>
+
+      <div class="loader"></div>
+
+
+    </div>
+
+  </app-root>
+</div>
+</body>
+</html>

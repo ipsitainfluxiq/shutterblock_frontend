@@ -1,0 +1,157 @@
+<!--Admin dashboard-->
+
+<app-adminheader></app-adminheader>
+
+<div class="s_getmyoffer_adminpanel">
+  <div class="s_getmyoffer_adminpanel_inner">
+    <div class="s_getmyoffer_adminpanel_inner_content_left">
+      <app-adminleft></app-adminleft>
+    </div>
+    <div class="s_getmyoffer_adminpanel_inner_content_right">
+      <div class="page-wrapper s_getmyoffer_adminlist">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content_header_block">
+              <ol class="breadcrumb">
+                <li ><a class="shatterinactive" ui-sref="dashboard" [routerLink]="['/admindashboard']"><i class=" fa fa-dashboard"></i> Dashboard </a> </li>
+
+              </ol>
+              <div class="clearfix"></div>
+            </div>
+            <h1 class="page-header s_getmyoffer_adminlistpage-header"><i class="fa fa-circle" aria-hidden="true"></i> Manage Admin</h1>
+
+            <div class="clearfix"></div>
+            <div class="s_getmyoffer_block2 admin_dashboard">
+              <div clss="s_footer_offer_wrapper admin_dashboard_inner">
+                <div class="s_getmyoffer_offer_content admin_dashboard_content">
+                  <ul>
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main">
+                        <h2>Dashboard</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/dashboardicon.png" >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/manageadmin']" style="cursor: pointer">
+                        <h2>manage admin</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/manageadmin.png" >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/influencerlist']" style="cursor:pointer">
+                        <h2>Manage Influencer</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/manageinfluencer.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/brandlist']" style="cursor:pointer">
+                        <h2>Manage Brand</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/manageadminbrand.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/offerlist']" style="cursor: pointer">
+                        <h2>Manage  Offer</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/manageoffer.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+                    <!--<li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/offerwall']" style="cursor:pointer">
+                        <h2>offer wall</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/offerwallicon.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>-->
+                    <!--<li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/addofferwallinfo']">
+                        <h2>add offer wall</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/addofferwallicon.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>-->
+                    <!--<li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/userlist']">
+                        <h2>customer</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/customericon.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>-->
+                    <!--<li>
+                      <div class="s_getmyoffer_offerSection_main">
+                        <h2>pixel tester</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/pixeltestericon.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>-->
+
+                    <!--<li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/offerwalllist']">
+                        <h2>Manage Offers</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/offerwallicon.png" >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>-->
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main" [routerLink]="['/myaccount']">
+                        <h2>my account</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/myaccount.png" >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="s_getmyoffer_offerSection_main">
+                        <h2>log off</h2>
+                        <div class="s_getmyoffer_offerSection">
+                          <img src="assets/images/logoff.png"  >
+                        </div>
+                        <h4>more info</h4>
+                      </div>
+                    </li>
+
+                    <div class="clearfix"></div>
+                  </ul>
+                </div>
+                <div class="clearfix"></div>
+                <div class="s_getmyoffer_block2_footer">
+
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

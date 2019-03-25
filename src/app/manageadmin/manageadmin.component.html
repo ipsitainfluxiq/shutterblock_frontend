@@ -1,0 +1,100 @@
+<app-adminheader></app-adminheader>
+
+<div class="s_getmyoffer_adminpanel">
+  <div class="s_getmyoffer_adminpanel_inner">
+    <div class="s_getmyoffer_adminpanel_inner_content_left">
+      <app-adminleft></app-adminleft>
+    </div>
+    <div class="s_getmyoffer_adminpanel_inner_content_right">
+      <div class="page-wrapper s_getmyoffer_adminlist">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content_header_block">
+              <ol class="breadcrumb">
+                <li ><a class="shatteractive" ui-sref="dashboard" [routerLink]="['/admindashboard']"><i class="active fa fa-dashboard"></i> Dashboard </a> </li>
+                <li>/</li>
+                <li>Manage Admin</li>
+
+              </ol>
+              <div class="clearfix"></div>
+            </div>
+            <h1 class="page-header s_getmyoffer_adminlistpage-header"><i class="fa fa-circle" aria-hidden="true"></i> Manage Admin</h1>
+
+            <div class="clearfix"></div>
+
+            <div class="content_header_block">
+              <div class="clearfix"></div>
+
+              <div class="newblock1 shatterblock1">
+
+                <input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search Admin">
+
+                <a [routerLink]="['/addadmin']" class="addfrinderbtn s_getmyoffer_savebutton"> Add Admin</a>
+
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+
+
+
+            <div class="admintable s_getmyoffer_adminlist_table ">
+              <h3>Admin List</h3>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr >
+                    <th scope="col">Id</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Telephoneno.</th>
+                    <th scope="col">Mobileno.</th>
+                    <th scope="col">Action.</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let item of datalist; let i = index">
+                    <td [routerLink]="['/editadmin',item._id]">{{i+1}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.firstname}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.lastname}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.email}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.address}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.telephoneno}}</td>
+                    <td [routerLink]="['/editadmin',item._id]">{{item.phoneno}}</td>
+                    <td (click)="deleteadmin(item._id,template)"><span class="s_getmyoffer_savebutton">Delete</span></td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<ng-template #template>
+  <div class="modal-body">
+    <h1>Do you want to delete?</h1>
+    <button type="button" class="btn btn-default" (click)="delete(selectedadminid,templatecommon)" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
+
+<ng-template #templatecommon>
+  <div class="modal-body">
+    <h1>{{message}}</h1>
+
+  </div>
+</ng-template>

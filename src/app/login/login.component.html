@@ -1,0 +1,31 @@
+<div class="s_getmyoffer">
+  <div class="s_shatter_logo">
+    <img src="assets/images/shaterblockLogo.png">
+  </div>
+
+
+  <div class="s_getmyoffer_login_wrapper">
+
+    <div class="s_getmyoffer_inner_content">
+      <h1>Login</h1>
+      <p>welcome back!</p>
+      <div class="error" *ngIf="errormg!==''">{{errormg}}</div>
+      <form name="login" novalidate [formGroup]="dataForm" (ngSubmit)="dosubmit(dataForm.value)">
+        <div class="form-group">
+          <input type="text" placeholder="Phone"  class="form-control" [formControl]="dataForm.controls['phone']">
+          <span class="error" *ngIf="!dataForm.controls['phone'].valid && dataForm.controls['phone'].touched">Please Enter a Valid phone </span>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password"  class="form-control" [formControl]="dataForm.controls['password']">
+          <span class="error" *ngIf="!dataForm.controls['password'].valid && dataForm.controls['password'].touched">Enter your password</span>
+        </div>
+
+        <button type="submit" class="s_getmyoffer_login_button"><span>Submit</span></button>
+
+        <div class="form-group">
+          <a href="" class="shatter_block_forgetPass">forget Password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

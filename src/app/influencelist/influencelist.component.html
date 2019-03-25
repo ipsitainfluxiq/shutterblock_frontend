@@ -1,0 +1,533 @@
+
+<app-adminheader></app-adminheader>
+
+<div class="s_getmyoffer_adminpanel">
+  <div class="s_getmyoffer_adminpanel_inner">
+    <div class="s_getmyoffer_adminpanel_inner_content_left">
+      <app-adminleft></app-adminleft>
+    </div>
+    <div class="s_getmyoffer_adminpanel_inner_content_right">
+      <div class="page-wrapper s_getmyoffer_adminlist">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content_header_block">
+              <ol class="breadcrumb">
+                <li ><a class="shatteractive" ui-sref="dashboard" [routerLink]="['/admindashboard']"><i class="active fa fa-dashboard"></i> Dashboard </a> </li>
+                <li>/</li>
+                <li>Manage Admin</li>
+                <li>Manage Influencer</li>
+
+              </ol>
+              <div class="clearfix"></div>
+            </div>
+            <h1 class="page-header s_getmyoffer_adminlistpage-header"><i class="fa fa-circle" aria-hidden="true"></i> Manage Influencer</h1>
+
+            <div class="clearfix"></div>
+
+            <div class="content_header_block">
+
+
+              <div class="clearfix"></div>
+
+              <div class="newblock1 shatterblock1">
+
+                <input type="text" name="search" ng-model="searchkey" class="search1" placeholder="Search Influencer">
+                  <div class="row_view">
+                    <button class="s_gridactive" (click)="islistview=1-islistview"> List View</button>
+                    <button class=" " (click)="islistview=1-islistview" > Grid View</button>
+                    <a [routerLink]="['/addinfluencer']" class="addfrinderbtn s_getmyoffer_savebutton"> Add Influencer</a>
+                  </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+
+
+
+            <div *ngIf="islistview==0" class="admintable s_getmyoffer_adminlist_table ">
+              <h3>Influencer List</h3>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                  <tr >
+                    <th scope="col">#</th>
+                    <th scope="col">Influencer name</th>
+                    <th scope="col">Profile Image</th>
+                    <th scope="col">About</th>
+                    <th scope="col">Socials</th>
+                    <th scope="col">Website</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let item of influencerlist; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.influencername}}</td>
+                    <td ><div>
+                      <img src="{{this._commonservices.filepathurl+item.image}}">
+                      <!--&lt;!&ndash;<span>{{item.image}}</span>&ndash;&gt;-->
+                    </div></td>
+                    <td >{{item.about}}</td>
+                    <td >
+                      <span> <i class="fa fa-facebook-square" aria-hidden="true"></i>{{item.fburl}}</span><br>
+                      <span><i class="fa fa-twitter-square" aria-hidden="true"></i>{{item.twitter}}</span><br>
+                      <span><i class="fa fa-linkedin-square" style="font-size:24px"></i>{{item.linkedin}}</span><br>
+                      <span><i class="fa fa-at" aria-hidden="true"></i>{{item.instagram}}</span>
+                    </td>
+
+                    <td >{{item.website}}</td>
+                    <td ><span class="s_getmyoffer_savebutton" (click)="deleteinfluencer(item._id,template)">Delete</span>
+                      <span class="s_getmyoffer_savebutton" [routerLink]="['/addinfluencer',item._id]">Edit</span>
+                      <span class="s_getmyoffer_savebutton" *ngIf="item.status== null || item.status==0" (click)="toggleinfluencerstatus(item,template2)">Avtive</span>
+                      <span class="s_getmyoffer_savebutton" *ngIf="item.status==1" (click)="toggleinfluencerstatus(item,template2)">Inactive</span>
+                    </td>
+
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+
+            </div>
+            <div *ngIf="islistview==1" class="admintable s_getmyoffer_adminlist_table ">
+              <h3 class="influencer_name">influencer List</h3>
+              <div class="shatterBlock_Brandwrapper Brand_offerlist_wrapper">
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo3.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo4.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo5.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo6.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo4.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo5.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo6.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo3.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo4.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo5.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo6.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo3.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo4.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo5.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo6.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo3.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo4.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo5.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+                <div class="inner_panel">
+                  <div class="brand_image_wrapper">
+                    <div class="brand_image">
+                      <img src="assets/images/s_offerlogo6.png">
+                    </div>
+                  </div>
+                  <div class="brand_descrition">
+                    <h4>  Name: Adam gili</h4>
+                    <div class="social_icon">
+                      <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                    </p>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+              </div> <!--end Brand Wrapper-->
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-body">
+    <h1>Do you want to delete?</h1>
+    <button type="button" class="btn btn-default" (click)="delete(selectedinfluencerid,templatecommon)" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
+
+<ng-template #templatecommon>
+  <div class="modal-body">
+    <h1>{{message}}</h1>
+
+  </div>
+</ng-template>
+
+<ng-template #template2>
+  <div class="modal-body">
+    <h1>Do you want to Change the Status?</h1>
+    <button type="button" class="btn btn-default" (click)="togglestatus(selectedinfluencerid,templatecommon1)" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
+
+<ng-template #templatecommon1>
+  <div class="modal-body">
+    <h1>{{message1}}</h1>
+
+  </div>
+</ng-template>
+
+
+<!--Grid view-->
+
+
+
+
+
+
+
+
+
+<!--
+<ng-template #template>
+  <div class="modal-body">
+    <h1>Do you want to delete?</h1>
+    <button type="button" class="btn btn-default" (click)="delete(selectedadminid,templatecommon)" >Yes</button>
+    <button type="button" class="btn btn-primary" (click)="decline()" >No</button>
+  </div>
+</ng-template>
+
+<ng-template #templatecommon>
+  <div class="modal-body">
+    <h1>{{message}}</h1>
+
+  </div>
+</ng-template>
+-->

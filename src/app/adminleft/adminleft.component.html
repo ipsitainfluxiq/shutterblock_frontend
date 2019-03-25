@@ -1,0 +1,18 @@
+<div class="s_getmyoffer_admin_leftpanel">
+  <!--<div class="admin_logo" [routerLink]="['/admindashboard']">-->
+    <!--<img src="assets/images/shaterblockLogo.png">-->
+  <!--</div>-->
+<button class="toggle_button" (click)="toggle()" id="bt">{{buttonName}}</button>
+  <ng-container *ngIf="show">
+  <ul class="nav flex-column">
+    <li class="nav-item"><a [routerLink]="['/dashboard']"> dashboard</a></li>
+    <li class="nav-item"><a [routerLink]="['/manageadmin']">Manage Admin</a></li>
+    <li class="nav-item"><a [routerLink]="['/offerlist']">Manage Offers</a></li>
+    <li class="nav-item"><a [routerLink]="['/brandlist']">Manage Brand</a>  </li>
+    <li class="nav-item"><a [routerLink]="['/influencerlist']">Manage Influencer</a> </li>
+    <li class="nav-item"><a [routerLink]="['/myaccount']">My Account</a> </li>
+  </ul>
+
+</ng-container >
+
+</div>

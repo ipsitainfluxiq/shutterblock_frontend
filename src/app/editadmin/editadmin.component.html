@@ -1,0 +1,96 @@
+<div class="s_getmyoffer_adminpanel">
+
+  <div class="s_getmyoffer_adminpanel_inner">
+    <div class="s_getmyoffer_adminpanel_inner_content_left">
+      <app-adminleft></app-adminleft>
+    </div>
+    <div class="s_getmyoffer_adminpanel_inner_content_right">
+      <div class="page-wrapper s_getmyoffer_adminlist">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="content_header_block">
+              <ol class="breadcrumb">
+                <li><a href="javascript:void(0)" class="active" [routerLink]="['/dashboard']">Dashboard </a></li>
+                <li>/</li>
+                <li><a href="javascript:void(0)" class="active" [routerLink]="['/manageadmin']">Manage Admin </a></li>
+                <li>/</li>
+                <li>Edit Admin </li>
+
+              </ol>
+              <div class="clearfix"></div>
+            </div>
+            <h1 class="page-header s_getmyoffer_adminlistpage-header"><i class="fa fa-circle" aria-hidden="true"></i> Manage Admin</h1>
+
+            <div class="clearfix"></div>
+
+            <div class="content_header_block">
+              <div class="clearfix"></div>
+
+              <div class="clearfix"></div>
+            </div>
+
+
+            <div class="admintable s_getmyoffer_adminlist_table ">
+              <h3> Edit Admin</h3>
+              <div class="formsection">
+                <h6 class="form-grouptext"> All the fields marked "*" are required fields and must be filled.</h6>
+
+                <form id="add_Admin" name="add_Admin" role="form"  novalidate [formGroup]="dataForm" (ngSubmit)="dosubmit(dataForm.value)">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label >First Name<span>*</span> :</label>
+                      <input type="text" class="form-control" placeholder="First Name" [formControl]="dataForm.controls['fname']">
+                      <span class="error" *ngIf="!dataForm.controls['fname'].valid && dataForm.controls['fname'].touched">First Name field can not be blank</span>
+                    </div>
+                    <div class="form-group">
+                      <label >Last Name<span>*</span> :</label>
+                      <input type="text" class="form-control" placeholder="Last Name" [formControl]="dataForm.controls['lname']">
+                      <span class="error" *ngIf="!dataForm.controls['lname'].valid && dataForm.controls['lname'].touched">Last Name field can not be blank</span>
+                    </div>
+                    <div class="form-group email_div">
+                      <label >Email address<span>*</span> :</label>
+                      <input type="email" class="form-control" placeholder="email" [formControl]="dataForm.controls['email']">
+                      <span class="error" *ngIf="!dataForm.controls['email'].valid && dataForm.controls['email'].touched ">Email field can not be blank & Give proper Email Id!</span>
+                      <!-- <span *ngIf="dataForm.controls['email'].hasError('invalidEmail') && dataForm.controls['email'].valid">Give proper email id!</span>-->
+                    </div>
+                    <div class="form-group">
+                      <label >Password<span>*</span> :</label>
+                      <input type="password" class="form-control" placeholder="Password" [formControl]="dataForm.controls['password']">
+                      <span class="error" *ngIf="!dataForm.controls['password'].valid && dataForm.controls['password'].touched">Password field can not be blank</span>
+                    </div>
+                    <div class="form-group">
+                      <label >Re-Type Password<span>*</span> :</label>
+                      <input type="password" class="form-control" placeholder="password" [formControl]="dataForm.controls['confirmPassword']">
+                      <span class="error" *ngIf="dataForm.controls['confirmPassword'].hasError('equalTo') && dataForm.controls['confirmPassword'].touched">*Password is not matched!</span>
+                    </div>
+                    <div class="form-group">
+                      <label >Address :</label>
+                      <textarea class="form-control"  placeholder="Address" [formControl]="dataForm.controls['address']" style="columns: 20;"></textarea>
+                      <span class="error" *ngIf="!dataForm.controls['address'].valid && dataForm.controls['address'].touched">Address is Required!</span>
+                    </div>
+                    <div class="form-group">
+                      <label >Telephone number<span>*</span> :</label>
+                      <input type="text" class="form-control" placeholder="Telephone Number" [formControl]="dataForm.controls['telephoneno']">
+                      <span class="error" *ngIf="!dataForm.controls['telephoneno'].valid && dataForm.controls['telephoneno'].touched">Telephone Number Required!</span>
+                    </div>
+
+                    <div class="form-group">
+                      <label >Mobile Number<span>*</span> :</label>
+                      <input type="text" class="form-control" placeholder="Mobile Number" [formControl]="dataForm.controls['mobileno']">
+                      <span class="error" *ngIf="dataForm.controls['mobileno'].touched && !dataForm.controls['mobileno'].valid">Mobile Number Required!</span>
+                    </div>
+                  </div>
+                  <div class="box-footer" style="background:none; height:auto; padding-bottom:0px; padding-top:0px;">
+                    <button type="submit" class="btn btn-primary shatter_addAdmin">Submit</button>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

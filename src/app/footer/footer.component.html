@@ -1,0 +1,138 @@
+<div class="container-fluid newhome_footerdiv">
+  <div class="newhome_footerdiv_wrapper">
+      <div class="col-md-6">
+          <div class="newhomefooterlogo">
+              <img src="../assets/images/shaterblockLogo.png" class="newhomenewhomefooterlogo">
+          </div>
+          <!--<div class="newhomenewsletterblogwrapper">
+              <form action="#" method="post" accept-charset="utf-8" id="newhomenewsletterblog">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever..</p>
+                 &lt;!&ndash; <p><span><input type="text" name="email" class="form-control" placeholder="Email" value="" id="newhomenewsletter-field"><button type="submit" class="btnyellow" value="go!">Go</button></span></p>&ndash;&gt;
+              </form>
+          </div>-->
+      </div>
+      <div class="col-md-3">
+        <h3>Quick Links</h3>
+          <ul class="newhomefooternavlinks footerborder">
+              <li><a [routerLink]="['/']">Home</a></li>
+              <li><a [routerLink]="['/whoweare']">Who We Are</a></li>
+              <li><a [routerLink]="['/model-marketing']">Model Management</a></li>
+              <li><a [routerLink]="['/marketing-management']">Marketing Management</a></li>
+              <li><a [routerLink]="['/music-management']">Music Management</a></li>
+              <li><a [routerLink]="['/contact-us']">Contact Us</a></li>
+          </ul>
+      </div>
+      <div class="col-md-3">
+          <h3>Contact Us</h3>
+          <p class="newhomecontactaddress footerborder">
+              <span>Lorem Ipsum is,  simply,dummy</span><br>
+              <span>25 of the printing</span><br>
+              <span>Call: 000 000 0000</span><br>
+              <span>Email: <a href="mailto:lorem@ipsum.com" target="_top">lorem@ipsum.com</a></span>
+          </p>
+          <ul class="newhomesocialmedialinks footerborder">
+              <li><a href="javascript:void(0)"><div class="socialmediaiconwrapper"><i class="fa fa-facebook"></i></div></a></li>
+              <li><a href="javascript:void(0)"><div class="socialmediaiconwrapper"><i class="fa fa-twitter"></i></div></a></li>
+              <li><a href="javascript:void(0)"><div class="socialmediaiconwrapper"><i class="fa fa-linkedin"></i></div></a></li>
+              <li><a href="javascript:void(0)"><div class="socialmediaiconwrapper"><i class="fa fa-instagram"></i></div></a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="container-fluid newhome_copyrightdiv text-center">
+    <div class="newhome_copyrightdiv_wrapper">
+        <div class="col-md-12">
+            <p>Copyright © 2018 Shatter Blok - All Rights Reserved. <span>Powered by GoDaddy</span></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade modaldefault" id="mysuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="logoshatterblock">
+                    <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+                </div>
+                <p>Thank you for contacting Shatter Blok! We will get back to you with a response as soon as possible.</p>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<!-- Modal -->
+<div class="modal fade modaldefault" id="musicmanagementdialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="logoshatterblock">
+                    <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+                </div>
+                <p>Thank you for Submitting your music media for a chance to be a part of Shatter Proof Music Group’s team! We will review your form as soon as possible and respond with details on your opportunity regarding what steps may come next! </p>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade modaldefault" id="becomeamodeldialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" *ngIf="showmodal==1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="logoshatterblock">
+                    <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+                </div>
+                <p>THANK YOU FOR SUBMITTING YOUR APPLICATION FOR A CHANCE TO BE A PART OF SHATTER PROOF’S MODEL/TALENT’S TEAM! WE WILL REVIEW YOUR FORM AS SOON AS POSSIBLE AND RESPOND WITH DETAILS ON YOUR OPPORTUNITY REGARDING WHAT STEPS MAY COME NEXT!</p>
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade modaldefault animated bounceIn" id="fullscreenimgmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <div class="modal-content">
+
+            <div class="modal-body">
+                <drag-scroll #imgbig>
+                    <div class="fullscreenimagewrapper" data-toggle="modal">
+                        <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg1.jpg" alt="modelmodelbigimg1">
+                    </div>
+                    <div class="fullscreenimagewrapper" data-toggle="modal">
+                        <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg2.jpg" alt="modelmodelbigimg2">
+                    </div>
+
+                </drag-scroll>
+                <!-- Next and previous buttons -->
+                <a class="prev" (click)="movebigLeft()">&#10094;</a>
+                <a class="next" (click)="movebigRight()">&#10095;</a>
+
+
+                <!--<div class="fullscreenimagewrapper">
+                    <img src="../assets/images/modelbigimg/modelmodelbigimg1.jpg" alt="modelmodelbigimg1">
+                </div>-->
+
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
