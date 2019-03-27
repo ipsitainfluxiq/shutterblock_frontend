@@ -52,6 +52,7 @@ import { Resolveservice } from '../app/resolveservice';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import {ApiService} from './api.service';
 import {AuthGuard} from './auth.guard';
+import {NgxUploaderModule} from 'ngx-uploader';
 
 
 
@@ -106,6 +107,7 @@ import {AuthGuard} from './auth.guard';
     FormsModule,
     ReactiveFormsModule,
     routing,
+    NgxUploaderModule,
     ModalModule.forRoot()
   ],
 

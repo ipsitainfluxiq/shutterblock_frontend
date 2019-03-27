@@ -68,6 +68,9 @@ export class ApiService {
     var result = this._http.post(this.getEndpointUrl(endpoint), JSON.stringify(data), httpOptions).pipe(map(res => res));
     return result;
   } // postData end
+
+
+
   getState() {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -78,6 +81,10 @@ export class ApiService {
     var result = this._http.get('assets/data/state.json').pipe(map(res => res));
 return result;
   }
+  // getState end
+
+
+
   postDatawithottoken(endpoint:any, data) {
     const httpOptions = {
       headers: new HttpHeaders({

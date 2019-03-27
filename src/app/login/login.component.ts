@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import {Commonservices} from '../app.commonservices' ;
 import { HttpClient } from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
+import { ApiService} from '../api.service';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +15,11 @@ import { CookieService } from 'ngx-cookie-service';
 export class LoginComponent implements OnInit {
   public dataForm: FormGroup;
   public kp;
+  public endpoint = 'login';
   public serverurl;
   public errormg: any = '';
 
-  constructor(kp: FormBuilder, private router: Router, private _commonservices: Commonservices, private _http: HttpClient, private cookeiservice: CookieService) {
+  constructor(kp: FormBuilder, private router: Router, private _commonservices: Commonservices, public apiService: ApiService, private _http: HttpClient, private cookeiservice: CookieService) {
     this.kp = kp;
     this.serverurl = _commonservices.url;
 
@@ -68,7 +70,8 @@ export class LoginComponent implements OnInit {
         password: formval.password,
 
       };
-      this._http.post(link, data)
+      this.apiService.postDatawithottoken(this.endpoint, data)
+      // this._http.post(link, data)
           .subscribe(res => {
             let result: any = {};
             result = res;
@@ -84,7 +87,7 @@ export class LoginComponent implements OnInit {
               this.cookeiservice.set('phone', result.item[0].phone);
               this.cookeiservice.set('type', result.item[0].type);
               this.cookeiservice.set('fullname', result.item[0].firstname + ' ' + result.item[0].lastname);
-
+              // this.cookeiservice.set('jwttoken', result.token);
 
               if (result.item.length > 0 && result.status == 'success' ) {
 

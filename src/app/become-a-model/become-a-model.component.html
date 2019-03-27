@@ -229,6 +229,19 @@
 
           <div class="form-group col-xs-12">
             <div class="uploadsection">
+            <div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+            </div>
+
+            <label class="upload-button">
+              <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
+              or choose file(s)
+            </label>
+
+            <button type="button" class="custom-file-upload" (click)="startUpload()">
+              Start Upload
+            </button>
+            </div>
+           <!-- <div class="uploadsection">
 
 
               <div class="progress">
@@ -244,10 +257,11 @@
                 <input id="file-upload" type="file"/>
 
 
-                <!--<input type="file" id="file" (change)="handleFileInput($event.target.files)">-->
+                &lt;!&ndash;<input type="file" id="file" (change)="handleFileInput($event.target.files)">&ndash;&gt;
               </div>
 
-            </div>
+            </div>-->
+
 
           </div>
         </div>
