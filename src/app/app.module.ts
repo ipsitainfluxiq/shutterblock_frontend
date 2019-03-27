@@ -45,9 +45,13 @@ import { OldmusicvideosComponent } from './oldmusicvideos/oldmusicvideos.compone
 import { MusicManagementComponent } from './music-management/music-management.component';
 import { MarketingManagementComponent } from './marketing-management/marketing-management.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { Resolveservice } from '../app/resolveservice';
+
 
 
 import { DragScrollModule } from 'ngx-drag-scroll';
+import {ApiService} from './api.service';
+import {AuthGuard} from './auth.guard';
 
 
 
@@ -106,6 +110,6 @@ import { DragScrollModule } from 'ngx-drag-scroll';
   ],
 
   bootstrap: [AppComponent],
-  providers: [CookieService],
+  providers: [CookieService, Resolveservice, ApiService, AuthGuard],
 })
 export class AppModule { }

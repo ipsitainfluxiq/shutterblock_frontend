@@ -32,8 +32,8 @@ export class Commonservices {
          }*/
     }
     shorten(str, maxLen, separator = '') {
-        if (str.length <= maxLen) return str;
-        //return str.substr(0, str.lastIndexOf(separator, maxLen));
+        if (str.length <= maxLen) { return str; }
+        // return str.substr(0, str.lastIndexOf(separator, maxLen));
         return str.substr(0, maxLen);
     }
 }

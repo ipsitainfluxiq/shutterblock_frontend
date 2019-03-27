@@ -83,8 +83,11 @@
             <span class="error" *ngIf="!dataForm.controls['city'].valid && dataForm.controls['city'].touched && issubmit==1">City field is required.</span>
           </div>
           <div class="form-group col-xs-7">
-            <input type="text" class="form-control" name="state" id="state" placeholder="state"  [formControl]="dataForm.controls['state']" (keyup)="issubmit=0">
-            <span class="error" *ngIf="!dataForm.controls['state'].valid && dataForm.controls['state'].touched && issubmit==1">State field is required.</span>
+            <select class="form-control" [formControl]="dataForm.controls['state']">
+              <option value="">Select State</option>
+              <option *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</option>
+            </select>
+            <span class="error" *ngIf="!dataForm.controls['state'].valid && dataForm.controls['state'].touched">Have to choose any States</span>
           </div>
         </div>
         <div class="clearfix"></div>

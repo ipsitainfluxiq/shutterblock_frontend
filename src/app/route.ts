@@ -43,6 +43,7 @@ import {OldmusicvideosComponent} from "./oldmusicvideos/oldmusicvideos.component
 import {MusicManagementComponent} from "./music-management/music-management.component";
 import {MarketingManagementComponent} from "./marketing-management/marketing-management.component";
 import {ContactUsComponent} from "./contact-us/contact-us.component";
+import {Resolveservice} from './resolveservice';
 
 //import {FooterComponent} from "./footer/footer.component";
 
@@ -73,6 +74,7 @@ const appRoutes: Routes = [
     {path: 'events', component: EventsComponent},
     {path: 'navbaricon', component: NavbariconComponent},
     {path: 'partners', component: PartnersComponent},
+    // {path: 'become-a-model', component: BecomeAModelComponent,  resolve: {results: Resolveservice}},
     {path: 'become-a-model', component: BecomeAModelComponent},
     {path: 'our-models', component: OurModelsComponent},
     {path: 'model-profile', component: ModelProfileComponent},
@@ -87,4 +89,4 @@ const appRoutes: Routes = [
 
 export const appRoutingProviders: any[] = [
 ];
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes,{ useHash: true });
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes, { useHash: false });
