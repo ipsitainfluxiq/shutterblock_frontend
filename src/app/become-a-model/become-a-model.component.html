@@ -1,3 +1,4 @@
+<!--
 <div class="blankmenuiconblock innerhead1">
   <app-header></app-header>
     <div class="container-fluid innerhead1_header">
@@ -13,7 +14,7 @@
 <div class="becomeamemberbannerblock">
   <div class="becomeamemberbannertext">
     <h1 class="headertitle">Join The Team</h1>
-    <p>Apply to become a part of our alluring team of models and become a member of the Shatter Proof family. Fill out the application, upload your photos, and link your social media accounts to start the process. Upon approval, you will begin the process of becoming one of our beautiful Shatter Proof Models.<!--Apply to become a part of our alluring team of models and become a member of the Shatterproof family.  Fill out the application, upload your photos, and link your social media accounts to start the process.  Upon approval, you will begin the process of becoming one of our beautiful ShatterProof Models.--></p>
+    <p>Apply to become a part of our alluring team of models and become a member of the Shatter Proof family. Fill out the application, upload your photos, and link your social media accounts to start the process. Upon approval, you will begin the process of becoming one of our beautiful Shatter Proof Models.&lt;!&ndash;Apply to become a part of our alluring team of models and become a member of the Shatterproof family.  Fill out the application, upload your photos, and link your social media accounts to start the process.  Upon approval, you will begin the process of becoming one of our beautiful ShatterProof Models.&ndash;&gt;</p>
     <div class="btncheckshatterproof">
       <a class="btnpink uno" id="mybutton" (click)="scrolltoform()">Application Form</a>
     </div>
@@ -237,11 +238,11 @@
               or choose file(s)
             </label>
 
-            <button type="button" class="custom-file-upload" (click)="startUpload()">
+            <button type="button" class="start-upload-btn" (click)="startUpload()">
               Start Upload
             </button>
             </div>
-           <!-- <div class="uploadsection">
+           &lt;!&ndash; <div class="uploadsection">
 
 
               <div class="progress">
@@ -260,7 +261,7 @@
                 &lt;!&ndash;<input type="file" id="file" (change)="handleFileInput($event.target.files)">&ndash;&gt;
               </div>
 
-            </div>-->
+            </div>&ndash;&gt;
 
 
           </div>
@@ -270,13 +271,389 @@
         <div class="form-row">
           <div class="form-group col-sm-12 text-right btncheckshatterproofwrappper">
             <div class="btncheckshatterproof">
-              <button class="btnyellow" data-toggle="modal">Submit</button> <!--data-target="#becomeamodeldialog"-->
+              <button class="btnyellow" data-toggle="modal">Submit</button> &lt;!&ndash;data-target="#becomeamodeldialog"&ndash;&gt;
             </div>
           </div>
         </div>
 
       </form>
     </div>
+</div>
+
+
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;!&ndash;
+&lt;!&ndash;Sucess Subission Modal&#45;&#45;&ndash;&gt;
+&lt;!&ndash; The Modal &ndash;&gt;
+<div id="mysuccessapplication" class="modal mysuccessapplication modalopen" *ngIf="mysuccessapplication==true" >
+  <div class="modal-dialog">
+  &lt;!&ndash; Modal content &ndash;&gt;
+  <div class="modal-content">
+    <div class="modal-body">
+      <button class="close" (click)="doclickclose()" style="cursor: pointer;">&times;</button>
+      <div class="logoshatterblock">
+        <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+      </div>
+      <p>Thank you for submitting your Application for a chance to be a part of ShatterProof’s Model/Talent’s Team! We will review your form as soon as possible and respond with details on your opportunity regarding what steps may come next! </p>
+    </div>
+  </div>
+  </div>
+
+</div>&ndash;&gt;
+
+&lt;!&ndash; Modal &ndash;&gt;
+<div class="modal fade modaldefault" id="becomeamodeldialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" *ngIf="showmodal==1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+
+        </div>&lt;!&ndash; /.modal-content &ndash;&gt;
+      </div>&lt;!&ndash; /.modal-dialog &ndash;&gt;
+
+</div>&lt;!&ndash; /.modal &ndash;&gt;
+
+
+<ng-template #successform>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="logoshatterblock">
+      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+    </div>
+    <p>THANK YOU FOR SUBMITTING YOUR APPLICATION FOR A CHANCE TO BE A PART OF SHATTER PROOF’S MODEL/TALENT’S TEAM! WE WILL REVIEW YOUR FORM AS SOON AS POSSIBLE AND RESPOND WITH DETAILS ON YOUR OPPORTUNITY REGARDING WHAT STEPS MAY COME NEXT!</p>
+  </div>
+</ng-template>
+-->
+
+
+
+<div class="blankmenuiconblock innerhead1">
+  <app-header></app-header>
+  <div class="container-fluid innerhead1_header">
+    <div class="innerhead1_header_wrapper">
+      <div class="innerhead1toplogowrapper">
+        <img src="../assets/images/shatterproofmodelslogo.png" alt="Shatter Proof Models Logo">
+      </div>
+    </div>
+  </div>
+</div>
+<app-sidemenu></app-sidemenu>
+
+<div class="becomeamemberbannerblock">
+  <div class="becomeamemberbannertext">
+    <h1 class="headertitle">Join The Team</h1>
+    <p>Apply to become a part of our alluring team of models and become a member of the Shatter Proof family. Fill out the application, upload your photos, and link your social media accounts to start the process. Upon approval, you will begin the process of becoming one of our beautiful Shatter Proof Models.<!--Apply to become a part of our alluring team of models and become a member of the Shatterproof family.  Fill out the application, upload your photos, and link your social media accounts to start the process.  Upon approval, you will begin the process of becoming one of our beautiful ShatterProof Models.--></p>
+    <div class="btncheckshatterproof">
+      <a class="btnpink uno" id="mybutton" (click)="scrolltoform()">Application Form</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="becomeamemberblock1">
+  <div class="becomeamemberblock1_wrapper_img">
+    <img src="../assets/images/becomeamemberblock1_wrapper_img.png"  alt="#">
+  </div>
+
+  <div class="becomeamemberblock1_wrapper">
+    <h1 class="headertitle">ARE YOU INTERESTED<br>
+      IN BECOMING A<br>
+      SHATTER PROOF MODEL?<br>
+      DO YOU HAVE THE DRIVE?<br>
+      WE HAVE A PROCESS.<br>
+    </h1>
+
+    <h2>First, upon approval of the application, you are immediately implemented into the Shatter Proof promoter program. Promote on your social media accounts and get paid! You will be responsible for digital promotions, you will join an elite business group with other models in an affiliate program referred to as the Shatter Blok Model Ambassador Program. Everyone will be treated like family if one succeeds we all succeed. The existing models in the program will begin promoting you as the newest member of the Shatter Proof family and again the best part, <span>YOU GET PAID TO PROMOTE!</span></h2>
+
+    <p>
+      Once you have promoted 50 or more times, you are upgraded into a VIP Membership of Shatter Proof Models, this is where your hard work has paid off.
+      <span>Once a VIP member, you will begin being booked on sets, like music videos, major photo shoots, and commercials. You now are getting paid for not only the promotions you are doing but also from the bookings. As well as becoming a known face in the Shatter Blok family.</span>
+      So what are you waiting for? Start filling out that application, the horizon on your career is endless.
+    </p>
+
+  </div>
+</div>
+
+
+<div class="becomeamemberblock2" id="div_id">
+
+  <div class="formdivwrapper">
+    <h1 class="headertitle">Submission Process</h1>
+    <form [formGroup]="dataForm" (ngSubmit)="dosubmit(successform)">
+      <div class="clearfix"></div>
+      <h2>Personal Information:</h2>
+      <div class="form-row">
+        <div class="form-group col-xs-6 formpaddingright">
+          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name*" [formControl]="dataForm.controls['firstname']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['firstname'].valid && dataForm.controls['firstname'].touched && issubmit==1">First Name field is required.</span>
+        </div>
+        <div class="form-group col-xs-6">
+          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name*" [formControl]="dataForm.controls['lastname']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['lastname'].valid && dataForm.controls['lastname'].touched && issubmit==1">Last Name field is required.</span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row">
+        <div class="form-group col-sm-2 col-xs-4 formpaddingright">
+          <input type="text" class="form-control" name="age" id="age" placeholder="Age*"  [formControl]="dataForm.controls['age']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['age'].valid && dataForm.controls['age'].touched && issubmit==1">Age field is required.</span>
+        </div>
+        <div class="form-group col-sm-5 col-xs-8 formpaddingright">
+          <input type="text" class="form-control" name="phone" id="phone" placeholder="phone number*" [formControl]="dataForm.controls['phone']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['phone'].valid && dataForm.controls['phone'].touched && issubmit==1">Phone field is required.</span>
+        </div>
+        <!-- <div class="form-group col-sm-5 col-xs-12">
+           <input type="text" class="form-control" name="email" id="email" placeholder="email address*">
+         </div>-->
+        <div class="form-group col-sm-5 col-xs-12">
+          <input type="text" class="form-control" name="city" id="city" placeholder="city*"  [formControl]="dataForm.controls['city']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['city'].valid && dataForm.controls['city'].touched && issubmit==1">City field is required.</span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row">
+
+        <div class="form-group col-xs-7 formpaddingright">
+          <select class="form-control" [formControl]="dataForm.controls['state']">
+            <option value="">Select State</option>
+            <option *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</option>
+          </select>
+          <span class="error" *ngIf="!dataForm.controls['state'].valid && dataForm.controls['state'].touched">Have to choose any States</span>
+        </div>
+        <div class="form-group col-xs-5">
+          <input type="text" class="form-control" name="ethnicity" id="ethnicity" placeholder="Ethnicity*" [formControl]="dataForm.controls['ethnicity']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['ethnicity'].valid && dataForm.controls['ethnicity'].touched && issubmit==1">Ethnicity field is required.</span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row">
+
+        <div class="form-group col-xs-3 formpaddingright">
+          <input type="text" class="form-control" name="height" id="height" placeholder="height*"  [formControl]="dataForm.controls['height']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['height'].valid && dataForm.controls['height'].touched && issubmit==1">Height field is required.</span>
+        </div>
+        <div class="form-group col-xs-4 formpaddingright">
+          <input type="text" class="form-control" name="eyecolor" id="eyecolor" placeholder="Eye Color*" [formControl]="dataForm.controls['eyecolor']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['eyecolor'].valid && dataForm.controls['eyecolor'].touched && issubmit==1">Eyecolor field is required.</span>
+        </div>
+        <div class="form-group col-sm-5 col-xs-12">
+          <input type="text" class="form-control" name="haircolor" id="haircolor" placeholder="Hair Color*"  [formControl]="dataForm.controls['haircolor']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['haircolor'].valid && dataForm.controls['haircolor'].touched && issubmit==1">Hair color field is required.</span>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <div class="form-row">
+
+        <div class="form-group col-sm-3 col-xs-12 formpaddingright">
+          <input type="text" class="form-control" name="weight" id="weight" placeholder="weight*"  [formControl]="dataForm.controls['weight']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['weight'].valid && dataForm.controls['weight'].touched && issubmit==1">Weight field is required.</span>
+        </div>
+        <div class="form-group col-sm-9 col-xs-12">
+          <div class="form-row">
+            <div class="form-group col-xs-4 formpaddingright measurementsdiv">
+              <label>Measurements:</label>
+            </div>
+            <div class="form-group col-xs-8">
+              <div class="form-row">
+                <div class="form-group col-xs-4 formpaddingright">
+                  <input type="text" class="form-control" name="bust" id="bust" placeholder="Bust*" [formControl]="dataForm.controls['bust']" (keyup)="issubmit=0">
+                  <span class="error" *ngIf="!dataForm.controls['bust'].valid && dataForm.controls['bust'].touched && issubmit==1">Bust field is required.</span>
+                </div>
+                <div class="form-group col-xs-4 formpaddingright">
+                  <input type="text" class="form-control" name="waist" id="waist" placeholder="waist*"  [formControl]="dataForm.controls['waist']" (keyup)="issubmit=0">
+                  <span class="error" *ngIf="!dataForm.controls['waist'].valid && dataForm.controls['waist'].touched && issubmit==1">Waist field is required.</span>
+                </div>
+                <div class="form-group col-xs-4">
+                  <input type="text" class="form-control" name="hips" id="hips" placeholder="Hips*"  [formControl]="dataForm.controls['hips']" (keyup)="issubmit=0">
+                  <span class="error" *ngIf="!dataForm.controls['hips'].valid && dataForm.controls['hips'].touched && issubmit==1">Hips field is required.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row">
+        <div class="form-group col-sm-2 formpaddingright">
+          <h2>Body Type:</h2>
+        </div>
+        <div class="form-group col-sm-10">
+          <label class="checkbox-inline">
+            <input type="checkbox"  value="athletic" [formControl]="dataForm.controls['athletic']" (keyup)="issubmit=0">Athletic
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox"  value="slim" [formControl]="dataForm.controls['slim']" (keyup)="issubmit=0">Slim
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="toned" [formControl]="dataForm.controls['toned']" (keyup)="issubmit=0">Toned
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="voluptuous" [formControl]="dataForm.controls['voluptuous']" (keyup)="issubmit=0">Voluptuous
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="tattoos" [formControl]="dataForm.controls['tattoos']" (keyup)="issubmit=0">Tattoos
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox"  value="piercings" [formControl]="dataForm.controls['piercings']" (keyup)="issubmit=0">Piercings
+          </label>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <h2>Years of Experience:</h2>
+      <div class="form-row">
+        <div class="form-group col-xs-4 formpaddingright">
+          <input type="text" class="form-control" name="promotions" id="promotions" placeholder="promotions*" [formControl]="dataForm.controls['promotions']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['promotions'].valid && dataForm.controls['promotions'].touched && issubmit==1">Promotions field is required.</span>
+        </div>
+        <div class="form-group col-xs-4 formpaddingright">
+          <input type="text" class="form-control" name="sales" id="sales" placeholder="sales*" [formControl]="dataForm.controls['sales']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['sales'].valid && dataForm.controls['sales'].touched && issubmit==1">Sales field is required.</span>
+        </div>
+        <div class="form-group col-xs-4">
+          <input type="text" class="form-control" name="retail" id="retail" placeholder="retail*" [formControl]="dataForm.controls['retail']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['retail'].valid && dataForm.controls['retail'].touched && issubmit==1">Retail field is required.</span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row">
+        <div class="form-group col-xs-12">
+          <textarea class="form-control" name="descriptionbox" id="validationTextarea" placeholder="Description Box*" rows="3" required [formControl]="dataForm.controls['descriptionbox']" (keyup)="issubmit=0"></textarea>
+          <span class="error" *ngIf="!dataForm.controls['descriptionbox'].valid && dataForm.controls['descriptionbox'].touched && issubmit==1">Description Box field is required.</span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row socilamediafield">
+        <div class="form-group col-sm-6 col-xs-12 formpaddingright">
+          <div class="socialmediafieldinner">
+            <img src="../../assets/images/socialicon-fb.png" alt="socialicon-fb">
+            <input type="url" class="form-control" name="facebooklink" id="facebooklink" placeholder="facebook link*" [formControl]="dataForm.controls['facebooklink']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!dataForm.controls['facebooklink'].valid && dataForm.controls['facebooklink'].touched && issubmit==1">Facebook link field is required.</span>
+          </div>
+        </div>
+        <div class="form-group col-sm-6 col-xs-12">
+          <div class="socialmediafieldinner">
+            <img src="../../assets/images/socialicon-ins.png" alt="socialicon-ins">
+            <input type="url" class="form-control" name="instagramlink" id="instagramlink" placeholder="instagram link*" [formControl]="dataForm.controls['instagramlink']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!dataForm.controls['instagramlink'].valid && dataForm.controls['instagramlink'].touched && issubmit==1">Instagram Link field is required.</span>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-row socilamediafield">
+        <div class="form-group col-sm-6 col-xs-12 formpaddingright">
+          <div class="socialmediafieldinner">
+            <img src="../../assets/images/socialicon-twit.png" alt="socialicon-twit">
+            <input type="url" class="form-control" name="twitterlink" id="twitterlink" placeholder="Twitter Link" [formControl]="dataForm.controls['twitterlink']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!dataForm.controls['twitterlink'].valid && dataForm.controls['twitterlink'].touched && issubmit==1">Twitter Link field is required.</span>
+          </div>
+        </div>
+        <div class="form-group col-sm-6 col-xs-12">
+          <div class="socialmediafieldinner">
+            <img src="../../assets/images/modelmayhemlink.png" alt="modelmayhemlink">
+            <input type="url" class="form-control" name="modelmayhemlink" id="modelmayhemlink" placeholder="Model Mayhem Link" [formControl]="dataForm.controls['modelmayhemlink']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!dataForm.controls['modelmayhemlink'].valid && dataForm.controls['modelmayhemlink'].touched && issubmit==1">Model Mayhem Link field is required.</span>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <h2>Create An Account:</h2>
+      <div class="form-row">
+        <div class="form-group col-sm-6 col-xs-12 formpaddingright">
+          <input class="form-control" id="emailaddress" name="emailaddress" placeholder="email address*" type="email" [formControl]="dataForm.controls['email']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['email'].valid && dataForm.controls['email'].touched && issubmit==1">Email field is required & give proper email id.</span>
+        </div>
+        <div class="form-group col-sm-3 col-xs-12 formpaddingright">
+          <input class="form-control" id="password" name="password" placeholder="password*" type="password"  [formControl]="dataForm.controls['password']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['password'].valid && dataForm.controls['password'].touched && issubmit==1">Password field is required & give proper password.</span>
+        </div>
+        <div class="form-group col-sm-3 col-xs-12">
+          <input class="form-control" id="confirmpassword" name="confirmpassword" placeholder="confirm password*" type="password"  [formControl]="dataForm.controls['confirmpassword']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!dataForm.controls['confirmpassword'].valid && dataForm.controls['confirmpassword'].touched && issubmit==1">Password field is required & give proper password.</span>
+        </div>
+      </div>
+      <!-- <div class="form-row">
+         <div class="form-group col-sm-6 col-xs-12 formpaddingright">
+
+             <input type="email" class="form-control" name="emailaddress" id="emailaddress" placeholder="Email Address">
+
+         </div>
+         <div class="form-group col-sm-3 col-xs-12 formpaddingright">
+
+             <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+
+         </div>
+         <div class="form-group col-sm-3 col-xs-12">
+
+             <input type="password" class="form-control" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password">
+
+         </div>
+       </div>-->
+      <div class="clearfix"></div>
+      <p class="headertitlepara">Upload Images (Upload at least 10 images/medias)</p>
+      <div class="form-row">
+
+        <div class="form-group col-xs-12">
+          <!--<div class="uploadsection">-->
+            <div class="uploadsection">
+              <div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+              </div>
+
+              <label class="upload-button">
+                <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
+                or choose file(s)
+              </label>
+
+              <button type="button" class="start-upload-btn" (click)="startUpload()">
+                Start Upload
+              </button>
+            </div>
+
+           <!-- <div class="progress">
+              <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 100%">
+                <span class="title">100%</span>
+              </div>
+
+            </div>
+            <div class="uploadbutton text-right">
+              <label for="file-upload" class="custom-file-upload">
+                Upload Files
+              </label>
+              <input id="file-upload" type="file"/>
+
+
+              &lt;!&ndash;<input type="file" id="file" (change)="handleFileInput($event.target.files)">&ndash;&gt;
+            </div>
+
+          </div>-->
+
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+      <div class="form-row">
+        <div class="form-group col-sm-12 text-right btncheckshatterproofwrappper">
+          <div class="btncheckshatterproof">
+            <button class="btnyellow" data-toggle="modal" data-target="#becomeamodeldialog">Submit</button>
+          </div>
+        </div>
+      </div>
+
+    </form>
+  </div>
 </div>
 
 
@@ -314,24 +691,3 @@
 
 </div>-->
 
-<!-- Modal -->
-<div class="modal fade modaldefault" id="becomeamodeldialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" *ngIf="showmodal==1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-
-
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-
-</div><!-- /.modal -->
-
-
-<ng-template #successform>
-  <div class="modal-body">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <div class="logoshatterblock">
-      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
-    </div>
-    <p>THANK YOU FOR SUBMITTING YOUR APPLICATION FOR A CHANCE TO BE A PART OF SHATTER PROOF’S MODEL/TALENT’S TEAM! WE WILL REVIEW YOUR FORM AS SOON AS POSSIBLE AND RESPOND WITH DETAILS ON YOUR OPPORTUNITY REGARDING WHAT STEPS MAY COME NEXT!</p>
-  </div>
-</ng-template>

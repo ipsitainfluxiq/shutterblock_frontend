@@ -83,6 +83,8 @@ export class BecomeAModelComponent implements OnInit {
       bust: ['',Validators.required],
       waist: ['',Validators.required],
       hips: ['',Validators.required],
+      password: ['',Validators.required],
+      confirmpassword: ['',Validators.required],
       athletic: [''],
       slim: [''],
       toned: [''],
@@ -197,11 +199,13 @@ export class BecomeAModelComponent implements OnInit {
     const event: UploadInput = {
       type: 'uploadAll',
       url: 'http://18.222.26.198:7002/frontendsignup',
-      // method: 'POST',
+      method: 'POST',
       // data: { foo: 'bar' }
     };
-
+console.log(event);
     this.uploadInput.emit(event);
+    console.log(this.uploadInput);
+    console.log(this.uploadInput.emit(event));
   }
 
   cancelUpload(id: string): void {
