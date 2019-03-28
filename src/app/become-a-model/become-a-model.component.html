@@ -608,8 +608,14 @@
 
         <div class="form-group col-xs-12">
           <!--<div class="uploadsection">-->
-            <div class="uploadsection">
-              <div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+            <!--<div class="uploadsection">-->
+              <div class="uploadsection">
+                <input style="display: none" type="file" accept="*" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" #fileInput1 >
+                <h3 *ngIf="nameis" style="color: white;">upload file: {{nameis}}</h3> <button (click)="fileInput1.click()" type="button">upload</button>
+
+                <img src="{{url1}}/{{fileservername}}" style="height: 50px; width: 50px">
+              </div>
+              <!--<div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
               </div>
 
               <label class="upload-button">
@@ -619,8 +625,8 @@
 
               <button type="button" class="start-upload-btn" (click)="startUpload()">
                 Start Upload
-              </button>
-            </div>
+              </button>-->
+            <!--</div>-->
 
            <!-- <div class="progress">
               <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="max-width: 100%">
@@ -690,4 +696,45 @@
   </div>
 
 </div>-->
-
+<!--<div class="upload-box-content">
+  <div class="drop-container" ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput">
+    <p>
+      Drag files here or
+      <label class="upload-button">
+        <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple> browse
+      </label>
+      to upload.
+    </p>
+  </div>
+  <div class="upload-item" *ngFor="let f of files; let i = index;">
+    <div class="upload-item-content">
+      <div class="filename">
+        <div class="filename-left">
+          <i class="ionicon ion-ios-copy"></i>
+          <span>{{ f.name }}</span>
+        </div>
+        <div class="filename-right">
+          <i class="ionicon ion-close-round" (click)="cancelUpload(f.id)"></i>
+        </div>
+      </div>
+      <div class="progress-content">
+        <div class="progress">
+          <span class="bar" [style.width]="f?.progress?.data?.percentage + '%'" [class.is-done]="f?.progress?.data?.percentage === 100"></span>
+        </div>
+      </div>
+      <div class="progress-text-content">
+                    <span class="progress-text" [class.is-done]="f?.progress?.data?.percentage === 100">
+                      <span>{{ f.progress?.data?.percentage }}% </span>
+                      <span *ngIf="f.progress?.data?.percentage !== 100">Uploading...</span>
+                      <span *ngIf="f.progress?.data?.percentage === 100">Done</span>
+                    </span>
+        <span class="speed-and-eta-text" *ngIf="f.progress?.data?.percentage !== 0 && f.progress?.data?.percentage !== 100">
+                      <span>{{ f.progress?.data?.speedHuman }} </span>
+                      <span>ETA {{ f.progress?.data?.etaHuman }}</span>
+                    </span>
+      </div>
+    </div>
+  </div>
+</div>-->
+<input style="display: none" type="file" accept="*" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" #fileInput1>
+<span>upload file: </span> <button (click)="fileInput1.click()" type="button">upload</button>

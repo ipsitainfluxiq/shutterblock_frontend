@@ -74,7 +74,6 @@ const appRoutes: Routes = [
     {path: 'events', component: EventsComponent},
     {path: 'navbaricon', component: NavbariconComponent},
     {path: 'partners', component: PartnersComponent},
-    // {path: 'become-a-model', component: BecomeAModelComponent,  resolve: {results: Resolveservice}},
     {path: 'become-a-model', component: BecomeAModelComponent},
     {path: 'our-models', component: OurModelsComponent},
     {path: 'model-profile', component: ModelProfileComponent},

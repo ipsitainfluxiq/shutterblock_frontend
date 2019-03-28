@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, TemplateRef } from '@angular/core';
+import {Component, OnInit, EventEmitter, TemplateRef, ViewChild, ElementRef} from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ValidatorFn, AbstractControl, FormControl} from '@angular/forms';
-import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions } from 'ngx-uploader';
+import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, UploadStatus } from 'ngx-uploader';
 
 import { Router, ActivatedRoute} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -16,14 +16,22 @@ declare var $:any;
   styleUrls: ['./become-a-model.component.css']
 })
 export class BecomeAModelComponent implements OnInit {
-  options: UploaderOptions;
+  url1 = 'http://18.222.26.198/upload';
+  url = 'http://18.222.26.198:7002/uploads';
   formData: FormData;
   files: UploadFile[];
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
   dragOver: boolean;
+  options: UploaderOptions;
+  @ViewChild('fileInput1') uploaderInput: ElementRef;
+  public lengthis;
+  public percentageis;
+  public nameis;
   public dataForm: FormGroup;
   public kp;
+  public fileservername;
+  public filelocalname;
   public endpoint = 'frontendsignup';
   public mysuccessapplication: any = false;
   public issubmit=0;
@@ -98,7 +106,10 @@ export class BecomeAModelComponent implements OnInit {
       facebooklink: ['',Validators.required],
       instagramlink: ['',Validators.required],
       twitterlink: ['',Validators.required],
-      modelmayhemlink: ['',Validators.required]});
+      modelmayhemlink: ['',Validators.required],
+      fileservername: [''],
+      filelocalname: [''],
+    });
   }
 
   doclick() {
@@ -153,7 +164,8 @@ export class BecomeAModelComponent implements OnInit {
       });
     }
   }
-  onUploadOutput(output: UploadOutput): void {
+/*  onUploadOutput(output: UploadOutput): void {
+
     switch (output.type) {
       case 'allAddedToQueue':
         // uncomment this if you want to auto upload files when added
@@ -164,18 +176,25 @@ export class BecomeAModelComponent implements OnInit {
         //   data: { foo: 'bar' }
         // };
         // this.uploadInput.emit(event);
+          console.log('allAddedToQueue');
         break;
       case 'addedToQueue':
+
         if (typeof output.file !== 'undefined') {
+          console.log(output.file.type);
           this.files.push(output.file);
+          console.log(this.files);
         }
+        // console.log('addedToQueue');
         break;
       case 'uploading':
         if (typeof output.file !== 'undefined') {
           // update current data in files array for uploading file
           const index = this.files.findIndex((file) => typeof output.file !== 'undefined' && file.id === output.file.id);
           this.files[index] = output.file;
+          console.log(this.files[0]);
         }
+        // console.log('uploading');
         break;
       case 'removed':
         // remove file from array when removed
@@ -198,8 +217,8 @@ export class BecomeAModelComponent implements OnInit {
     console.log("all ok");
     const event: UploadInput = {
       type: 'uploadAll',
-      url: 'http://18.222.26.198:7002/frontendsignup',
-      method: 'POST',
+      url: 'http://18.222.26.198:7002/uploads',
+      // method: 'POST',
       // data: { foo: 'bar' }
     };
 console.log(event);
@@ -218,5 +237,115 @@ console.log(event);
 
   removeAllFiles(): void {
     this.uploadInput.emit({ type: 'removeAll' });
+  }*/
+
+/*  onUploadOutput(output: UploadOutput): void {
+    if (output.type === 'allAddedToQueue') {
+      const event: UploadInput = {
+        type: 'uploadAll',
+        url: this.url,
+        // method: 'POST',
+        // data: { foo: 'bar' }
+      };
+
+      this.uploadInput.emit(event);
+    } else if (output.type === 'addedToQueue' && typeof output.file !== 'undefined') {
+      this.files.push(output.file);
+    } else if (output.type === 'uploading' && typeof output.file !== 'undefined') {
+      const index = this.files.findIndex(file => typeof output.file !== 'undefined' && file.id === output.file.id);
+      this.files[index] = output.file;
+    } else if (output.type === 'cancelled' || output.type === 'removed') {
+      this.files = this.files.filter((file: UploadFile) => file !== output.file);
+    } else if (output.type === 'dragOver') {
+      this.dragOver = true;
+    } else if (output.type === 'dragOut') {
+      this.dragOver = false;
+    } else if (output.type === 'drop') {
+      this.dragOver = false;
+    } else if (output.type === 'rejected' && typeof output.file !== 'undefined') {
+      console.log(output.file.name + ' rejected');
+    }
+
+    this.files = this.files.filter(file => file.progress.status !== UploadStatus.Done);
+  }*/
+
+  startUpload(): void {
+    const event: UploadInput = {
+      type: 'uploadAll',
+      url: this.url,
+      // method: 'POST',
+      // data: { foo: 'bar' }
+    };
+
+    this.uploadInput.emit(event);
   }
+
+  cancelUpload(id: string): void {
+    this.uploadInput.emit({ type: 'cancel', id: id });
+  }
+
+  removeFile(id: string): void {
+    this.uploadInput.emit({ type: 'remove', id: id });
+  }
+
+  removeAllFiles(): void {
+    this.uploadInput.emit({ type: 'removeAll' });
+  }
+
+
+
+
+
+onUploadOutput(output: UploadOutput): void {
+  this.uploaderInput.nativeElement.value = '';
+  if (output.type === 'allAddedToQueue') {
+    const event: UploadInput = {
+      type: 'uploadAll',
+      url: this.url,
+      method: 'POST',
+    };
+    this.uploadInput.emit(event);
+  } else if (output.type === 'addedToQueue' && typeof output.file !== 'undefined') {
+    if (output.file.response != '') {
+      this.files = [];
+      this.files.push(output.file);
+      console.log('this.files*********');
+      console.log(this.files);
+      this.lengthis = this.files.length;
+      this.percentageis = this.files[0].progress.data.percentage;
+    }
+  } else if (output.type === 'uploading' && typeof output.file !== 'undefined') {
+    const index = this.files.findIndex(file => typeof output.file !== 'undefined' && file.id === output.file.id);
+    this.files[index] = output.file;
+    this.lengthis = this.files.length;
+    this.percentageis = this.files[0].progress.data.percentage;
+    console.log('this.files==================');
+    console.log(this.files);
+  } else if (output.type === 'removed') {
+    this.files = this.files.filter((file: UploadFile) => file !== output.file);
+  } else if (output.type === 'dragOver') {
+    this.dragOver = true;
+  } else if (output.type === 'dragOut') {
+    this.dragOver = false;
+  } else if (output.type === 'drop') {
+    this.dragOver = false;
+  }
+  console.log('files-');
+  console.log(this.files);
+  if (this.files.length > 0 && this.files[0].name != null && this.files[0].response != null) {
+    this.lengthis = this.files.length;
+    this.percentageis = this.files[0].progress.data.percentage;
+    this.nameis = this.files[0].name;
+    console.log(this.files[0].response);
+    console.log(this.files[0].name);
+    console.log(this.lengthis);
+    this.dataForm.patchValue({
+      fileservername : this.files[0].response,
+      filelocalname : this.files[0].name
+    });
+    // this.fileservername = this.dataForm.controls['fileservername'];
+    this.fileservername = this.files[0].response;
+  }
+}
+
 }
