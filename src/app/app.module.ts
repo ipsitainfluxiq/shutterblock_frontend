@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import {appRoutingProviders, routing} from './route';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 import { MusicdivisionComponent } from './musicdivision/musicdivision.component';
 import { WebookComponent } from './webook/webook.component';
 import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
@@ -53,6 +54,7 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 import {ApiService} from './api.service';
 import {AuthGuard} from './auth.guard';
 import {NgxUploaderModule} from 'ngx-uploader';
+import { UploaderComponent } from './uploader/uploader.component';
 
 
 
@@ -96,6 +98,7 @@ import {NgxUploaderModule} from 'ngx-uploader';
     MusicManagementComponent,
     MarketingManagementComponent,
     ContactUsComponent,
+    UploaderComponent,
 
   ],
   imports: [
@@ -108,7 +111,8 @@ import {NgxUploaderModule} from 'ngx-uploader';
     ReactiveFormsModule,
     routing,
     NgxUploaderModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    ProgressbarModule.forRoot()
   ],
 
   bootstrap: [AppComponent],

@@ -1,0 +1,22 @@
+<div class="uploadsection">
+  <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,UploaderComponent)" [uploadInput]="apiService.uploadInput" #fileInput1 >
+  <h3 *ngIf="nameis" style="color: white;">upload file:</h3> <button (click)="fileInput1.click()" type="button">upload</button>
+
+
+</div>
+
+<div>
+
+  <progressbar *ngIf="apiService.progress>0" class="progress-striped active" max="100" [value]="apiService.progress" [type]="type">{{apiService.progress}}% uploaded</progressbar>
+
+  <span *ngIf="apiService.fileservername!=null && apiService.fileservername.length>0">
+                  <span *ngFor="let img of apiService.fileservername">
+                    <img  src="{{apiService.Model_Image_Url}}/{{img}}" style="height: 50px; width: 50px">
+                  </span>
+                </span>
+
+
+</div>
+
+<div style="color: white">0000----999======={{filenamevalc}}//{{filenamevalc1}}---</div>
+<button (click)="getval()">uiiii</button>
