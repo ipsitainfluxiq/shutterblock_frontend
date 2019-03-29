@@ -33,8 +33,8 @@ export class BecomeAModelComponent implements OnInit {
   public lengthis=0;
   public percentageis=0;
   public nameis=0;
-  public uploader;
-  public uploader1;
+  public uploader:any='upload';
+  public uploader1:any='upload1';
   public stateslist:any = [];
   modalRef: BsModalRef;
   dragOver:boolean;
@@ -175,6 +175,7 @@ export class BecomeAModelComponent implements OnInit {
       console.log('ghjgjg --iuuyyy ');
       console.log(this.uploader);
       console.log(this.uploader1);
+      console.log(this.apiService.fileservername);
     }
 
   dosubmit(template:TemplateRef<any>) {
