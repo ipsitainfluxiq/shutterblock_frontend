@@ -66,25 +66,6 @@ export class BecomeAModelComponent implements OnInit {
     this.dynamic = 0;
     this.type = 'info';
   }
-/*
-  random(): void {
-    let value = Math.floor(Math.random() * 100 + 1);
-    let type: string;
-
-    if (value < 25) {
-      type = 'success';
-    } else if (value < 50) {
-      type = 'info';
-    } else if (value < 75) {
-      type = 'warning';
-    } else {
-      type = 'danger';
-    }
-
-    this.dynamic = value;
-    this.type = type;
-  }*/
-
   ngOnInit() {
     this.apiService.uploadtype = 'single';
     this.apiService.getState().subscribe(res => {
@@ -187,20 +168,35 @@ export class BecomeAModelComponent implements OnInit {
     for (x in this.dataForm.controls) {
       this.dataForm.controls[x].markAsTouched();
     }
+
+    console.log(this.apiService.fileservername);
+    console.log(this.apiService.fileservername[this.uploader]);
+    console.log(this.apiService.fileservername[this.uploader].length);
     if (this.dataForm.valid) {
       console.log('valid');
       console.log(this.dataForm.value);
-      let data = {source:'users',data:this.dataForm.value};
-      this.apiService.postDatawithottoken(this.endpoint, data).subscribe(res => {
-        console.log("okkk");
-        let result: any = {};
-        result = res;
-        if (result.status == 'success') {
-          this.modalRef = this.modal.show(template);
-        }
-      }, error => {
-        console.log('Oooops!');
-      });
+      let data:any;
+      data={source:'users',data:this.dataForm.value};
+      data.data.images=this.apiService.fileservername[this.uploader];
+      if(this.apiService.fileservername==null || this.apiService.fileservername[this.uploader]==null || this.apiService.fileservername[this.uploader].length<4){
+        alert('please upload atleast 4 images');
+
+      }else {
+        //alert(33);
+        console.log(this.apiService.fileservername);
+        console.log(this.apiService.fileservername[this.uploader]);
+        this.apiService.postDatawithottoken(this.endpoint, data).subscribe(res => {
+          console.log("okkk");
+          let result: any = {};
+          result = res;
+          if (result.status == 'success') {
+            this.apiService.fileservername[this.uploader]=[];
+            this.modalRef = this.modal.show(template);
+          }
+        }, error => {
+          console.log('Oooops!');
+        });
+      }
     }
   }
 

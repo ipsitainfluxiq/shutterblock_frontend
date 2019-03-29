@@ -363,8 +363,8 @@
 
 }
 @media screen and (max-width: 991px) {
-
-
+    .uploadsection_wrapper{ text-align: center;}
+    .uploadsection_wrapper .uploadthumimgbox{ display: inline-block; float: none;}
 
     .sponsorblock {
         padding: 7px;
@@ -4451,6 +4451,10 @@
     .progress {
         width:74%;
     }
+
+    .progressnew {
+        width:74%;
+    }
     .musicmanagementblock2imgrighttop {
         width: 340px;
     }
@@ -5065,6 +5069,12 @@
         width: 100%;
         margin-bottom: 15px;
         margin-top: 10px;
+    }
+
+    .progressnew {
+        width: 100%;
+        margin-bottom: 0px; height:auto;
+        margin-top: 0;
     }
     .musicmanagementblock3 h1.headertitle {
         font-size: 50px;

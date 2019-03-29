@@ -7651,3 +7651,38 @@ p.headertitlepara{
 /*----End contact us css---*/
 
 
+.uploadsection button{display: inline-block!important;
+	padding: 10px 35px!important;
+	cursor: pointer!important;
+	background-color: #4b4571!important;
+	font-size: 18px!important;
+	color: #c5c0e6!important;
+	font-family: 'CenturyGothic'!important;
+	text-transform: uppercase!important; border: none!important; outline: none!important;}
+
+
+
+.progressnew {
+	position: relative;
+	margin-bottom: 0px !important;
+	height: 10px;
+	width: 80%;
+	overflow: inherit;
+	margin-bottom: 15px;
+	background-color: #272b33;
+	box-shadow: none;
+}
+
+.uploadsection_wrapper{ width: 100%; margin-top: 15px;}
+
+.uploadsection_wrapper .uploadthum{ display: inline-block;}
+
+.uploadsection_wrapper .uploadthumimgbox{   width: 226px; height: 226px;   background: rgba(0, 0, 0, 0.5);  border: 1px solid #201e2c;  position: relative; overflow: hidden; margin:2px;  display: block;
+	float: left;}
+
+.uploadsection_wrapper img{ width: 100%; display: block;}
+
+.uploadsection_wrapper button{ position: absolute; right:2px;
+	top: 2px; background: url(../images/imagedelete.png) center center; background-size: 100%; width: 25px; height: 25px; border: none; font-size: 0px; opacity: 0.7;}
+
+.uploadthumimgbox_span{ width: 226px; height: 226px;  display: table-cell; text-align: center; vertical-align: middle;}
