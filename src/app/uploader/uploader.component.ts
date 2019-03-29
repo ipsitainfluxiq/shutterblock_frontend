@@ -8,7 +8,7 @@ import {ApiService} from "../api.service";
 })
 export class UploaderComponent implements OnInit {
 
-  //public filenamevalc;
+  public filenamevalc;
   public filenamevalc1;
   ///public filenameval;
   @Input()
