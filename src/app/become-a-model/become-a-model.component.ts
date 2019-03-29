@@ -15,10 +15,10 @@ declare var $:any;
   styleUrls: ['./become-a-model.component.css']
 })
 export class BecomeAModelComponent implements OnInit {
-  url1 = 'http://18.222.26.198/upload';
-  url = 'http://18.222.26.198:7002/uploads';
+  // url1 = 'http://18.222.26.198/upload';
+  // url = 'http://18.222.26.198:7002/uploads';
   formData: FormData;
-  EventEmitter
+  EventEmitter;
   public dataForm: FormGroup;
   public kp;
   public fileservername;
@@ -83,63 +83,63 @@ export class BecomeAModelComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.apiService.uploadtype='single';
+    this.apiService.uploadtype = 'single';
     this.apiService.getState().subscribe(res => {
       let result;
       result = res;
       this.stateslist = result;
-      // console.log('All staes.....');
-      // console.log(this.stateslist);
     }, error => {
       console.log('Oooops!');
     });
-    /*this._http.get("assets/data/state.json")
-        .subscribe(res => {
-          let result;
-          result = res;
-          this.stateslist = result;
-          console.log('All staes.....');
-          console.log(this.stateslist);
-        }, error => {
-          console.log('Oooops!');
-        });*/
 
-
-    this.dataForm =  this.kp.group({
-      firstname: ['',Validators.required],
-      lastname: ['',Validators.required],
-      age: ['',Validators.required],
-      phone: ['',Validators.required],
+    this.dataForm = this.kp.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      age: ['', Validators.required],
+      phone: ['', Validators.required],
       email: ["", BecomeAModelComponent.validateEmail],
-      city: ['',Validators.required],
-      state: ['',Validators.required],
-      ethnicity: ['',Validators.required],
-      height: ['',Validators.required],
-      eyecolor: ['',Validators.required],
-      haircolor: ['',Validators.required],
-      weight: ['',Validators.required],
-      bust: ['',Validators.required],
-      waist: ['',Validators.required],
-      hips: ['',Validators.required],
-      password: ['',Validators.required],
-      confirmpassword: ['',Validators.required],
+      city: ['', Validators.required],
+      state: ['', Validators.required],
+      ethnicity: ['', Validators.required],
+      height: ['', Validators.required],
+      eyecolor: ['', Validators.required],
+      haircolor: ['', Validators.required],
+      weight: ['', Validators.required],
+      bust: ['', Validators.required],
+      waist: ['', Validators.required],
+      hips: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmpassword: ['', Validators.required],
       athletic: [''],
       slim: [''],
       toned: [''],
       voluptuous: [''],
       tattoos: [''],
       piercings: [''],
-      promotions: ['',Validators.required],
-      sales: ['',Validators.required],
-      retail: ['',Validators.required],
-      descriptionbox: ['',Validators.required],
-      facebooklink: ['',Validators.required],
-      instagramlink: ['',Validators.required],
-      twitterlink: ['',Validators.required],
-      modelmayhemlink: ['',Validators.required],
+      promotions: ['', Validators.required],
+      sales: ['', Validators.required],
+      retail: ['', Validators.required],
+      descriptionbox: ['', Validators.required],
+      facebooklink: ['', Validators.required],
+      instagramlink: ['', Validators.required],
+      twitterlink: ['', Validators.required],
+      modelmayhemlink: ['', Validators.required],
       fileservername: [''],
       filelocalname: [''],
-    });
+    }, {validator: this.machpassword('password', 'confirmpassword')});
+  }
+
+    machpassword(passwordkye: string, confirmpasswordkye: string) {
+      return (group: FormGroup) => {
+        let passwordInput = group.controls[passwordkye],
+            confirmpasswordInput = group.controls[confirmpasswordkye];
+        if (passwordInput.value !== confirmpasswordInput.value) {
+          return confirmpasswordInput.setErrors({notEquivalent: true});
+        }
+        else {
+          return confirmpasswordInput.setErrors(null);
+        }
+      };
   }
 
   doclick() {
