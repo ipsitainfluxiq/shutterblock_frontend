@@ -8,6 +8,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { ApiService } from '../../app/api.service';
 import { Resolveservice } from '../../app/resolveservice';
+import { environment } from '../../environments/environment';
 declare var $:any;
 @Component({
   selector: 'app-become-a-model',
@@ -21,6 +22,8 @@ export class BecomeAModelComponent implements OnInit {
   EventEmitter;
   public dataForm: FormGroup;
   public kp;
+  public modeluploadpath:any=environment.brandfolder;
+  public modelfilepath:any=environment.Brand_Image_Url
   public fileservername;
   public uploadInput:EventEmitter<UploadInput>;
   public humanizeBytes:Function;

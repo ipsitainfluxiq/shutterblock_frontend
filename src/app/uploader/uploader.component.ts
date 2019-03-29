@@ -11,6 +11,8 @@ export class UploaderComponent implements OnInit {
   public filenamevalc;
   public filenamevalc1;
   public uploadtypec;
+  public uploadpathc;
+  public filepathc;
   ///public filenameval;
   @Input()
   set filenameval(filenameval: any) {
@@ -18,6 +20,20 @@ export class UploaderComponent implements OnInit {
     this.filenamevalc = filenameval;
     console.log('this.filenamevalc');
     console.log(this.filenamevalc);
+  }
+  @Input()
+  set uploadpath(uploadpath: any) {
+    //alert(filenameval);
+    this.uploadpathc = uploadpath;
+    console.log('this.uploadpathc');
+    console.log(this.uploadpathc);
+  }
+  @Input()
+  set filepath(filepath: any) {
+    //alert(filenameval);
+    this.filepathc = filepath;
+    console.log('this.filepathc');
+    console.log(this.filepathc);
   }
   @Input()
   set uploadtype(uploadtype: any) {

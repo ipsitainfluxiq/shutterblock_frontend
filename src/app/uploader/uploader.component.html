@@ -1,5 +1,5 @@
 <div class="uploadsection">
-  <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,filenamevalc,uploadtypec)" multiple [uploadInput]="apiService.uploadInput" #fileInput1 >
+  <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,filenamevalc,uploadtypec,uploadpathc)"  [uploadInput]="apiService.uploadInput" #fileInput1 >
   <h3 *ngIf="nameis" style="color: white;">upload file:</h3> <button *ngIf="apiService.inprogress==null" (click)="fileInput1.click()" type="button">upload</button>
 
 
@@ -11,17 +11,12 @@
 
   <span *ngIf="apiService.fileservername!=null && apiService.fileservername[filenamevalc]!=null && apiService.fileservername[filenamevalc].length>0">
                   <span *ngFor="let img of apiService.fileservername[filenamevalc] ;let i=index;">
-                    <img  src="{{apiService.Model_Image_Url}}/{{img}}" style="height: 50px; width: 50px">
+                    <img  src="{{filepathc}}/{{img}}" style="height: 50px; width: 50px">
                     <button (click)="delimage(i)">Delete</button>
                   </span>
                 </span>
 
 
 </div>
-<<<<<<< HEAD
-<!--
 
-<div style="color: white">0000&#45;&#45;&#45;&#45;999======={{filenamevalc}}//{{filenamevalc1}}-&#45;&#45;</div>
-<button (click)="getval()">uiiii</button>-->
-=======
->>>>>>> 5cb365e49affd633c8b86452ab35c4afc9aa855b
+<div *ngIf="apiService.uploaderror!='' " class="error" style="color: white;"> {{apiService.uploaderror}}</div>
