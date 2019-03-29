@@ -22,8 +22,8 @@ export class BecomeAModelComponent implements OnInit {
   EventEmitter;
   public dataForm: FormGroup;
   public kp;
-  public modeluploadpath:any=environment.brandfolder;
-  public modelfilepath:any=environment.Brand_Image_Url
+  public modeluploadpath:any = environment.brandfolder;
+  public modelfilepath:any = environment.Brand_Image_Url;
   public fileservername;
   public uploadInput:EventEmitter<UploadInput>;
   public humanizeBytes:Function;
@@ -62,11 +62,11 @@ export class BecomeAModelComponent implements OnInit {
     this.files = []; // local uploading files array
     this.uploadInput = new EventEmitter<UploadInput>(); // input events, we use this to emit data to ngx-uploader
     this.humanizeBytes = humanizeBytes;
-    //this.random();
+    // this.random();
     this.dynamic = 0;
     this.type = 'info';
   }
-
+/*
   random(): void {
     let value = Math.floor(Math.random() * 100 + 1);
     let type: string;
@@ -83,7 +83,7 @@ export class BecomeAModelComponent implements OnInit {
 
     this.dynamic = value;
     this.type = type;
-  }
+  }*/
 
   ngOnInit() {
     this.apiService.uploadtype = 'single';
@@ -100,7 +100,7 @@ export class BecomeAModelComponent implements OnInit {
       lastname: ['', Validators.required],
       age: ['', Validators.required],
       phone: ['', Validators.required],
-      email: ["", BecomeAModelComponent.validateEmail],
+      email: ['', BecomeAModelComponent.validateEmail],
       city: ['', Validators.required],
       state: ['', Validators.required],
       ethnicity: ['', Validators.required],

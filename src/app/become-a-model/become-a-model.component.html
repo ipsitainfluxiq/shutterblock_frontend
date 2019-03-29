@@ -242,7 +242,7 @@
         </div>
         <div class="form-group col-sm-3 col-xs-12">
           <input class="form-control" id="confirmpassword" name="confirmpassword" placeholder="confirm password*" type="password"  [formControl]="dataForm.controls['confirmpassword']" (keyup)="issubmit=0">
-          <span class="error" *ngIf="!dataForm.controls['confirmpassword'].valid && dataForm.controls['confirmpassword'].touched && issubmit==1">Password field is required & give proper password.</span>
+          <span class="error" *ngIf="!dataForm.controls['confirmpassword'].valid && dataForm.controls['confirmpassword'].touched && issubmit==1">Password dose not mach.</span>
         </div>
       </div>
       <!-- <div class="form-row">

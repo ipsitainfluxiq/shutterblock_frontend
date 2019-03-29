@@ -1,11 +1,11 @@
-import {Injectable, ViewChild,EventEmitter,ElementRef} from '@angular/core';
+import {Injectable, ViewChild, EventEmitter, ElementRef} from '@angular/core';
 import { Observable, interval, pipe } from 'rxjs';
 import { switchMap, map, takeWhile } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { CookieService } from 'ngx-cookie-service';
 import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, UploadStatus } from 'ngx-uploader';
-import {UploaderComponent} from "./uploader/uploader.component";
+// import {UploaderComponent} from "./uploader/uploader.component";
 
 @Injectable()
 export class ApiService {
@@ -30,7 +30,7 @@ export class ApiService {
   constructor(private _http: HttpClient,
               private _authHttp: HttpClient,
               private cookieService: CookieService,
-              //private uploaderservice: UploaderComponent
+              // private uploaderservice: UploaderComponent
               // public jwtHelper: JwtHelperService,
               // private loggedinService: LoggedinService
   ) {
