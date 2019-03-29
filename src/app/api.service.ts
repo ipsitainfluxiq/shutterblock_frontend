@@ -21,7 +21,7 @@ export class ApiService {
   @ViewChild('fileInput1') uploaderInput: ElementRef;
   public lengthis;
   public percentageis;
-  public progress:any=0;
+  public progress:any=[];
   public uploadtype;
   fileservername:any=[];
 
@@ -73,7 +73,7 @@ export class ApiService {
 
 
 
-  onUploadOutput(output: UploadOutput,classval:UploaderComponent): void {
+  onUploadOutput(output: UploadOutput,arrayval:any,uploadtypec:any): void {
     //this.uploaderInput.nativeElement.value = '';
     if (output.type === 'allAddedToQueue') {
       const event: UploadInput = {
@@ -111,28 +111,31 @@ export class ApiService {
     console.log('files-');
     console.log(this.files);
     if(this.files[0].progress!=null) {
-      this.progress=0;
+      if(this.progress[arrayval]==null)this.progress[arrayval]=0;
       console.log('this.files[0].progress.data.percentage');
       console.log(this.files[0].progress.data.percentage);
-      this.progress = (this.files[0].progress.data.percentage);
-      if(this.progress==100) this.progress=null;
-      console.log('this.uploadtype');
-      console.log(this.uploadtype);
+      this.progress[arrayval] = (this.files[0].progress.data.percentage);
+      if(this.progress[arrayval]==100) this.progress[arrayval]=null;
+      console.log('this.uploadtype in api service');
+      console.log(uploadtypec);
     }
-    if(this.uploadtype=='single'){
-      this.fileservername=[];
-      if(this.files[0].response!=null) this.fileservername.push(this.files[0].response);
+    if(uploadtypec=='single'){
+      //this.fileservername=[];
+      if(this.fileservername[arrayval]==null) this.fileservername[arrayval]=[];
+      this.fileservername[arrayval]=[];
+      if(this.files[0].response!=null) this.fileservername[arrayval].push(this.files[0].response);
     }
-    if(this.uploadtype=='multiple'){
+    if(uploadtypec=='multiple'){
       console.log('this.files[0].response');
       console.log(this.files[0].response);
-      if(this.files[0].response!=null) this.fileservername.push(this.files[0].response);
+      if(this.fileservername[arrayval]==null) this.fileservername[arrayval]=[];
+      if(this.files[0].response!=null) this.fileservername[arrayval].push(this.files[0].response);
     }
     console.log('this.fileservername');
     console.log(this.fileservername);
     //this.uploaderservice.filenamevalc1=this.fileservername;
     //UploaderComponent.filenamevalc1=87;
-    console.log(classval);
+    //console.log(classval);
 
   }
 

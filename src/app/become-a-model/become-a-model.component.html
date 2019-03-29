@@ -272,8 +272,8 @@
           <!--<div class="uploadsection">-->
             <!--<div class="uploadsection">-->
 
-            <app-uploader [lf]="uploader" filenameval="" ></app-uploader>
-            <app-uploader filenameval="" ></app-uploader>
+            <app-uploader uploadtype="single" [filenameval]="uploader" ></app-uploader>
+            <app-uploader uploadtype="multiple" [filenameval]="uploader1" ></app-uploader>
 
             <button (click)="checkupload()">Check uploads</button>
 
