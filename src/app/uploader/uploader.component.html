@@ -1,6 +1,6 @@
 <div class="uploadsection">
-  <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,filenamevalc,uploadtypec)" [uploadInput]="apiService.uploadInput" #fileInput1 >
-  <h3 *ngIf="nameis" style="color: white;">upload file:</h3> <button (click)="fileInput1.click()" type="button">upload</button>
+  <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,filenamevalc,uploadtypec)" multiple [uploadInput]="apiService.uploadInput" #fileInput1 >
+  <h3 *ngIf="nameis" style="color: white;">upload file:</h3> <button *ngIf="apiService.inprogress==null" (click)="fileInput1.click()" type="button">upload</button>
 
 
 </div>

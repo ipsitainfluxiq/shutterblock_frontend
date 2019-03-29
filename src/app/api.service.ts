@@ -21,6 +21,7 @@ export class ApiService {
   @ViewChild('fileInput1') uploaderInput: ElementRef;
   public lengthis;
   public percentageis;
+  public inprogress;
   public progress:any=[];
   public uploadtype;
   fileservername:any=[];
@@ -112,10 +113,14 @@ export class ApiService {
     console.log(this.files);
     if(this.files[0].progress!=null) {
       if(this.progress[arrayval]==null)this.progress[arrayval]=0;
+      this.inprogress=true;
       console.log('this.files[0].progress.data.percentage');
       console.log(this.files[0].progress.data.percentage);
       this.progress[arrayval] = (this.files[0].progress.data.percentage);
-      if(this.progress[arrayval]==100) this.progress[arrayval]=null;
+      if(this.progress[arrayval]==100) {
+        this.progress[arrayval]=null;
+        this.inprogress=null;
+      }
       console.log('this.uploadtype in api service');
       console.log(uploadtypec);
     }
