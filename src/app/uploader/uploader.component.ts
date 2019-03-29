@@ -10,6 +10,7 @@ export class UploaderComponent implements OnInit {
 
   public filenamevalc;
   public filenamevalc1;
+  public uploadtypec;
   ///public filenameval;
   @Input()
   set filenameval(filenameval: any) {
@@ -34,7 +35,7 @@ export class UploaderComponent implements OnInit {
     console.log('this.filenamevalc in constructor ... ');
     console.log(this.filenamevalc);
     console.log(this.filenamevalc1);
-    console.log(this.lf);
+    //console.log(this.lf);
     //this.filenamevalcChange.emit(this.filenamevalc);
   }
   getval(){
