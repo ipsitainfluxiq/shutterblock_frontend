@@ -1,18 +1,22 @@
 <div class="uploadsection">
   <input style="display: none" type="file" accept="*" ngFileSelect [options]="apiService.options" (uploadOutput)="apiService.onUploadOutput($event,filenamevalc,uploadtypec,uploadpathc)"  [uploadInput]="apiService.uploadInput" #fileInput1 >
+   <div class="progressnew"> <progressbar *ngIf=" apiService.progress[filenamevalc] !=null && apiService.progress[filenamevalc]>0" class="progress-striped active" max="100" [value]="apiService.progress[filenamevalc]" [type]="type">{{apiService.progress[filenamevalc]}}% </progressbar></div>
   <h3 *ngIf="nameis" style="color: white;">upload file:</h3> <button *ngIf="apiService.inprogress==null" (click)="fileInput1.click()" type="button">upload</button>
 
 
 </div>
 
-<div>
+<div class="uploadsection_wrapper">
 
-  <progressbar *ngIf=" apiService.progress[filenamevalc] !=null && apiService.progress[filenamevalc]>0" class="progress-striped active" max="100" [value]="apiService.progress[filenamevalc]" [type]="type">{{apiService.progress[filenamevalc]}}% </progressbar>
+  <!--<progressbar *ngIf=" apiService.progress[filenamevalc] !=null && apiService.progress[filenamevalc]>0" class="progress-striped active" max="100" [value]="apiService.progress[filenamevalc]" [type]="type">{{apiService.progress[filenamevalc]}}% </progressbar>-->
 
-  <span *ngIf="apiService.fileservername!=null && apiService.fileservername[filenamevalc]!=null && apiService.fileservername[filenamevalc].length>0">
-                  <span *ngFor="let img of apiService.fileservername[filenamevalc] ;let i=index;">
-                    <img  src="{{filepathc}}/{{img}}" style="height: 50px; width: 50px">
+  <span class="uploadthum" *ngIf="apiService.fileservername!=null && apiService.fileservername[filenamevalc]!=null && apiService.fileservername[filenamevalc].length>0">
+                  <span class="uploadthumimgbox" *ngFor="let img of apiService.fileservername[filenamevalc] ;let i=index;">
+
+                      <span class="uploadthumimgbox_span">
+                    <img  src="{{filepathc}}/{{img}}" >
                     <button (click)="delimage(i)">Delete</button>
+                          </span>
                   </span>
                 </span>
 
