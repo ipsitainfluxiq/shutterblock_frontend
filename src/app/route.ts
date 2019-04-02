@@ -45,7 +45,7 @@ import {MarketingManagementComponent} from "./marketing-management/marketing-man
 import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {Resolveservice} from './resolveservice';
 
-//import {FooterComponent} from "./footer/footer.component";
+// import {FooterComponent} from "./footer/footer.component";
 
 
 const appRoutes: Routes = [
@@ -65,7 +65,7 @@ const appRoutes: Routes = [
     {path: 'editadmin/:id', component: EditadminComponent},
     {path: 'footer', component: FooterComponent},
     {path: 'brandlisting', component: BrandlistingComponent},
-    {path:'offerlisting', component: OfferlistingComponent},
+    {path: 'offerlisting', component: OfferlistingComponent},
     {path: 'influencerlisting', component: InfluencerlistingComponent},
     {path: 'influencelist', component: InfluencelistComponent},
     {path: 'brandlist', component: BrandlistComponent},

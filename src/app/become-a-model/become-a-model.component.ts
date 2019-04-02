@@ -22,25 +22,25 @@ export class BecomeAModelComponent implements OnInit {
   EventEmitter;
   public dataForm: FormGroup;
   public kp;
-  public modeluploadpath:any = environment.brandfolder;
-  public modelfilepath:any = environment.Brand_Image_Url;
+  public modeluploadpath: any = environment.brandfolder;
+  public modelfilepath: any = environment.Brand_Image_Url;
   public fileservername;
-  public uploadInput:EventEmitter<UploadInput>;
-  public humanizeBytes:Function;
+  public uploadInput: EventEmitter<UploadInput>;
+  public humanizeBytes: Function;
   public files;
   public options;
   public filelocalname;
   public endpoint = 'frontendsignup';
   public mysuccessapplication: any = false;
-  public issubmit=0;
-  public lengthis=0;
-  public percentageis=0;
-  public nameis=0;
-  public uploader:any='upload';
-  public uploader1:any='upload1';
-  public stateslist:any = [];
+  public issubmit = 0;
+  public lengthis = 0;
+  public percentageis = 0;
+  public nameis = 0;
+  public uploader: any = 'upload';
+  public uploader1: any = 'upload1';
+  public stateslist: any = [];
   modalRef: BsModalRef;
-  dragOver:boolean;
+  dragOver: boolean;
 
 
 
@@ -119,15 +119,14 @@ export class BecomeAModelComponent implements OnInit {
             confirmpasswordInput = group.controls[confirmpasswordkye];
         if (passwordInput.value !== confirmpasswordInput.value) {
           return confirmpasswordInput.setErrors({notEquivalent: true});
-        }
-        else {
+        } else {
           return confirmpasswordInput.setErrors(null);
         }
       };
   }
 
   doclick() {
-    console.log("dfsg");
+    // console.log("dfsg");
     this.mysuccessapplication = true;
     console.log(' this.mysuccessapplication');
     console.log(this.mysuccessapplication);
@@ -140,13 +139,13 @@ export class BecomeAModelComponent implements OnInit {
 
   scrolltoform() {
     $('html, body').animate({
-      scrollTop: $("#div_id").offset().top
+      scrollTop: $('#div_id').offset().top
     }, 2000);
   }
 
 
   static validateEmail(control: FormControl){
-    if(control.value==''){
+    if (control.value == '') {
       return { 'invalidemail': true };
     }
     let filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
@@ -162,8 +161,8 @@ export class BecomeAModelComponent implements OnInit {
       console.log(this.apiService.fileservername);
     }
 
-  dosubmit(template:TemplateRef<any>) {
-    this.issubmit=1;
+  dosubmit(template: TemplateRef<any>, erroemodal: TemplateRef<any>) {
+    this.issubmit = 1;
     let x: any;
     for (x in this.dataForm.controls) {
       this.dataForm.controls[x].markAsTouched();
@@ -171,27 +170,28 @@ export class BecomeAModelComponent implements OnInit {
 
     console.log(this.apiService.fileservername);
     console.log(this.apiService.fileservername[this.uploader]);
-    console.log(this.apiService.fileservername[this.uploader].length);
+    // console.log(this.apiService.fileservername[this.uploader].length);
     if (this.dataForm.valid) {
       console.log('valid');
       console.log(this.dataForm.value);
-      let data:any;
-      data={source:'users',data:this.dataForm.value};
-      data.data.images=this.apiService.fileservername[this.uploader];
-      if(this.apiService.fileservername==null || this.apiService.fileservername[this.uploader]==null || this.apiService.fileservername[this.uploader].length<4){
-        alert('please upload atleast 4 images');
-
-      }else {
-        //alert(33);
+      let data: any;
+      data = {source: 'users', data : this.dataForm.value};
+      data.data.images = this.apiService.fileservername[this.uploader];
+      if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
+        // alert('please upload atleast 4 images');
+          // this.modalRef = this.modal.show(erroemodal), {class: 'modal-md editcompetition'};
+          this.modalRef = this.modal.show(erroemodal,{ class: 'modal-md modaldefault'});
+      } else {
+        // alert(33);
         console.log(this.apiService.fileservername);
         console.log(this.apiService.fileservername[this.uploader]);
         this.apiService.postDatawithottoken(this.endpoint, data).subscribe(res => {
-          console.log("okkk");
+          console.log('okkk');
           let result: any = {};
           result = res;
           if (result.status == 'success') {
-            this.apiService.fileservername[this.uploader]=[];
-            this.modalRef = this.modal.show(template);
+            this.apiService.fileservername[this.uploader] = [];
+            this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
           }
         }, error => {
           console.log('Oooops!');
@@ -199,7 +199,12 @@ export class BecomeAModelComponent implements OnInit {
       }
     }
   }
-
-
-
+    closemodal() {
+      // console.log("ok");
+        this.modalRef.hide();
+    }
+    errormodal() {
+        // console.log("error");
+        this.modalRef.hide();
+    }
 }

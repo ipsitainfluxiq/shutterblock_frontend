@@ -126,18 +126,18 @@ export class ApiService {
       console.log('this.uploadtype in api service');
       console.log(uploadtypec);
     }
-    if(uploadtypec=='single'){
-      //this.fileservername=[];
-      if(this.fileservername[arrayval]==null) this.fileservername[arrayval]=[];
+    if (uploadtypec=='single'){
+      // this.fileservername = [];
+      if(this.fileservername[arrayval] == null) this.fileservername[arrayval]=[];
       this.fileservername[arrayval]=[];
       if(this.files[0].response!=null) this.fileservername[arrayval].push(this.files[0].response);
     }
-    if(uploadtypec=='multiple'){
+    if (uploadtypec == 'multiple') {
       console.log('this.files[0].response');
-      //console.log(this.files[0].response);
+      // console.log(this.files[0].response);
       console.log(this.files.length);
       console.log(this.files);
-      if(this.fileservername[arrayval]==null) this.fileservername[arrayval]=[];
+      if (this.fileservername[arrayval] == null) this.fileservername[arrayval] = [];
      // if(this.files[0].response!=null){
         if(this.files.length==1) {
           if(this.files[0] && this.files[0].response!=null && this.files[0].response.error_code==null ) {

@@ -52,7 +52,7 @@
 
   <div class="formdivwrapper">
     <h1 class="headertitle">Submission Process</h1>
-    <form [formGroup]="dataForm" (ngSubmit)="dosubmit(successform)">
+    <form [formGroup]="dataForm" (ngSubmit)="dosubmit(successform, error)">
       <div class="clearfix"></div>
       <h2>Personal Information:</h2>
       <div class="form-row">
@@ -303,7 +303,7 @@
 
           <button (click)="checkupload()">Check uploads</button>
 
-          <!--<div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
+         <div ngFileDrop [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" [ngClass]="{ 'is-drop-over': dragOver }">
           </div>
           <label class="upload-button">
             <input type="file" ngFileSelect [options]="options" (uploadOutput)="onUploadOutput($event)" [uploadInput]="uploadInput" multiple>
@@ -355,7 +355,25 @@
 
 
 
+<ng-template #successform>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closemodal()">&times;</button>
+    <div class="logoshatterblock">
+      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+    </div>
+    <p>THANK YOU FOR SUBMITTING YOUR APPLICATION FOR A CHANCE TO BE A PART OF SHATTER PROOF’S MODEL/TALENT’S TEAM! WE WILL REVIEW YOUR FORM AS SOON AS POSSIBLE AND RESPOND WITH DETAILS ON YOUR OPPORTUNITY REGARDING WHAT STEPS MAY COME NEXT!</p>
+  </div>
+</ng-template>
 
+<ng-template #error>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="errormodal()">&times;</button>
+    <div class="logoshatterblock">
+      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+    </div>
+    <p>Please upload atleast 4 images!</p>
+  </div>
+</ng-template>
 
 
 
