@@ -203,8 +203,4 @@ export class BecomeAModelComponent implements OnInit {
       // console.log("ok");
         this.modalRef.hide();
     }
-    errormodal() {
-        // console.log("error");
-        this.modalRef.hide();
-    }
 }
