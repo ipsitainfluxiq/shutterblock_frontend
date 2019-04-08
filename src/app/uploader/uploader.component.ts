@@ -13,6 +13,7 @@ export class UploaderComponent implements OnInit {
   public uploadtypec;
   public uploadpathc;
   public filepathc;
+  public nameis;
   ///public filenameval;
   @Input()
   set filenameval(filenameval: any) {

@@ -3949,8 +3949,9 @@ body{
 .formpaddingright{padding-right: 15px !important;}
 
 .formdivwrapper form .form-control{
-	background-color: #201e2c;
-	color:#515776;
+	/*background-color: #201e2c;*/
+	background-color: #5c5976;
+	color:#fff !important;
 	font-family: "CenturyGothic";
 	font-size: 18px;
 	text-transform: inherit;
@@ -3987,39 +3988,39 @@ body{
 
 .formdivwrapper form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	text-transform: capitalize;
-	color:#515776;
+	color: #fff;
 }
 .formdivwrapper form input::-moz-placeholder { /* Firefox 19+ */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 }
 .formdivwrapper form input:-ms-input-placeholder { /* IE 10+ */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 }
 .formdivwrapper form input:-moz-placeholder { /* Firefox 18- */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 }
 
 .formdivwrapper form textarea::-webkit-input-placeholder{
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 	position: relative;
 }
 .formdivwrapper form textarea::-moz-placeholder { /* Firefox 19+ */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 	position: relative;
 }
 .formdivwrapper form textarea:-ms-input-placeholder { /* IE 10+ */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 	position: relative;
 }
 .formdivwrapper form textarea:-moz-placeholder { /* Firefox 18- */
 	text-transform: capitalize;
-	color:#515776;
+	color:#fff;
 	position: relative;
 }
 
@@ -7651,6 +7652,9 @@ p.headertitlepara{
 /*----End contact us css---*/
 
 
+
+
+
 .uploadsection button{display: inline-block!important;
 	padding: 10px 35px!important;
 	cursor: pointer!important;
@@ -7672,6 +7676,7 @@ p.headertitlepara{
 	background-color: #272b33;
 	box-shadow: none;
 }
+
 
 .uploadsection_wrapper{ width: 100%; margin-top: 15px;}
 

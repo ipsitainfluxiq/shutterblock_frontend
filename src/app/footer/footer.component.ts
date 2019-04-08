@@ -11,6 +11,7 @@ import {DragScrollComponent} from "ngx-drag-scroll/lib";
 export class FooterComponent implements OnInit {
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;
+    showmodal:any;
 
   constructor(private router: Router) { }
 

@@ -62,7 +62,7 @@ export class LoginComponent implements OnInit {
       console.log(this.dataForm.controls[x].valid);
     }
     if (this.dataForm.valid) {
-      //const link = this.serverurl + 'login';
+      // const link = this.serverurl + 'login';
       const link = this.serverurl + 'userlogin';
 
       const data = {

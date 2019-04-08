@@ -28,9 +28,11 @@ export class BecomeAModelComponent implements OnInit {
   public uploadInput: EventEmitter<UploadInput>;
   public humanizeBytes: Function;
   public files;
+  // public data1: {"source":"pending_and_notpending_application_view","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1NTQyNzk2ODMsImlhdCI6MTU1NDE5MzI4M30.oTnpSA6o8zhcQmYFtABGvxCmgoyrdfpb0bFwxwmpdfo"};
   public options;
   public filelocalname;
   public endpoint = 'frontendsignup';
+  public endpoint1 = 'datalist';
   public mysuccessapplication: any = false;
   public issubmit = 0;
   public lengthis = 0;
@@ -65,7 +67,13 @@ export class BecomeAModelComponent implements OnInit {
     // this.random();
     this.dynamic = 0;
     this.type = 'info';
+    /*let data1 = this.apiService.postDatawithottoken(this.endpoint1, this.data1).subscribe(res => {
+      let re;
+      re = res;
+      console.log(re);
+    });*/
   }
+
   ngOnInit() {
     this.apiService.uploadtype = 'single';
     this.apiService.getState().subscribe(res => {
@@ -110,6 +118,7 @@ export class BecomeAModelComponent implements OnInit {
       modelmayhemlink: ['', Validators.required],
       fileservername: [''],
       filelocalname: [''],
+      type: ['model'],
     }, {validator: this.machpassword('password', 'confirmpassword')});
   }
 
@@ -175,7 +184,7 @@ export class BecomeAModelComponent implements OnInit {
       console.log('valid');
       console.log(this.dataForm.value);
       let data: any;
-      data = {source: 'users', data : this.dataForm.value};
+      data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
       if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
         // alert('please upload atleast 4 images');

@@ -204,7 +204,7 @@ export class ApiService {
   }
   // getData end
 
-  postData(endpoint:any, data) {
+  postData(endpoint: any, data) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type':  'application/json',
@@ -253,7 +253,7 @@ export class ApiService {
 
 
 
-  putData(endpoint:any, data, id:any) {
+  putData(endpoint: any, data, id: any) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
