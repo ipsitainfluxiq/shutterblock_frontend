@@ -9,15 +9,13 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import { ApiService } from '../../app/api.service';
 import { Resolveservice } from '../../app/resolveservice';
 import { environment } from '../../environments/environment';
-declare var $:any;
+declare var $: any;
 @Component({
   selector: 'app-become-a-model',
   templateUrl: './become-a-model.component.html',
   styleUrls: ['./become-a-model.component.css']
 })
 export class BecomeAModelComponent implements OnInit {
-  // url1 = 'http://18.222.26.198/upload';
-  // url = 'http://18.222.26.198:7002/uploads';
   formData: FormData;
   EventEmitter;
   public dataForm: FormGroup;
@@ -28,10 +26,10 @@ export class BecomeAModelComponent implements OnInit {
   public uploadInput: EventEmitter<UploadInput>;
   public humanizeBytes: Function;
   public files;
-  // public data1: {"source":"pending_and_notpending_application_view","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmb28iOiJiYXIiLCJleHAiOjE1NTQyNzk2ODMsImlhdCI6MTU1NDE5MzI4M30.oTnpSA6o8zhcQmYFtABGvxCmgoyrdfpb0bFwxwmpdfo"};
   public options;
   public filelocalname;
-  public endpoint = 'frontendsignup';
+  // public endpoint = 'frontendsignup';
+  public endpoint = 'confirmationemail';
   public endpoint1 = 'datalist';
   public mysuccessapplication: any = false;
   public issubmit = 0;
@@ -119,6 +117,7 @@ export class BecomeAModelComponent implements OnInit {
       fileservername: [''],
       filelocalname: [''],
       type: ['model'],
+      status: [0],
     }, {validator: this.machpassword('password', 'confirmpassword')});
   }
 
@@ -171,6 +170,7 @@ export class BecomeAModelComponent implements OnInit {
     }
 
   dosubmit(template: TemplateRef<any>, erroemodal: TemplateRef<any>) {
+  //  this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
     this.issubmit = 1;
     let x: any;
     for (x in this.dataForm.controls) {
@@ -186,9 +186,8 @@ export class BecomeAModelComponent implements OnInit {
       let data: any;
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
-      if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
-        // alert('please upload atleast 4 images');
-          // this.modalRef = this.modal.show(erroemodal), {class: 'modal-md editcompetition'};
+
+     if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
           this.modalRef = this.modal.show(erroemodal,{ class: 'modal-md modaldefault'});
       } else {
         // alert(33);

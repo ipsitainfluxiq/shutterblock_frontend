@@ -2927,6 +2927,11 @@
         /* padding: 10px 12px;*/
     }
 
+    .btnblue {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
     .ourmodelsbannerblock .ourmodelsbannertext h1 {
         font-size: 173px;
         line-height: 173px;
@@ -3664,6 +3669,11 @@
 }
 
 @media screen and (max-width: 1199px) {
+
+    .newhome_sproofmodeldiv h3 br{
+        display: none;
+    }
+
     .btnyellowmt20 {
         margin: 10% auto;
     }
@@ -3934,6 +3944,13 @@
         line-height: 12px;
         /* padding: 7px 8px;*/
     }
+
+    .btnblue {
+        font-size: 12px;
+        line-height: 12px;
+    }
+
+
 
     .ourmodelssingleblockimg1 {
         height: 274px;
@@ -5016,6 +5033,22 @@
 }
 
 @media screen and (max-width: 767px) {
+    .partnersbannerblock2new .whatweprodivesingleservice h2 {
+        width: 100% !important;
+    }
+    .partnersbannerblock2new .whatweprodivesingleserviceimgwrapper {
+        width: 100%;
+        margin: 0 auto 10px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .btnimgcontent.bottomaudideadlinelogo img {
+        margin-left: 0px;
+        margin-top: 16px;
+        width: 260px;
+    }
+
     .modelprofileinfo .btnyellowmt20 .btnyellow {
         width: 60%;
     }
@@ -5604,12 +5637,11 @@
         display: block;
         margin-top: 30px;
         margin-bottom: 0px;
+        max-width: 90%;
+        margin-right: auto;
     }
 
-    .btnimgcontent.bottomaudideadlinelogo img {
-        margin-left: auto;
-        margin-top: 30px;
-    }
+
 
     .modelmarketingblock1_wrapper_img img {
         height: auto;
@@ -5656,9 +5688,24 @@
     .seeyouthere .newupcomingeventphotolists {
         height: 230px;
     }
+
+    .btncheckshatterproof .btnimgcontent.bottomaudideadlinelogo a {
+        margin-right: 5px;
+    }
 }
 
 @media screen and (max-width: 600px){
+    .btnimgcontent.bottomaudideadlinelogo img {
+        margin-left: auto;
+        margin-top: 0px;
+        margin-right: auto;
+    }
+    .btncheckshatterproof .btnimgcontent.bottomaudideadlinelogo a {
+        margin-bottom: 10px;
+    }
+    .btncheckshatterproof .btnimgcontent.bottomaudideadlinelogo a:last-child{
+        margin-right: 0px;
+    }
     .contactusbannerblock .innerbannertext h1 {
         font-size: 38px;
         line-height: 42px;
@@ -5867,9 +5914,13 @@
     .ourmodelsblock1outside {
         width: 100%;
     }
+
 }
 
 @media screen and (max-width: 500px) {
+    .btncheckshatterproof .btnimgcontent.bottomaudideadlinelogo a{
+        margin-right: 0px;
+    }
     .mmbannerblock2imgright {
         width: 96%;
     }
@@ -5881,6 +5932,20 @@
 }
 
 @media screen and (max-width: 480px){
+    .partnersbannerblock2new .whatweprodivesingleserviceimgwrapper{
+        height: auto;
+    }
+    .partnersbannerblock2new .whatweprodivesingleserviceimgwrapper img {
+        width: 80%;
+        position: inherit;
+        top: 0;
+        left: 0;
+        transform: inherit;
+    }
+
+    .partnersbannerblock2new .formdivwrapper ul li{
+        width: 100%;
+    }
 
     .modelthumbimginnerwarpper {
         width: 230px;

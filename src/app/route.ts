@@ -53,7 +53,8 @@ const appRoutes: Routes = [
     { path: 'musicdivision', component: MusicdivisionComponent},
     { path: 'webook', component: WebookComponent},
     { path: 'whoweare', component: WhoWeAreComponent},
-    { path: 'musicvideos', component: MusicvideosComponent},
+    /*{ path: 'musicvideos', component: MusicvideosComponent},*/
+    { path: 'booked-work', component: MusicvideosComponent},
     {path: 'modelandtalent', component: ModelandtalentComponent},
     {path: 'trendingmodels', component: TrendingmodelsComponent},
     {path: 'login', component: LoginComponent},
@@ -71,16 +72,23 @@ const appRoutes: Routes = [
     {path: 'brandlist', component: BrandlistComponent},
     {path: 'oldhome', component: OldhomeComponent},
     {path: 'sidemenu', component: SidemenuComponent},
-    {path: 'events', component: EventsComponent},
+    /*{path: 'events', component: EventsComponent},*/
+    {path: 'promo-events', component: EventsComponent},
     {path: 'navbaricon', component: NavbariconComponent},
-    {path: 'partners', component: PartnersComponent},
-    {path: 'become-a-model', component: BecomeAModelComponent},
-    {path: 'our-models', component: OurModelsComponent},
+    /*{path: 'partners', component: PartnersComponent},*/
+    {path: 'partnerships-affiliates', component: PartnersComponent},
+    /*{path: 'become-a-model', component: BecomeAModelComponent},*/
+    {path: 'join-the-talent-team', component: BecomeAModelComponent},
+    /*{path: 'our-models', component: OurModelsComponent},*/
+    {path: 'our-models-talent', component: OurModelsComponent},
     {path: 'model-profile', component: ModelProfileComponent},
-    {path: 'model-marketing', component: ModelMarketingComponent},
+    /*{path: 'model-marketing', component: ModelMarketingComponent},*/
+    {path: 'model-talent-division', component: ModelMarketingComponent},
     {path: 'oldmusicvideos', component: OldmusicvideosComponent},
-    {path: 'music-management', component: MusicManagementComponent},
-    {path: 'marketing-management', component: MarketingManagementComponent},
+    /*{path: 'music-management', component: MusicManagementComponent},*/
+    {path: 'music-division', component: MusicManagementComponent},
+   /* {path: 'marketing-management', component: MarketingManagementComponent},*/
+    {path: 'clients-campaigns', component: MarketingManagementComponent},
     {path: 'contact-us', component: ContactUsComponent},
 
 ];

@@ -8,22 +8,31 @@
       <a [routerLink]="['/whoweare']" class="opensubsidemenu" onclick="opensubsidemenu1()">Who we are<i class="fa fa-chevron-right"></i></a>
       <ul id="subsidemenuDropdown1" class="newsubsidemenu">
        <!-- <li class="active"><a >About us<i class="fa fa-chevron-right"></i></a></li>-->
-        <li><a [routerLink]="['/partners']">Partners<i class="fa fa-chevron-right"></i></a></li>
+        <li><a [routerLink]="['/partnerships-affiliates']">Partnerships & Affiliates<!--Partners--><i class="fa fa-chevron-right"></i></a></li>
       </ul>
     </li>
     <li>
-      <a [routerLink]="['/model-marketing']" class="opensubsidemenu" onclick="opensubsidemenu()">Model Management<i class="fa fa-chevron-right"></i></a>
-      <ul id="subsidemenuDropdown" class="newsubsidemenu">
-        <!--<li class="active"><a [routerLink]="['/events/']">Events<i class="fa fa-chevron-right"></i></a></li>-->
-        <li><a [routerLink]="['/our-models']">our models<i class="fa fa-chevron-right"></i></a></li>
-        <li><a [routerLink]="['/become-a-model']">Become a Model<i class="fa fa-chevron-right"></i></a></li>
-        <!--<li><a [routerLink]="['/model-marketing/']">model marketing<i class="fa fa-chevron-right"></i></a></li>-->
-        <li><a [routerLink]="['/musicvideos']">Music Video<i class="fa fa-chevron-right"></i></a></li>
+      <!--<a [routerLink]="['/marketing-management']">Marketing Management <i class="fa fa-chevron-right"></i></a>-->
+      <a class="opensubsidemenu">Marketing Division<i class="fa fa-chevron-right"></i></a>
+      <ul id="subsidemenuDropdown2" class="newsubsidemenu">
+        <li><a [routerLink]="['/clients-campaigns']">Clients & Campaigns<i class="fa fa-chevron-right"></i></a></li>
       </ul>
     </li>
-    <li><a [routerLink]="['/marketing-management']">Marketing Management <i class="fa fa-chevron-right"></i></a></li>
-    <li><a [routerLink]="['/music-management']">Music Management <i class="fa fa-chevron-right"></i></a></li>
-    <li><a [routerLink]="['/contact-us']">Contact us <i class="fa fa-chevron-right"></i></a></li>
+    <li>
+      <a [routerLink]="['/model-talent-division']" class="opensubsidemenu" onclick="opensubsidemenu()">Model | Talent Division<!--Model Management--><i class="fa fa-chevron-right"></i></a>
+      <ul id="subsidemenuDropdown" class="newsubsidemenu">
+
+        <li><a [routerLink]="['/our-models-talent']">Our Models | Talent<!--our models--><i class="fa fa-chevron-right"></i></a></li>
+        <li><a [routerLink]="['/join-the-talent-team']">Join The Talent Team<!--Become a Model--><i class="fa fa-chevron-right"></i></a></li>
+        <li><a [routerLink]="['']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>
+        <!--<li><a [routerLink]="['/model-marketing/']">model marketing<i class="fa fa-chevron-right"></i></a></li>-->
+        <li><a [routerLink]="['/booked-work']">Booked Work<!--Music Video--><i class="fa fa-chevron-right"></i></a></li>
+      </ul>
+    </li>
+
+    <li><a [routerLink]="['/music-division']">Music Division<!--Music Management --><i class="fa fa-chevron-right"></i></a></li>
+    <li><a href="javascript:void(0)">Calendar<i class="fa fa-chevron-right"></i></a></li>
+    <li><a [routerLink]="['/contact-us']">Contact Us <i class="fa fa-chevron-right"></i></a></li><li><a [routerLink]="['']">Login <i class="fa fa-chevron-right"></i></a></li>
   </ul>
   </div>
 
