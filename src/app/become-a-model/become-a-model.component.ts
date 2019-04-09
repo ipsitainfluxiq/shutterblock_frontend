@@ -66,10 +66,10 @@ export class BecomeAModelComponent implements OnInit {
     this.dynamic = 0;
     this.type = 'info';
     /*let data1 = this.apiService.postDatawithottoken(this.endpoint1, this.data1).subscribe(res => {
-      let re;
-      re = res;
-      console.log(re);
-    });*/
+     let re;
+     re = res;
+     console.log(re);
+     });*/
   }
 
   ngOnInit() {
@@ -121,16 +121,16 @@ export class BecomeAModelComponent implements OnInit {
     }, {validator: this.machpassword('password', 'confirmpassword')});
   }
 
-    machpassword(passwordkye: string, confirmpasswordkye: string) {
-      return (group: FormGroup) => {
-        let passwordInput = group.controls[passwordkye],
-            confirmpasswordInput = group.controls[confirmpasswordkye];
-        if (passwordInput.value !== confirmpasswordInput.value) {
-          return confirmpasswordInput.setErrors({notEquivalent: true});
-        } else {
-          return confirmpasswordInput.setErrors(null);
-        }
-      };
+  machpassword(passwordkye: string, confirmpasswordkye: string) {
+    return (group: FormGroup) => {
+      let passwordInput = group.controls[passwordkye],
+          confirmpasswordInput = group.controls[confirmpasswordkye];
+      if (passwordInput.value !== confirmpasswordInput.value) {
+        return confirmpasswordInput.setErrors({notEquivalent: true});
+      } else {
+        return confirmpasswordInput.setErrors(null);
+      }
+    };
   }
 
   doclick() {
@@ -162,15 +162,15 @@ export class BecomeAModelComponent implements OnInit {
     }
   }
 
-    checkupload(){
-      console.log('ghjgjg --iuuyyy ');
-      console.log(this.uploader);
-      console.log(this.uploader1);
-      console.log(this.apiService.fileservername);
-    }
+  checkupload(){
+    console.log('ghjgjg --iuuyyy ');
+    console.log(this.uploader);
+    console.log(this.uploader1);
+    console.log(this.apiService.fileservername);
+  }
 
   dosubmit(template: TemplateRef<any>, erroemodal: TemplateRef<any>) {
-  //  this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
+    //  this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
     this.issubmit = 1;
     let x: any;
     for (x in this.dataForm.controls) {
@@ -187,8 +187,8 @@ export class BecomeAModelComponent implements OnInit {
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
 
-     if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
-          this.modalRef = this.modal.show(erroemodal,{ class: 'modal-md modaldefault'});
+      if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
+        this.modalRef = this.modal.show(erroemodal, { class: 'modal-md modaldefault'});
       } else {
         // alert(33);
         console.log(this.apiService.fileservername);
@@ -198,6 +198,7 @@ export class BecomeAModelComponent implements OnInit {
           let result: any = {};
           result = res;
           if (result.status == 'success') {
+            this.dataForm.reset();
             this.apiService.fileservername[this.uploader] = [];
             this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
           }
@@ -207,8 +208,8 @@ export class BecomeAModelComponent implements OnInit {
       }
     }
   }
-    closemodal() {
-      // console.log("ok");
-        this.modalRef.hide();
-    }
+  closemodal() {
+    // console.log("ok");
+    this.modalRef.hide();
+  }
 }
