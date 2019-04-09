@@ -20,12 +20,13 @@ export class BecomeAModelComponent implements OnInit {
   EventEmitter;
   public dataForm: FormGroup;
   public kp;
-  public modeluploadpath: any = environment.brandfolder;
-  public modelfilepath: any = environment.Brand_Image_Url;
+  public modeluploadpath: any = environment.modelfolder;
+  public modelfilepath: any = environment.Model_Image_Url;
   public fileservername;
   public uploadInput: EventEmitter<UploadInput>;
   public humanizeBytes: Function;
   public files;
+  public errormsg;
   public options;
   public filelocalname;
   // public endpoint = 'frontendsignup';
@@ -172,6 +173,7 @@ export class BecomeAModelComponent implements OnInit {
   dosubmit(template: TemplateRef<any>, erroemodal: TemplateRef<any>) {
     //  this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
     this.issubmit = 1;
+    this.errormsg='';
     let x: any;
     for (x in this.dataForm.controls) {
       this.dataForm.controls[x].markAsTouched();
@@ -201,6 +203,8 @@ export class BecomeAModelComponent implements OnInit {
             this.dataForm.reset();
             this.apiService.fileservername[this.uploader] = [];
             this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
+          }else if (result.status == 'error') {
+              this.errormsg = result.msg;
           }
         }, error => {
           console.log('Oooops!');

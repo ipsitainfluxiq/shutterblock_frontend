@@ -234,6 +234,7 @@
         <div class="form-group col-sm-6 col-xs-12 formpaddingright">
           <input class="form-control" id="emailaddress" name="emailaddress" placeholder="email address*" type="email" [formControl]="dataForm.controls['email']" (keyup)="issubmit=0">
           <span class="error" *ngIf="!dataForm.controls['email'].valid && dataForm.controls['email'].touched && issubmit==1">Email field is required & give proper email id.</span>
+          <span class="error" *ngIf="errormsg">{{errormsg}}</span>
         </div>
         <div class="form-group col-sm-3 col-xs-12 formpaddingright">
           <input class="form-control" id="password" name="password" placeholder="password*" type="password"  [formControl]="dataForm.controls['password']" (keyup)="issubmit=0">
