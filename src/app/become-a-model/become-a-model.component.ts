@@ -117,8 +117,8 @@ export class BecomeAModelComponent implements OnInit {
       modelmayhemlink: ['', Validators.required],
       fileservername: [''],
       filelocalname: [''],
-      type: ['model'],
-      status: [0],
+      type: [''],
+      status: [''],
     }, {validator: this.machpassword('password', 'confirmpassword')});
   }
 
@@ -163,7 +163,7 @@ export class BecomeAModelComponent implements OnInit {
     }
   }
 
-  checkupload(){
+  checkupload() {
     console.log('ghjgjg --iuuyyy ');
     console.log(this.uploader);
     console.log(this.uploader1);
@@ -173,7 +173,7 @@ export class BecomeAModelComponent implements OnInit {
   dosubmit(template: TemplateRef<any>, erroemodal: TemplateRef<any>) {
     //  this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
     this.issubmit = 1;
-    this.errormsg='';
+    this.errormsg = '';
     let x: any;
     for (x in this.dataForm.controls) {
       this.dataForm.controls[x].markAsTouched();
@@ -183,8 +183,17 @@ export class BecomeAModelComponent implements OnInit {
     console.log(this.apiService.fileservername[this.uploader]);
     // console.log(this.apiService.fileservername[this.uploader].length);
     if (this.dataForm.valid) {
-      console.log('valid');
+
+
+      console.log('valid----');
       console.log(this.dataForm.value);
+      this.dataForm.patchValue({status: 0});
+      this.dataForm.patchValue({type: 'model'});
+      console.log('-----------------');
+      console.log(this.dataForm.value);
+
+
+
       let data: any;
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
@@ -203,7 +212,7 @@ export class BecomeAModelComponent implements OnInit {
             this.dataForm.reset();
             this.apiService.fileservername[this.uploader] = [];
             this.modalRef = this.modal.show(template, { class: 'modal-md modaldefault'});
-          }else if (result.status == 'error') {
+          } else if (result.status == 'error') {
               this.errormsg = result.msg;
           }
         }, error => {

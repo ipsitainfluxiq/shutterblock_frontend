@@ -15,6 +15,7 @@ import { ApiService} from '../api.service';
 export class LoginComponent implements OnInit {
   public dataForm: FormGroup;
   public kp;
+  public loginurl;
   public endpoint = 'login';
   public serverurl;
   public errormg: any = '';
@@ -22,7 +23,9 @@ export class LoginComponent implements OnInit {
   constructor(kp: FormBuilder, private router: Router, private _commonservices: Commonservices, public apiService: ApiService, private _http: HttpClient, private cookeiservice: CookieService) {
     this.kp = kp;
     this.serverurl = _commonservices.url;
-
+this.loginurl = this.apiService.loginurl;
+console.log('this.loginurl');
+console.log(this.loginurl);
   }
 
   ngOnInit() {

@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {DragScrollComponent} from "ngx-drag-scroll/lib";
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,11 +10,11 @@ import {DragScrollComponent} from "ngx-drag-scroll/lib";
 })
 
 export class FooterComponent implements OnInit {
-
+public loginurl: any;
     @ViewChild('imgbig') imgbig: DragScrollComponent;
-    showmodal:any;
+    showmodal: any;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public apiservic: ApiService) { }
 
   ngOnInit() {
       this.router.events.subscribe(() =>
@@ -25,11 +26,11 @@ export class FooterComponent implements OnInit {
       );
   }
 
-    movebigLeft(){
+    movebigLeft() {
       this.imgbig.moveLeft();
     }
 
-    movebigRight(){
+    movebigRight() {
         this.imgbig.moveRight();
     }
 }

@@ -13,6 +13,7 @@ export class ApiService {
   public domain =  environment['API_URL'];
   public _url = environment['API_URL'];
   public Model_Image_Url = environment['Model_Image_Url'];
+  public loginurl = environment['loginurl'];
   files: UploadFile[];
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
