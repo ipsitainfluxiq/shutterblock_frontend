@@ -11,6 +11,7 @@ import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, 
 export class ApiService {
 
   public domain =  environment['API_URL'];
+  public domain_for_fileupload =  environment['domain_for_fileupload'];
   public _url = environment['API_URL'];
   public Model_Image_Url = environment['Model_Image_Url'];
   public loginurl = environment['loginurl'];
@@ -84,7 +85,7 @@ export class ApiService {
     if (output.type === 'allAddedToQueue') {
       const event: UploadInput = {
         type: 'uploadAll',
-        url: this.domain+'uploads',
+        url: this.domain_for_fileupload+'uploads',
         method: 'POST',
         data: { path: uploadpath }
       };
