@@ -14,40 +14,40 @@ export class UploaderComponent implements OnInit {
   public uploadpathc;
   public filepathc;
   public nameis;
-  ///public filenameval;
+  /// public filenameval;
   @Input()
   set filenameval(filenameval: any) {
-    //alert(filenameval);
+    // alert(filenameval);
     this.filenamevalc = filenameval;
     console.log('this.filenamevalc');
     console.log(this.filenamevalc);
   }
   @Input()
   set uploadpath(uploadpath: any) {
-    //alert(filenameval);
+    // alert(filenameval);
     this.uploadpathc = uploadpath;
     console.log('this.uploadpathc');
     console.log(this.uploadpathc);
   }
   @Input()
   set filepath(filepath: any) {
-    //alert(filenameval);
+    // alert(filenameval);
     this.filepathc = filepath;
     console.log('this.filepathc');
     console.log(this.filepathc);
   }
   @Input()
   set uploadtype(uploadtype: any) {
-    //alert(filenameval);
+    // alert(filenameval);
     this.uploadtypec = uploadtype;
     console.log('this.uploadtypec');
     console.log(this.uploadtypec);
   }
-  //@Output() filenamevalcChange = new EventEmitter<any>();
-  //@Output() lfChange = new EventEmitter<any>();
+  // @Output() filenamevalcChange = new EventEmitter<any>();
+  // @Output() lfChange = new EventEmitter<any>();
 
   constructor(public apiService: ApiService) {
-    //this.filenamevalc='90';
+    // this.filenamevalc='90';
     this.filenamevalc1='90';
     console.log('this.filenamevalc in constructor ... ');
     console.log(this.filenamevalc);

@@ -14,7 +14,9 @@ public loginurl: any;
     @ViewChild('imgbig') imgbig: DragScrollComponent;
     showmodal: any;
 
-  constructor(private router: Router, public apiservic: ApiService) { }
+  constructor(private router: Router, public apiservic: ApiService) {
+      console.log(router.url);
+  }
 
   ngOnInit() {
       this.router.events.subscribe(() =>
