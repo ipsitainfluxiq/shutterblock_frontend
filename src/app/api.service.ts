@@ -14,6 +14,9 @@ export class ApiService {
   public _url = environment['API_URL'];
   public Model_Image_Url = environment['Model_Image_Url'];
   public loginurl = environment['loginurl'];
+  public fb_url = environment['fb_url'];
+  public twitter_url = environment['twitter_url'];
+  public instagram_url = environment['instagram_url'];
   files: UploadFile[];
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
