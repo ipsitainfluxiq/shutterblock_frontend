@@ -3315,6 +3315,22 @@ body{
 .newhome_about_wrapper strong a{color:#fff !important}
 .newhome_about_wrapper strong a:hover{color:#000 !important}
 
+.btndivhomenew{margin-top: 30px !important;}
+.btndivhomenew a{display: inline-block; margin-right: 10px; margin-left: 10px; margin-bottom: 10px;}
+.btndivhomenew strong a{position: relative;}
+.btndivhomenew strong a:after{
+	content: "";
+	background-color: #f89b19;
+	height: 100%;
+	width: 1px;
+	position: absolute;
+	left: -11px;
+	top: 0px;
+}
+.btndivhomenew strong a:nth-child(1){margin-left: 0px !important;}
+
+.btndivhomenew strong a:nth-child(1):after{display: none !important;}
+
 
 
 

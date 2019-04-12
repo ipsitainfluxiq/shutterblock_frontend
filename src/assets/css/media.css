@@ -5932,6 +5932,16 @@
 }
 
 @media screen and (max-width: 480px){
+
+    .btndivhomenew strong a:after{display: none;}
+    .btndivhomenew strong a {
+        position: relative;
+        width: 80%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
     .partnersbannerblock2new .whatweprodivesingleserviceimgwrapper{
         height: auto;
     }
