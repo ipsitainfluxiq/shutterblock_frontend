@@ -12,6 +12,7 @@ export class ApiService {
 
   public domain =  environment['API_URL'];
   public domain_for_fileupload =  environment['domain_for_fileupload'];
+  // public domain_for_fileupload =  environment['API_URL'];
   public _url = environment['API_URL'];
   public Model_Image_Url = environment['Model_Image_Url'];
   public loginurl = environment['loginurl'];
