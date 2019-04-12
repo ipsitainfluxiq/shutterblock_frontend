@@ -4206,11 +4206,16 @@ body{
 .newhomesocialmedialinks{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	margin-top: 0px;
 	flex-wrap: wrap;
 	padding-top: 40px;
+	width: max-content;
 }
+.newhomesocialmedialinks li{
+	margin-right: 10px;
+}
+.newhomesocialmedialinks li:last-child{margin-right: 0px;}
 
 .socialmediaiconwrapper .fa-facebook{color:#4267b2;}
 .socialmediaiconwrapper .fa-twitter{color:#1da1f2;}

@@ -4376,6 +4376,9 @@
 }
 
 @media screen and (max-width: 991px){
+    .newhomenewhomefooterlogo{display:none;}
+    .newhomenewhomefooterlogo.newhomenewhomefooterlogosml{display:block !important; margin-bottom: 40px;}
+
     .btnyellowmt20 {
         margin: 4% auto;
     }
@@ -4741,7 +4744,7 @@
     .footerborder {
         border-left: 0px solid #e6e7e9;
         padding-left: 0;
-        margin: 0px;
+        margin: 0px auto;
     }
 
     .newhome_sproofmarketdiv h2 {
@@ -5484,6 +5487,14 @@
         -o-background-size: cover;
     }
 }
+
+@media screen and (max-width:670px) {
+
+    .btndivhomenew strong a:last-child:after{display:none !important;}
+    .btndivhomenew strong a:last-child{margin-left: 0px !important;}
+}
+
+
 
 @media screen and (max-width:640px) {
     #fullscreenimgmodal .modal-dialog {
