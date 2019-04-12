@@ -13,6 +13,7 @@ export const environment = {
     // Model_Image_Url: 'https://shatterblok.com/upload/modelimages',
     Model_Image_Url: 'https://developmentapi.audiodeadline.com/nodeserver/uploads/modelimages',
     loginurl: 'http://developmentbackoffice.shatterblok.com/',
+    uplodeimg_url: 'https://developmentapi.audiodeadline.com/nodeserver/uploads/modelimages/',
     brandfolder: 'brandimages',
     modelfolder: 'modelimages',
     environment: 'development'

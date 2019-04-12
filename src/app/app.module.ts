@@ -55,6 +55,7 @@ import {ApiService} from './api.service';
 import {AuthGuard} from './auth.guard';
 import {NgxUploaderModule} from 'ngx-uploader';
 import { UploaderComponent } from './uploader/uploader.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -109,6 +110,7 @@ import { UploaderComponent } from './uploader/uploader.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     routing,
     NgxUploaderModule,
     ModalModule.forRoot(),

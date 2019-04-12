@@ -16,7 +16,7 @@ export class AuthGuard implements CanActivate {
               private _apiService: ApiService,
               private cookieService: CookieService
               // private loggedinService: LoggedinService
-              ) {}
+  ) {}
 
 
   canActivate() {
@@ -26,27 +26,25 @@ export class AuthGuard implements CanActivate {
     if (this.cookieService.get('jwttoken') == null || this.cookieService.get('jwttoken').length < 10) {
       // alert(7);
       this.router.navigate(['/']);
-    } else { return true; }
+    } else return true;
 
 
 
 
 
 
+    /*
+    private loggedinService: LoggedinService,
+     if (tokenNotExpired()) {
 
-/*   private loggedinService: LoggedinService,
-    if (tokenNotExpired()) {
-      
 
-      this.loggedinService.announceLoggedin(true);
-      return true;
-    }
-
-    // this.loggedinService.announceLoggedin(false);
-    // localStorage.removeItem('id_token');
-    // this.router.navigate(['/login']);
-    */
-
+       this.loggedinService.announceLoggedin(true);
+       return true;
+     }
+     */
+    //this.loggedinService.announceLoggedin(false);
+    //localStorage.removeItem('id_token');
+    //this.router.navigate(['/login']);
     return false;
   }
 }

@@ -11,6 +11,7 @@ import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, 
 export class ApiService {
 
   public domain =  environment['API_URL'];
+  public uplodeimg_url =  environment['uplodeimg_url'];
   public domain_for_fileupload =  environment['domain_for_fileupload'];
   // public domain_for_fileupload =  environment['API_URL'];
   public _url = environment['API_URL'];
@@ -189,6 +190,25 @@ export class ApiService {
 
 
 
+  }
+  getEndpoint(endpoint: any) {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        'access-token': this.cookieService.get('jwttoken')
+      })
+    };
+    console.log('endpoint');
+    console.log(endpoint);
+    console.log('httpOptions');
+    console.log(httpOptions);
+    console.log(this.cookieService.get('jwttoken'));
+
+    // this.isTokenExpired()
+    var result = this._http.post(this._url + endpoint.source, {}, httpOptions).pipe(map(res => res));
+    console.log(result);
+    return result;
   }
 
   getData(endpoint: any) {

@@ -44,6 +44,7 @@ import {MusicManagementComponent} from "./music-management/music-management.comp
 import {MarketingManagementComponent} from "./marketing-management/marketing-management.component";
 import {ContactUsComponent} from "./contact-us/contact-us.component";
 import {Resolveservice} from './resolveservice';
+import {AuthGuard} from './auth.guard';
 
 // import {FooterComponent} from "./footer/footer.component";
 
@@ -80,8 +81,8 @@ const appRoutes: Routes = [
     /*{path: 'become-a-model', component: BecomeAModelComponent},*/
     {path: 'join-the-talent-team', component: BecomeAModelComponent},
     /*{path: 'our-models', component: OurModelsComponent},*/
-    {path: 'our-models-talent', component: OurModelsComponent},
-    {path: 'model-profile', component: ModelProfileComponent},
+    {path: 'our-models-talent', component: OurModelsComponent, resolve: {results: Resolveservice}, data: { source: 'modellist'}},
+    {path: 'model-profile', component: ModelProfileComponent, resolve: {results: Resolveservice}, data: { source: 'modellist'}},
     /*{path: 'model-marketing', component: ModelMarketingComponent},*/
     {path: 'model-talent-division', component: ModelMarketingComponent},
     {path: 'oldmusicvideos', component: OldmusicvideosComponent},

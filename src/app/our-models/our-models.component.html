@@ -51,30 +51,30 @@
   <div class="ourmodelsblock1outside">
       <div class="ourmodelsblock1wrapper">
 
-        <div class="ourmodelssingleblock">
+        <div class="ourmodelssingleblock" *ngFor="let item of model" >
           <div class="ourmodelssingleimgblock">
             <div class="ourmodelssingleblockimg1">
-              <img src="../assets/images/ourmodelssingleblockimg11.jpg" alt="ourmodels image 11">
+              <img src="{{apiservice.uplodeimg_url}}{{item.images[0]}}" alt="ourmodels image 11">
             </div>
             <div class="ourmodelssingleblockimg1">
-              <img src="../assets/images/ourmodelssingleblockimg12.jpg" alt="ourmodels image 12">
+              <img src="{{apiservice.uplodeimg_url}}{{item.images[1]}}" alt="ourmodels image 12">
             </div>
           </div>
           <div class="ourmodelssingleblockoverlay">
             <div class="ourmodelssingleblockcontent">
-              <h1 class="title-div">Sandra Sago</h1>
+              <h1 class="title-div">{{item.name}}</h1>
               <div class="measure-div">
                 <p>
-                  Height: 5'5 |<br>
-                  Weight: 160lb | Bust: 36D<br>
-                  Waist: 28 | Hips: 45
+                  Height: {{item.height}} |<br>
+                  Weight: {{item.weight}} | Bust: {{item.bust}}<br>
+                  Waist: {{item.waist}} | Hips: {{item.hips}}
                 </p>
               </div>
               <a class="btnyellow" [routerLink]="['/model-profile']">See More</a>
             </div>
           </div>
         </div>
-
+<!--
 
         <div class="ourmodelssingleblock">
           <div class="ourmodelssingleimgblock">
@@ -1055,7 +1055,7 @@
               <a class="btnyellow" [routerLink]="'/model-profile'">See More</a>
             </div>
           </div>
-        </div>
+        </div>-->
 
        <!----------Deleted Model---------------->
         <!-- <div class="ourmodelssingleblock">

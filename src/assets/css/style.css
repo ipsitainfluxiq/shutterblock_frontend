@@ -3333,7 +3333,15 @@ body{
 
 
 
-
+.formdivwrapper .form-group .error {
+    color: #ff0000;
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    float: left;
+}
 
 /*---------SlideNavbar css----*/
 
