@@ -111,10 +111,10 @@ export class BecomeAModelComponent implements OnInit {
       sales: ['', Validators.required],
       retail: ['', Validators.required],
       descriptionbox: ['', Validators.required],
-      facebooklink: ['', Validators.required],
-      instagramlink: ['', Validators.required],
-      twitterlink: ['', Validators.required],
-      modelmayhemlink: ['', Validators.required],
+      facebooklink: ['', Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')],
+      instagramlink: ['', Validators.compose( [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')])],
+      twitterlink: ['', Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')],
+      modelmayhemlink: ['', Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')],
       fileservername: [''],
       filelocalname: [''],
       type: [''],
@@ -161,6 +161,10 @@ export class BecomeAModelComponent implements OnInit {
     if (String(control.value).search(filter) == -1) {
       return { 'invalidemail': true };
     }
+  }
+
+  static validateUrl(control: FormControl) {
+    const filterUrl = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
   }
 
   checkupload() {

@@ -65,7 +65,7 @@ public model: any;
         this.imgsmall.moveRight();
     }
 
-    movebigLeft(){
+    movebigLeft() {
       this.imgbig.moveLeft();
     }
 
@@ -73,7 +73,12 @@ public model: any;
         this.imgbig.moveRight();
     }
 
-
+    gethttplink(val: any) {
+            if (val.indexOf('http') == -1 && val.indexOf('https') == -1 && val.indexOf('http') != 0) {
+                return "http://" + val;
+            }
+            return val;
+        }
 
 
 

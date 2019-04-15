@@ -19,23 +19,31 @@ export class Resolveservice implements Resolve<EndpointComponent> {
         // let id = route.params['id'];
         console.log('resolve route data');
         let endpoint: any = route.data;
-
         let condition: any = {};
-        if (endpoint.condition != null) {
+        if ( endpoint.condition != '_id' || endpoint.condition != null) {
             for (let v in endpoint.condition) {
-                if (v == '_id' && endpoint.condition[v] == 'modelid') {
-                    endpoint.condition[v] = route.params['id'];
+                if (v == '_id') {
+                    endpoint.condition[v] = route.params.id;
+                    console.log(route.params.id);
                 }
             }
-            condition = endpoint.condition;
+            // condition = endpoint.condition;
+        // && endpoint.condition[v].indexOf('modelid') > -1
 
+        } else {
+            alert(66);
         }
 
 
         console.log(route.data);
         console.log(route.data.source);
+        console.log('route.params.id');
+        console.log(route.params);
+        console.log(route.params.id);
         console.log(route);
         console.log(state);
+        console.log('endpoint in resolve ...');
+        console.log(endpoint);
         // let endpoint = route.data.object;
         // console.log('endpoint!!!!!');
         // console.log(endpoint);
