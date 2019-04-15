@@ -1424,11 +1424,7 @@
 }
 @media screen and (max-width: 991px) {
     .modelprofileinfo .form-inline .instagramsection span.form-control {
-        WIDTH: 100% !important;
-    }
-    .instagramsection span i.fa {
-        width: 50%;
-        margin-right: 5px;
+        width: 100% !important;
     }
 
     .s_contactform_content .s_content_left h2 {
@@ -1472,10 +1468,7 @@
         background-size: 260%;
         padding-top: 48%;
     }
-    .instagramsection span i.fa {
-        width: 40%;
-        margin-right: 5px;
-    }
+
 }
 @media screen and (max-width: 576px){
     .s_weboook_block3 .s_overview_bg .s_model_overview .s_weboohb3Banner .s_webookb3Content h2 {

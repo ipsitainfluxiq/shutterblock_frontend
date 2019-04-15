@@ -6102,14 +6102,14 @@ body{
 }
 
 .modelprofileinfo .form-inline .instagramsection span.form-control{
-	line-height: 22px;
+	line-height: 25px;
 	margin-top: 20px;
 }
 
 
 
-.instagramsection span i.fa{width: 120px; margin-right: 5px}
-.instagramsection span img.instaicon{width:120px; margin-right: 5px}
+.instagramsection span i.fa{width: 25px; margin-right: 20px;  height: 25px;}
+.instagramsection span img.instaicon{width:25px; margin-right: 20px; height: 25px;}
 
 .languagesection span{
 	text-transform: capitalize !important;
