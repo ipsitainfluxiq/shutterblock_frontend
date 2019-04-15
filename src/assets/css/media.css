@@ -234,7 +234,9 @@
     .s_shatter_nav{ min-height: inherit;}
 }
 @media screen and (max-width: 1199px) {
-
+    .modelprofileinfo .form-inline .form-group .form-control{
+        line-height: 22px;
+    }
     .modelprofileinfo .form-inline .form-group .form-control {
         font-size: 14px;
     }
