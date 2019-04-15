@@ -12,49 +12,52 @@
 </div>
 <app-sidemenu></app-sidemenu>
 
-<div class="modelprofilemaindiv">
+<div class="modelprofilemaindiv" *ngIf="model">
   <div class="container-fluid modelprofileblock">
     <div> <!--ng-controller="MainCtrl"-->
       <div class="modelbigimgwrapper">
         <div class="modelprofileinfo">
-          <h2>Sandra Sago</h2>
+          <h2>{{model.name}}</h2>
           <div class="doubleborders"></div>
           <form class="modelprofileform form-inline">
             <div class="form-row">
               <div class="form-group">
                 <label class="control-label">Name:</label>
-                <span class="form-control">Sandra Sago</span>
+                <span class="form-control">{{model.name}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Location:</label>
-                <span class="form-control">Los Angeles</span>
+                <span class="form-control">{{model.location}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Height:</label>
-                <span class="form-control">5'5</span>
+                <span class="form-control">{{model.height}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Weight:</label>
-                <span class="form-control">160</span>
+                <span class="form-control">{{model.weight}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Bust:</label>
-                <span class="form-control">36D</span>
+                <span class="form-control">{{model.bust}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Waist:</label>
-                <span class="form-control">28</span>
+                <span class="form-control">{{model.waist}}</span>
               </div>
               <div class="form-group">
                 <label class="control-label">Hips:</label>
-                <span class="form-control">45</span>
+                <span class="form-control">{{model.hips}}</span>
               </div>
 
               <div class="form-group languagesection">
                 <span class="form-control">(Arabic)</span>
               </div>
               <div class="form-group instagramsection">
-                <span class="form-control"><a href="https://www.instagram.com/thearabianprincess/" target="_blank"><i class="fa fa-instagram"></i> @thearabianprincess</a></span>
+                <span class="form-control"><a href="https://www.instagram.com/{{model.instagramlink}}" target="_blank"><i class="fa fa-instagram"></i>@{{model.instagramlink}}</a></span>
+                <span class="form-control"><a href="https://www.instagram.com/thearabianprincess/" target="_blank"><i class="fa fa-twitter"></i>@{{model.twitterlink}}</a></span>
+                <span class="form-control"><a href="https://www.facebook.com/{{model.facebooklink}}" target="_blank"><i class="fa fa-facebook"></i>{{model.facebooklink}}</a></span>
+                <span class="form-control"><a href="https://www.instagram.com/{{model.modelmayhemlink}}" target="_blank"><img src="../../assets/images/instagram-icon4.png" class="instaicon">{{model.modelmayhemlink}}</a></span>
               </div>
 
             </div>
@@ -75,18 +78,18 @@
         <div class="modelbigimg">
           <!-- Full-width images with number text -->
           <div class="modelbigimgouter">
-          <drag-scroll #imgbig>
+<!--          <drag-scroll #imgbig>-->
             <div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
-              <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg1.jpg" alt="modelmodelbigimg1">
+              <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{imgbig1}}" alt="modelmodelbigimg1">
             </div>
-            <div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
-              <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg2.jpg" alt="modelmodelbigimg2">
-            </div>
+            <!--<div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
+              <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{item.images[0]}}" alt="modelmodelbigimg2">
+            </div>-->
 
-          </drag-scroll>
-          <!-- Next and previous buttons -->
+         <!-- </drag-scroll>
+          &lt;!&ndash; Next and previous buttons &ndash;&gt;
           <a class="prev" (click)="movebigLeft()">&#10094;</a>
-          <a class="next" (click)="movebigRight()">&#10095;</a>
+          <a class="next" (click)="movebigRight()">&#10095;</a>-->
           </div>
 
         </div>
@@ -140,10 +143,10 @@
               <a class="next" onclick="nextslide()">&#10095;</a>
             </div>-->
             <drag-scroll #imgsmall >
-              <div class="modelthumbimginnerwarpper">
-                <img drag-scroll-item class="demo cursor" src="../assets/images/modelthumbimg/modelthumbimg1.jpg" alt="modelmodelthumbimg1">
+              <div class="modelthumbimginnerwarpper" *ngFor="let x of model.images">
+                <img (click)="imgClick(x)" drag-scroll-item class="demo cursor" src="{{apiservice.uplodeimg_url}}{{[x]}}" alt="modelmodelthumbimg1">
               </div>
-              <div class="modelthumbimginnerwarpper">
+              <!--<div class="modelthumbimginnerwarpper">
                 <img drag-scroll-item class="demo cursor" src="../assets/images/modelthumbimg/modelthumbimg2.jpg" alt="modelmodelthumbimg2">
               </div>
               <div class="modelthumbimginnerwarpper">
@@ -178,7 +181,7 @@
               </div>
               <div class="modelthumbimginnerwarpper">
                 <img drag-scroll-item class="demo cursor" src="../assets/images/modelthumbimg/modelthumbimg5.jpg" alt="modelmodelthumbimg5">
-              </div>
+              </div>-->
             </drag-scroll>
             <a class="prev" (click)="moveLeft()">&#10094;</a>
             <a class="next" (click)="moveRight()">&#10095;</a>

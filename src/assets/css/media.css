@@ -3060,7 +3060,7 @@
     }
 
     .modelbigimginnerwarpper {
-        height: 770px;
+        height: 900px;
         cursor: pointer;
         width: 100%;
         overflow: hidden;
@@ -3509,7 +3509,10 @@
 
 @media screen and (max-width: 1280px) {
     .modelbigimginnerwarpper {
-        height: auto;
+        height: 770px;
+        cursor: pointer;
+        width: 100%;
+        overflow: hidden;
     }
 
     .contactusbannerblock .innerbannertext h1 {
@@ -3677,9 +3680,9 @@
     .btnyellowmt20 {
         margin: 10% auto;
     }
-    .modelbigimginnerwarpper {
+    /*.modelbigimginnerwarpper {
         height: auto;
-    }
+    }*/
 
     .innerhead1toplogowrapper {
         width: 695px;

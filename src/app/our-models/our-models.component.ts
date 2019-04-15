@@ -12,9 +12,6 @@ export class OurModelsComponent implements OnInit {
   constructor(public router: Router, private route: ActivatedRoute, public apiservice: ApiService) { }
 
   ngOnInit() {
-   /* this.route.data.forEach( (data)=>{
-      console.log(data);
-    });*/
 
     this.route.data.forEach((data) => {
       // PRE LOAD DATA PRIOR
@@ -25,6 +22,8 @@ export class OurModelsComponent implements OnInit {
       console.log(data['results'].results[0].images[0]);
       this.model = data['results'].results;
     });
+  }
+  onShow() {
   }
 
 }

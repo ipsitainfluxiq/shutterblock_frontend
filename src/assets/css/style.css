@@ -2328,6 +2328,10 @@ body{
 }
 .s_music_videos .s_music_videos_user .s_music_videos_content .s_music_videos_continer .s_music_videos_share .s_music_videos_share_content {
 	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: inherit;
@@ -3906,6 +3910,10 @@ body{
 .sponsorblockwrapper{
 	margin: 0;
 	padding: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
@@ -3919,6 +3927,10 @@ body{
 .sponsorblock{
 	background-color: #fff;
 	padding: 15px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -4212,6 +4224,10 @@ body{
 }
 
 .newhomesocialmedialinks{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -4339,6 +4355,10 @@ body{
 }
 
 .newshatterproofservice{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	margin-top: 15px;
@@ -4379,6 +4399,10 @@ body{
 
 .newupcomingeventphotolists{
 	display: flex;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
@@ -4615,7 +4639,6 @@ body{
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: flex;
 	-webkit-box-align: center;
 	-moz-box-align: center;
 	-ms-flex-align: center;
@@ -4662,6 +4685,10 @@ body{
 
 .seeyouthere{}
 .seeyouthere .newupcomingeventphotolists{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -4805,6 +4832,10 @@ body{
 }
 
 .newwhoweareblock1imagelist{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	margin-top: 15px;
@@ -4966,6 +4997,10 @@ body{
 .whatweprodivesingleservice{
 	width: 360px;
 	margin: 0; padding: 12px 20px; font-size: 24px; color: #ffffff; font-family: 'CenturyGothic'; background-color: #14121f; line-height: 30px; margin-bottom: 10px; margin-right: 20px; border: 1px solid #292639;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	display: -webkit-box;
@@ -5123,6 +5158,10 @@ body{
 	margin-top: 35px;
 }
 .testimonialssingleblock{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	display: -webkit-box;
@@ -5407,6 +5446,10 @@ body{
 	margin-top: 35px;
 }
 .partnersceosingleblock{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	display: -webkit-box;
@@ -5890,6 +5933,7 @@ body{
 	position: relative;
 	margin: 8px;
 	border: 1px solid #151b11;
+	overflow: hidden;
 }
 
 .modelthumbimginnerwarpper img{
@@ -5932,7 +5976,8 @@ body{
 .modelprofileinfo{
 	background-color: #0c0e10;
 	width:29%;
-	min-height: 100vh;
+	/*min-height: 100vh;*/
+	min-height: fit-content;
 	padding: 30px;
 }
 
@@ -5959,18 +6004,31 @@ body{
 	margin: 0 auto;
 }
 .modelthumbimgouter{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	overflow-y: hidden;
 	overflow-x: auto;
+	justify-content: center;
 }
 
 .modelthumbimg{
 	min-height: min-content; /* needs vendor prefixes */
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 }
 
 
 .modelbigimgouter{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	overflow-y: hidden;
 	overflow-x: auto;
@@ -5988,7 +6046,7 @@ body{
 .modelbigimginnerwarpper img{
 	width: 100%;
 	object-fit: cover;
-	height: auto;
+	height: 100%;
 }
 
 .modelprofileinfo .form-inline .form-group {
@@ -6028,7 +6086,11 @@ body{
 	color:#fa920a !important;
 	font-size: 25px;
 	cursor: pointer;
+	width: 100% !important;
 }
+.instagramsection span i.fa{width: 25px; margin-right: 5px}
+.instagramsection span img.instaicon{width: 25px; margin-right: 5px}
+
 .languagesection span{
 	text-transform: capitalize !important;
 }
@@ -6252,6 +6314,7 @@ body{
 	z-index: 9;
 	border: 2px solid #fff;
 	font-weight: normal;
+	outline: none !important;
 }
 
 
@@ -6448,7 +6511,6 @@ body{
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
-	display: flex;
 	-webkit-box-align: center;
 	-moz-box-align: center;
 	-ms-flex-align: center;
@@ -6951,6 +7013,10 @@ body{
 .sponsorblockwrapper{
 	margin: 0;
 	padding: 0;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: row;
 	align-items: stretch;
@@ -6964,6 +7030,10 @@ body{
 .sponsorblock{
 	background-color: #fff;
 	padding: 15px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

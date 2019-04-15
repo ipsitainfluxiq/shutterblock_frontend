@@ -82,7 +82,7 @@ const appRoutes: Routes = [
     {path: 'join-the-talent-team', component: BecomeAModelComponent},
     /*{path: 'our-models', component: OurModelsComponent},*/
     {path: 'our-models-talent', component: OurModelsComponent, resolve: {results: Resolveservice}, data: { source: 'modellist'}},
-    {path: 'model-profile', component: ModelProfileComponent, resolve: {results: Resolveservice}, data: { source: 'modellist'}},
+    {path: 'model-profile/:id', component: ModelProfileComponent, resolve: {results: Resolveservice}, data: { source: 'modellist', condition: {_id:'modelid'}}},
     /*{path: 'model-marketing', component: ModelMarketingComponent},*/
     {path: 'model-talent-division', component: ModelMarketingComponent},
     {path: 'oldmusicvideos', component: OldmusicvideosComponent},

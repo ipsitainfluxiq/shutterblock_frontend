@@ -204,9 +204,12 @@ export class ApiService {
     console.log('httpOptions');
     console.log(httpOptions);
     console.log(this.cookieService.get('jwttoken'));
+    let condition:any=endpoint.condition;
+    console.log('condition');
+    console.log(condition);
 
     // this.isTokenExpired()
-    var result = this._http.post(this._url + endpoint.source, {}, httpOptions).pipe(map(res => res));
+    var result = this._http.post(this._url + endpoint.source, condition, httpOptions).pipe(map(res => res));
     console.log(result);
     return result;
   }
