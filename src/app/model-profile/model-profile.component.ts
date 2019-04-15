@@ -16,7 +16,7 @@ declare var $:any;
 
 
 export class ModelProfileComponent implements OnInit {
-public imgbig1:any;
+public imgbig1: any;
     /*@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;*/
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;
