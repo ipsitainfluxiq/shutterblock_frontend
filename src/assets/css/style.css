@@ -6065,6 +6065,7 @@ body{
 	border:none !important;
 	border-radius: 0px !important;
 	font-size: 20px;
+	line-height: 22px;
 }
 
 .modelprofileinfo h2{ margin: 0; padding: 0; font-size: 40px; color: #fa0a53; font-family: 'OpenSansBold'; line-height: 48px; width: 100%; text-align: left; text-transform: uppercase; margin-bottom: 30px;}
@@ -6095,9 +6096,20 @@ body{
 	font-size: 25px;
 	cursor: pointer;
 	width: 100% !important;
+	display: flex;
+	white-space: normal;
+	word-break: break-word;
 }
-.instagramsection span i.fa{width: 25px; margin-right: 5px}
-.instagramsection span img.instaicon{width: 25px; margin-right: 5px}
+
+.modelprofileinfo .form-inline .instagramsection span.form-control{
+	line-height: 22px;
+	margin-top: 20px;
+}
+
+
+
+.instagramsection span i.fa{width: 120px; margin-right: 5px}
+.instagramsection span img.instaicon{width:120px; margin-right: 5px}
 
 .languagesection span{
 	text-transform: capitalize !important;

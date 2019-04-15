@@ -1224,6 +1224,9 @@
     }
 }
 @media screen and (max-width: 1199px) {
+    .instagramsection span, .instagramsection span a {
+        font-size: 20px;
+    }
     .modelbigimginnerwarpper{
         height: auto;
     }
@@ -1418,6 +1421,14 @@
     }
 }
 @media screen and (max-width: 991px) {
+    .modelprofileinfo .form-inline .instagramsection span.form-control {
+        WIDTH: 100% !important;
+    }
+    .instagramsection span i.fa {
+        width: 50%;
+        margin-right: 5px;
+    }
+
     .s_contactform_content .s_content_left h2 {
         font-size: 30px;
     }
@@ -1458,6 +1469,10 @@
     .s_weboook_block3 .s_overview_bg .s_model_overview .s_weboohb4Banner {
         background-size: 260%;
         padding-top: 48%;
+    }
+    .instagramsection span i.fa {
+        width: 40%;
+        margin-right: 5px;
     }
 }
 @media screen and (max-width: 576px){
