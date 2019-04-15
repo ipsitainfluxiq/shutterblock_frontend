@@ -6064,7 +6064,7 @@ body{
 	background-color: transparent !important;
 	border:none !important;
 	border-radius: 0px !important;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .modelprofileinfo h2{ margin: 0; padding: 0; font-size: 40px; color: #fa0a53; font-family: 'OpenSansBold'; line-height: 48px; width: 100%; text-align: left; text-transform: uppercase; margin-bottom: 30px;}
@@ -6080,7 +6080,7 @@ body{
 .modelprofileform .form-group label{width: 120px;}
 
 .modelprofileform .form-group label{
-	margin: 0; padding: 0; font-size: 16px; color: #666662; font-family: 'OpenSansSemibold'; line-height: 48px; text-align: left; text-transform: uppercase;
+	margin: 0; padding: 0; font-size: 20px; color: #666662; font-family: 'OpenSansSemibold'; line-height: 48px; text-align: left; text-transform: uppercase;
 }
 .modelprofileform .form-group span{
 	margin: 0; padding: 0; font-size: 24px; color: #fff; font-family: 'OpenSans'; line-height: 48px; text-align: left; text-transform: uppercase; height: inherit;

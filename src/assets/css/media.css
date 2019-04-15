@@ -235,7 +235,9 @@
 }
 @media screen and (max-width: 1199px) {
 
-
+    .modelprofileinfo .form-inline .form-group .form-control {
+        font-size: 14px;
+    }
 
 
     .s_shatter_nav_icons .navbar-collapse{
@@ -1114,6 +1116,17 @@
     }
 }
 @media screen and (max-width: 1440px) {
+    .modelprofileform .form-group label {
+        font-size: 16px;
+    }
+    .modelprofileinfo .form-inline .form-group .form-control {
+        font-size: 16px;
+    }
+    .modelprofileinfo h2 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
     .s_shatter_left_content h2 {
         font-size: 50px;
     }
