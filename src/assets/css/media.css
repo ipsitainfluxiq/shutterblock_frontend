@@ -1123,6 +1123,7 @@
     }
     .modelprofileinfo .form-inline .form-group .form-control {
         font-size: 16px;
+        line-height: 26px;
     }
     .modelprofileinfo h2 {
         font-size: 28px;
