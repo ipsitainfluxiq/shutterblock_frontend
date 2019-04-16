@@ -4402,6 +4402,21 @@
 }
 
 @media screen and (max-width: 991px){
+
+    .modelbigimginnerwarpper {
+        height: auto;
+        cursor: pointer;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .modelbigimginnerwarpper img {
+        width: 100%;
+        object-fit: fill;
+        min-height: 100%;
+    }
+
+
     .newhomenewhomefooterlogo{display:none;}
     .newhomenewhomefooterlogo.newhomenewhomefooterlogosml{display:block !important; margin-bottom: 40px;}
 
@@ -5523,9 +5538,9 @@
 
 
 @media screen and (max-width:640px) {
-    #fullscreenimgmodal .modal-dialog {
+    /*#fullscreenimgmodal .modal-dialog {
         width: 92%;
-    }
+    }*/
 
     .contactusbannerblock .innerbannertext h1 {
         font-size: 40px;
