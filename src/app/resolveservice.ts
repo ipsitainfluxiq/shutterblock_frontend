@@ -31,7 +31,7 @@ export class Resolveservice implements Resolve<EndpointComponent> {
         // && endpoint.condition[v].indexOf('modelid') > -1
 
         } else {
-            alert(66);
+            // alert(66);
         }
 
 

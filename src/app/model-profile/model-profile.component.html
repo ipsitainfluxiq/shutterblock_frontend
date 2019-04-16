@@ -82,9 +82,7 @@
             <div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
               <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{imgbig1}}" alt="modelmodelbigimg1">
             </div>
-            <!--<div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
-              <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{item.images[0]}}" alt="modelmodelbigimg2">
-            </div>-->
+
 
          <!-- </drag-scroll>
           &lt;!&ndash; Next and previous buttons &ndash;&gt;
@@ -195,6 +193,40 @@
 
 
 
+
+<!-- Modal -->
+<div class="modal fade modaldefault animated bounceIn" id="fullscreenimgmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <drag-scroll #imgbig>
+          <div class="fullscreenimagewrapper" data-toggle="modal" *ngFor="let x of model.images">
+            <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{x}}" alt="modelmodelbigimg1">
+          </div>
+          <!-- <div class="fullscreenimagewrapper" data-toggle="modal">
+               <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg2.jpg" alt="modelmodelbigimg2">
+           </div>-->
+
+        </drag-scroll>
+        <!-- Next and previous buttons -->
+        <a class="prev" (click)="movebigLeft()">&#10094;</a>
+        <a class="next" (click)="movebigRight()">&#10095;</a>
+
+
+        <!--<div class="fullscreenimagewrapper">
+            <img src="../assets/images/modelbigimg/modelmodelbigimg1.jpg" alt="modelmodelbigimg1">
+        </div>-->
+
+      </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 <app-footer></app-footer>
 
 
@@ -229,3 +261,4 @@
   }*/
 
 </script>
+

@@ -1,8 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {DragScrollComponent} from "ngx-drag-scroll/lib";
+import {DragScrollComponent} from 'ngx-drag-scroll/lib';
 import { Router, ActivatedRoute } from '@angular/router';
 import {ApiService} from '../api.service';
-declare var $:any;
+declare var $: any;
 
 
 @Component({
@@ -46,6 +46,13 @@ public model: any;
         scrollTop: $('#scrolltotopwrapper').offset().top
       }, 0);
 
+      this.router.events.subscribe(() =>
+          window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+          })
+      );
 
 
   }
@@ -79,9 +86,6 @@ public model: any;
             }
             return val;
         }
-
-
-
 
 }
 
