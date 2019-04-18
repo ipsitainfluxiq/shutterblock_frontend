@@ -6295,6 +6295,7 @@ body{
 
 #fullscreenimgmodal{
 	margin-top: 0% !important;
+	padding: 15px;
 }
 
 #fullscreenimgmodal .modal-body{
