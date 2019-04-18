@@ -6238,14 +6238,14 @@ body{
 }
 
 .fullscreenimagewrapper {
-	height: 100vh;
+	/*height: 100vh;*/
 	background-position: top center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;
 	display: inline-block;
-	width: 100%;
+	/*width: 100%;*/
 	position: relative;
 	left: 0;
 	top: 0;
@@ -6254,12 +6254,18 @@ body{
 
 
 .fullscreenimagewrapper img {
-	object-fit: cover;
+	/*object-fit: cover;
 	width: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
-	min-height: 100%;
+	min-height: 100%;*/
+	width: 100vw;
+	height: auto;
+	max-width: none;
+	max-height: 100vh;
+	object-fit: contain;
+
 }
 
 
@@ -6402,7 +6408,7 @@ body{
 @media (min-width: 400px) {
 	#fullscreenimgmodal .modal-dialog {
 		width: auto;
-		max-width: 90%;
+		max-width: 96%;
 	}
 
 }
