@@ -11,8 +11,8 @@ import { ApiService } from '../api.service';
 
 export class FooterComponent implements OnInit {
 public loginurl: any;
-   /* @ViewChild('imgbig') imgbig: DragScrollComponent;
-    showmodal: any;*/
+    @ViewChild('imgbig') imgbig: DragScrollComponent;
+    showmodal: any;
 
   constructor(public router: Router, public apiservic: ApiService) {
       console.log(router.url);

@@ -6058,14 +6058,14 @@
         font-size: 42px;
         line-height: 42px;
     }
-     .musicmanagementbannerblock .musicmanagementbannertext p {
+    .musicmanagementbannerblock .musicmanagementbannertext p {
         font-size: 24px;
         position: relative;
         z-index: 9;
         display: inline-block;
         margin-top: 11px;
         line-height: normal;
-         margin-bottom: 0px;
+        margin-bottom: 0px;
     }
     .mysuccessapplication .modal-content {
         width: 300px;

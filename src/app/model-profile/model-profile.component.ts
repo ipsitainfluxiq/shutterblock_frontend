@@ -17,6 +17,7 @@ declare var $: any;
 
 export class ModelProfileComponent implements OnInit {
 public imgbig1: any;
+public imgbig2: any;
     /*@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;*/
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;
@@ -39,7 +40,11 @@ public model: any;
 
           console.log(data['results']);
       });
-      this.imgbig1 = this.model.images[0];
+      if (this.model.profile_img == null ) {
+          this.imgbig1 = this.model.images[0];
+      } else {
+          this.imgbig1 = this.model.profile_img;
+      }
 
     console.log(324);
       $('html, body').animate({
@@ -61,7 +66,15 @@ public model: any;
       console.log('ok');
       this.imgbig1 = img;
       console.log(this.imgbig1);
+      console.log(this.imgbig1);
+        /*console.log('img loop');
+        for (const y in this.model.images) {
+            console.log(y);
+        }*/
+
     }
+
+
 
 
     moveLeft() {

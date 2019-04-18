@@ -14,6 +14,7 @@ export class UploaderComponent implements OnInit {
   public uploadpathc;
   public filepathc;
   public nameis;
+  public profileimage: any;
   /// public filenameval;
   @Input()
   set filenameval(filenameval: any) {
@@ -64,8 +65,15 @@ export class UploaderComponent implements OnInit {
   }
   ngOnInit() {
   }
-  delimage(indexval:any){
+  delimage(indexval: any) {
     this.apiService.fileservername[this.filenamevalc].splice(indexval,1);
+  }
+
+  profileImg(img: any) {
+    this.profileimage = img;
+    this.apiService.profileimage = img;
+    console.log('profile image');
+    console.log(this.profileimage);
   }
 
 }

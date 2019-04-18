@@ -13,12 +13,15 @@
   <!--<progressbar *ngIf=" apiService.progress[filenamevalc] !=null && apiService.progress[filenamevalc]>0" class="progress-striped active" max="100" [value]="apiService.progress[filenamevalc]" [type]="type">{{apiService.progress[filenamevalc]}}% </progressbar>-->
 
   <span class="uploadthum" *ngIf="apiService.fileservername!=null && apiService.fileservername[filenamevalc]!=null && apiService.fileservername[filenamevalc].length>0">
+      <div class="upload_caption">* Please select the image that you want to select as your ShatterBlok profile picture.</div>
                   <span class="uploadthumimgbox" *ngFor="let img of apiService.fileservername[filenamevalc] ;let i=index;">
 
-                      <span class="uploadthumimgbox_span">
-                    <img  src="{{filepathc}}/{{img}}" >
-                    <button (click)="delimage(i)">Delete</button>
-                          </span>
+                      <span class="uploadthumimgbox_span" >
+                          <a  [ngClass]="img==profileimage ? 'thumb_gallery_uploadselect' : 'thumb_gallery_upload'" (click)="profileImg(img)"> <img src="../../assets/images/upload_image.png"> </a>
+                        <img  src="{{filepathc}}/{{img}}" >
+                        <button (click)="delimage(i)">Delete</button>
+<!--                          <span>{{img}}==={{profileimage}}</span>-->
+                      </span>
                   </span>
                 </span>
 

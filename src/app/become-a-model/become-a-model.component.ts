@@ -182,7 +182,13 @@ export class BecomeAModelComponent implements OnInit {
     }
 
     console.log(this.apiService.fileservername);
+    console.log('this.apiService.fileservername[this.uploader]');
     console.log(this.apiService.fileservername[this.uploader]);
+    console.log('this.apiService.profileimage');
+    // console.log(this.apiService.profileimage);
+    if (this.apiService.profileimage == null && this.apiService.fileservername[this.uploader].length > 0) {
+      this.apiService.profileimage = this.apiService.fileservername[this.uploader][0];
+    }
     // console.log(this.apiService.fileservername[this.uploader].length);
     if (this.dataForm.valid) {
 
@@ -199,8 +205,9 @@ export class BecomeAModelComponent implements OnInit {
       let data: any;
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
+      data.data.profile_img = this.apiService.profileimage;
 
-      if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4) {
+      if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4 ) {
         this.modalRef = this.modal.show(erroemodal, { class: 'modal-md modaldefault'});
       } else {
         // alert(33);

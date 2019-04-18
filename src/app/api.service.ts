@@ -20,6 +20,7 @@ export class ApiService {
   public fb_url = environment['fb_url'];
   public twitter_url = environment['twitter_url'];
   public instagram_url = environment['instagram_url'];
+  public profileimage:any;
   files: UploadFile[];
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
@@ -199,14 +200,16 @@ export class ApiService {
         'access-token': this.cookieService.get('jwttoken')
       })
     };
-    console.log('endpoint');
+    console.log('endpoint in api getEndpoint func');
     console.log(endpoint);
+    console.log(this._url + endpoint.source);
     console.log('httpOptions');
     console.log(httpOptions);
     console.log(this.cookieService.get('jwttoken'));
     let condition:any=endpoint.condition;
     console.log('condition');
     console.log(condition);
+    console.log(this._url + endpoint.source);
 
     // this.isTokenExpired()
     var result = this._http.post(this._url + endpoint.source, condition, httpOptions).pipe(map(res => res));
