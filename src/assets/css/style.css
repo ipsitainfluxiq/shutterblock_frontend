@@ -3335,6 +3335,13 @@ body{
 
 .btndivhomenew strong a:nth-child(1):after{display: none !important;}
 
+.btndivhomenew .btnyellow {
+	font-size: 18px;
+	line-height: 20px;
+	padding: 12px 14px;
+}
+
+
 
 
 .formdivwrapper .form-group .error {
@@ -3346,6 +3353,8 @@ body{
 	clear: both;
 	float: left;
 }
+
+
 
 /*---------SlideNavbar css----*/
 

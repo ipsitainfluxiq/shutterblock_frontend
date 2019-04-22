@@ -3697,6 +3697,12 @@
 
 @media screen and (max-width: 1199px) {
 
+    .btndivhomenew .btnyellow {
+        font-size: 15px;
+        line-height: 18px;
+        padding: 12px 14px;
+    }
+
     .newhome_sproofmodeldiv h3 br{
         display: none;
     }
@@ -4404,6 +4410,27 @@
 
 @media screen and (max-width: 991px){
 
+    .btndivhomenew strong a {
+        margin: 5px !important;
+    }
+    .btndivhomenew strong a:after{display:none !important;}
+
+    .btndivhomenew strong a:nth-child(1){
+        margin: .5% !important;
+    }
+
+    .btndivhomenew{
+        text-align: center;
+    }
+
+    .btndivhomenew .btnyellow {
+        font-size: 14px;
+        line-height: 16px;
+        padding: 12px 8px;
+        width: 31.33%;
+        margin: .5% !important;
+    }
+
     .modelbigimginnerwarpper {
         height: auto;
         cursor: pointer;
@@ -5011,6 +5038,8 @@
 }
 
 @media screen and (max-width: 800px) {
+
+
     .innerhead1toplogowrapper {
         width: 495px;
     }
@@ -5078,6 +5107,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .btndivhomenew .btnyellow {
+        width: 48.33%;
+    }
+
     .partnersbannerblock2new .whatweprodivesingleservice h2 {
         width: 100% !important;
     }
@@ -5528,13 +5561,11 @@
         background-size: cover;
         -o-background-size: cover;
     }
+
+
 }
 
-@media screen and (max-width:670px) {
 
-    .btndivhomenew strong a:last-child:after{display:none !important;}
-    .btndivhomenew strong a:last-child{margin-left: 0px !important;}
-}
 
 
 
@@ -5985,7 +6016,9 @@
 }
 
 @media screen and (max-width: 480px){
-
+    .btndivhomenew .btnyellow {
+        width: 98.33%;
+    }
     .btndivhomenew strong a:after{display: none;}
     .btndivhomenew strong a {
         position: relative;
