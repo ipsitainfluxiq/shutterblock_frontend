@@ -6,7 +6,7 @@
     <li class="active"><a [routerLink]="['/']">Home<i class="fa fa-chevron-right"></i></a></li>
     <li><!--<a href="javascript:void(0)">Who we are <i class="fa fa-chevron-right"></i></a>-->
       <a [routerLink]="['/whoweare']" class="opensubsidemenu" onclick="opensubsidemenu1()">Who we are<i class="fa fa-chevron-right"></i></a>
-      <ul id="subsidemenuDropdown1" class="newsubsidemenu">
+        <ul id="subsidemenuDropdown1" class="newsubsidemenu">
        <!-- <li class="active"><a >About us<i class="fa fa-chevron-right"></i></a></li>-->
         <li><a [routerLink]="['/partnerships-affiliates']">Partnerships & Affiliates<!--Partners--><i class="fa fa-chevron-right"></i></a></li>
       </ul>
@@ -30,7 +30,13 @@
       </ul>
     </li>
 
-    <li><a [routerLink]="['/music-division']">Music Division<!--Music Management --><i class="fa fa-chevron-right"></i></a></li>
+    <li>
+      <a [routerLink]="['/music-division']">Music Division<!--Music Management --><i class="fa fa-chevron-right"></i></a>
+      <ul id="subsidemenuDropdown3" class="newsubsidemenu">
+
+        <li><a [routerLink]="['/#']">Media Division<!--our models--><i class="fa fa-chevron-right"></i></a></li>
+      </ul>
+    </li>
     <li><a href="javascript:void(0)">Calendar<i class="fa fa-chevron-right"></i></a></li>
     <li><a [routerLink]="['/contact-us']">Contact Us <i class="fa fa-chevron-right"></i></a></li><li><a target="_blank" href="{{apiService.loginurl}}">Login <i class="fa fa-chevron-right"></i></a></li>
   </ul>

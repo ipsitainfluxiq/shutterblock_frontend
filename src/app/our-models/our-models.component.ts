@@ -16,14 +16,17 @@ export class OurModelsComponent implements OnInit {
     this.route.data.forEach((data) => {
       // PRE LOAD DATA PRIOR
       console.log('data from route ... !!!');
-      console.log(data);
+      if (data['results'].results.length > 0 ) {
+        console.log(data);
       console.log('json', data['results']);
       console.log(data['results'].results);
+      console.log('________');
+      console.log(data['results'].results.length);
       console.log(data['results'].results[0].images[0]);
       this.model = data['results'].results;
+    } else {
+        console.log('opps');
+      }
     });
   }
-  onShow() {
-  }
-
 }

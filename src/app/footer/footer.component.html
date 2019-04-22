@@ -31,11 +31,15 @@
               <span>13547 Ventura Blvd #397</span><br>
               <span>Sherman Oaks CA 91423</span><br>
               <span>Call: <a href="tel:818.971.9561">818-971-9561</a> </span>
-              <span> Fax: <a href="877.905.70610">877.905.70610</a> </span><br>
+<!--              <span> Fax: <a href="877.905.70610">877.905.70610</a> </span><br>-->
               <span *ngIf="router.url=='/model-talent-division'"><a>info@shatterproofmodels.com</a></span>
+              <span *ngIf="router.url=='/join-the-talent-team'"><a>info@shatterproofmodels.com</a></span>
+              <span *ngIf="router.url=='/our-models-talent'"><a>info@shatterproofmodels.com</a></span>
+              <span *ngIf="router.url=='/booked-work'"><a>info@shatterproofmodels.com</a></span>
+              <span *ngIf="router.url=='/'"><a>info@shatterproofmodels.com</a></span>
               <span *ngIf="router.url=='/music-division'"><a>info@shatterproofmusicgroup.com</a></span>
               <span *ngIf="router.url=='/clients-campaigns'"><a>info@shattermarketing.com</a></span>
-              <span *ngIf="router.url!='/music-division' && router.url!='/model-talent-division' && router.url !='/clients-campaigns'"><a>info@shatterblok.com</a></span>
+              <span *ngIf="router.url!='/music-division' && router.url!='/model-talent-division' && router.url!='/join-the-talent-team' && router.url!='/our-models-talent' && router.url!='/booked-work' && router.url!='/' && router.url !='/clients-campaigns'"><a>info@shatterblok.com</a></span>
           </p>
           <ul class="newhomesocialmedialinks footerborder">
               <li><a href="https://www.facebook.com/shatterblok/" target="_blank"><div class="socialmediaiconwrapper"><i class="fa fa-facebook"></i></div></a></li>
