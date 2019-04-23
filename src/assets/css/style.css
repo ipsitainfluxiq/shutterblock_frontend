@@ -3916,7 +3916,7 @@ body{
 	color: #a8e00f;
 }
 
-.sponsorblockwrapper{
+/*.sponsorblockwrapper{
 	margin: 0;
 	padding: 0;
 	display: -webkit-box;
@@ -3935,7 +3935,7 @@ body{
 
 .sponsorblock{
 	background-color: #fff;
-	padding: 15px;
+	padding: 10px;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -3944,12 +3944,14 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: 35px;
-	margin-right: 35px;
+	margin-top: 23px;
+	margin-right: 23px;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+
 }
+
 
 .sponsorblock:last-child{
 	margin-right: 0px !important;
@@ -3963,7 +3965,7 @@ body{
 
 .sponsorblockgraybg{
 	background-color: #1f1f1f;
-}
+}*/
 
 /*---------End Home proof music group css----*/
 
@@ -7112,7 +7114,7 @@ body{
 
 .sponsorblock{
 	background-color: #fff;
-	padding: 15px;
+	padding: 10px;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -7122,11 +7124,15 @@ body{
 	justify-content: center;
 	align-items: center;
 	margin-top: 35px;
-	margin-right: 35px;
+	margin-right: 19px;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	width: 15%;
 }
+
+.sponsorblock:last-child{margin-right: 0px !important;}
+
 
 .sponsorblock img{
 	max-width: 100%;
@@ -7155,7 +7161,7 @@ body{
 .musicmanagementblock1_bottomdiv p span{color: #faa318;}
 
 .musicmanagementblock1 .sponsorblock {
-	padding: 15px 29px;
+	padding: 10px;
 }
 
 

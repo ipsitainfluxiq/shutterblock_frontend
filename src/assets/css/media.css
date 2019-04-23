@@ -372,10 +372,7 @@
 
 
 
-    .sponsorblock {
-        padding: 7px;
-        margin-right: 11px;
-    }
+
 
     .musicdivisionblock2 .s_overview_content_block2 .s_md_leftbg {
         min-height: inherit;
@@ -3697,6 +3694,21 @@
 
 @media screen and (max-width: 1199px) {
 
+    .sponsorblock {
+        margin: 10px;
+        width: 22%;
+    }
+    .sponsorblock:last-child{
+        margin-right: 10px !important;
+    }
+
+
+    .sponsorblockwrapper {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+
     .btndivhomenew .btnyellow {
         font-size: 15px;
         line-height: 18px;
@@ -4333,9 +4345,7 @@
     .newhomesproofmodeldivimgright {
         width: 400px !important;
     }
-    .sponsorblock {
-        margin-right: 10px;
-    }
+
     .newwhoerareblock2wrapper {
         width: 96%;
     }
@@ -4923,9 +4933,6 @@
     .musicmanagementblock1 .sponsorblock {
         padding: 15px 1px;
     }
-    .sponsorblock {
-        margin-right: 5px;
-    }
 
     .musicmanagementblock2imgrighttop {
         width: 230px;
@@ -4949,9 +4956,7 @@
 }
 
 @media screen and (max-width: 860px) {
-    .sponsorblock {
-        margin-right: 2px;
-    }
+
     .modelmarketingblockcontentinner h1 {
         font-size: 50px;
         line-height: 45px;
@@ -5839,6 +5844,7 @@
         width: 90%;
     }
 
+
     .newwhoerareblock3.mmbannerblock1 .newwhoerareblock3wrapper h2.headertitle {
         font-size: 42px;
         line-height: 42px;
@@ -5949,7 +5955,8 @@
         line-height: 42px;
     }
     .sponsorblock {
-        margin: 10px;
+        margin: 6px;
+        width: 29%;
     }
     .sponsorblockwrapper{
         justify-content: center;
@@ -6394,6 +6401,13 @@
 }
 
 @media screen and (max-width: 400px) {
+
+    .sponsorblock {
+        margin: 10px;
+        width: 44%;
+    }
+
+
     .contactusbannerblock .innerbannertext h1 {
         font-size: 24px;
         line-height: 30px;
@@ -6543,5 +6557,10 @@
     .btnrsvpnowrapper a span {
         line-height: 36px;
         font-size: 20px;
+    }
+
+    .sponsorblock {
+        margin: 10px;
+        width: 96%;
     }
 }
