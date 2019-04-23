@@ -59,9 +59,14 @@
             <div class="ourmodelssingleblockimg1" *ngIf= "item.profile_img!=null" >
               <img src="{{apiservice.uplodeimg_url}}{{item.profile_img}}" alt="ourmodels image 11">
             </div>
-            <div class="ourmodelssingleblockimg1">
+            <div class="ourmodelssingleblockimg1" *ngIf="item.images[1]!=null">
               <img src="{{apiservice.uplodeimg_url}}{{item.images[1]}}" alt="ourmodels image 12">
             </div>
+
+            <div class="ourmodelssingleblockimg1" *ngIf="item.images[1]==null">
+              <img src="../../assets/images/no-image.jpg" alt="ourmodels image 12">
+            </div>
+
           </div>
           <div class="ourmodelssingleblockoverlay">
             <div class="ourmodelssingleblockcontent">

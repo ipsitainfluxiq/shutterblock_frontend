@@ -49,14 +49,14 @@ export class UploaderComponent implements OnInit {
 
   constructor(public apiService: ApiService) {
     // this.filenamevalc='90';
-    this.filenamevalc1='90';
+    this.filenamevalc1 = '90';
     console.log('this.filenamevalc in constructor ... ');
     console.log(this.filenamevalc);
     console.log(this.filenamevalc1);
-    //console.log(this.lf);
-    //this.filenamevalcChange.emit(this.filenamevalc);
+    // console.log(this.lf);
+    // this.filenamevalcChange.emit(this.filenamevalc);
   }
-  getval(){
+  getval() {
     console.log('this.filenamevalc');
     console.log(this.filenamevalc);
     console.log(this.filenamevalc1);
