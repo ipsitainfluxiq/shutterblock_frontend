@@ -9,7 +9,8 @@ import {ApiService} from '../api.service';
 })
 export class OurModelsComponent implements OnInit {
   public model: any;
-  constructor(public router: Router, private route: ActivatedRoute, public apiservice: ApiService) { }
+  public staticImg: any = '../../assets/images/no-image.jpg';
+  constructor(public router: Router, private route: ActivatedRoute, public apiservice: ApiService) {}
 
   ngOnInit() {
 

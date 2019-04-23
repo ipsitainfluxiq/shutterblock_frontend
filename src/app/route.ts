@@ -51,6 +51,7 @@ import {AuthGuard} from './auth.guard';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent},
+    { path: '**', component: HomeComponent},
     { path: 'musicdivision', component: MusicdivisionComponent},
     { path: 'webook', component: WebookComponent},
     { path: 'whoweare', component: WhoWeAreComponent},
