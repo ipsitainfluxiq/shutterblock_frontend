@@ -1,4 +1,7 @@
+<span class="nclsback"  (click)="previce()"><i class="fa fa-arrow-left"></i><span class="tooltiptext"><a >Back to Previous page</a></span></span>
+
 <div class="container-fluid newhome_footerdiv">
+
   <div class="newhome_footerdiv_wrapper">
       <div class="col-md-6">
           <div class="newhomefooterlogo">
@@ -23,6 +26,7 @@
               <li><a [routerLink]="['/contact-us']">Contact Us</a></li>
           <!--    <li><a href={{apiservic.loginurl}}>Login</a></li>-->
               <li><a target="_blank" [attr.href]=apiservic.loginurl >Login</a></li>
+
           </ul>
       </div>
       <div class="col-md-3">
@@ -36,10 +40,10 @@
               <span *ngIf="router.url=='/join-the-talent-team'"><a>info@shatterproofmodels.com</a></span>
               <span *ngIf="router.url=='/our-models-talent'"><a>info@shatterproofmodels.com</a></span>
               <span *ngIf="router.url=='/booked-work'"><a>info@shatterproofmodels.com</a></span>
-              <span *ngIf="router.url=='/'"><a>info@shatterproofmodels.com</a></span>
+<!--              <span *ngIf="router.url=='/'"><a>info@shatterproofmodels.com</a></span>-->
               <span *ngIf="router.url=='/music-division'"><a>info@shatterproofmusicgroup.com</a></span>
               <span *ngIf="router.url=='/clients-campaigns'"><a>info@shattermarketing.com</a></span>
-              <span *ngIf="router.url!='/music-division' && router.url!='/model-talent-division' && router.url!='/join-the-talent-team' && router.url!='/our-models-talent' && router.url!='/booked-work' && router.url!='/' && router.url !='/clients-campaigns'"><a>info@shatterblok.com</a></span>
+              <span *ngIf="router.url!='/music-division' && router.url!='/model-talent-division' && router.url!='/join-the-talent-team' && router.url!='/our-models-talent' && router.url!='/booked-work' && router.url !='/clients-campaigns'"><a>info@shatterblok.com</a></span>
           </p>
           <ul class="newhomesocialmedialinks footerborder">
               <li><a href="https://www.facebook.com/shatterblok/" target="_blank"><div class="socialmediaiconwrapper"><i class="fa fa-facebook"></i></div></a></li>
@@ -62,6 +66,7 @@
 
 
 <!-- Modal -->
+<ng-template #mysuccess>
 <div class="modal fade modaldefault" id="mysuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -76,7 +81,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
+</ng-template>
 
 <!-- Modal -->
 <div class="modal fade modaldefault" id="musicmanagementdialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">

@@ -111,10 +111,10 @@ export class BecomeAModelComponent implements OnInit {
       sales: ['', Validators.required],
       retail: ['', Validators.required],
       descriptionbox: ['', Validators.required],
-      facebooklink: ['', Validators.compose([Validators.pattern('^http(s?):\\/\\/(www\\.)?(((\\w+(([\\.\\-]{1}([a-z]{2,})+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)|(\\w+((\\.([a-z]{2,})+)+)(\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)))|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}(([0-9]|([1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*)((\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)*))$')])],
-      instagramlink: ['', Validators.compose( [Validators.required, Validators.pattern('^http(s?):\\/\\/(www\\.)?(((\\w+(([\\.\\-]{1}([a-z]{2,})+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)|(\\w+((\\.([a-z]{2,})+)+)(\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)))|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}(([0-9]|([1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*)((\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)*))$')])],
-      twitterlink: ['', Validators.pattern('^http(s?):\\/\\/(www\\.)?(((\\w+(([\\.\\-]{1}([a-z]{2,})+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)|(\\w+((\\.([a-z]{2,})+)+)(\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)))|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}(([0-9]|([1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*)((\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)*))$')],
-      modelmayhemlink: ['', Validators.pattern('^http(s?):\\/\\/(www\\.)?(((\\w+(([\\.\\-]{1}([a-z]{2,})+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)|(\\w+((\\.([a-z]{2,})+)+)(\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)))|(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}(([0-9]|([1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5]+)+)(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*)((\\:[0-9]{1,5}(\\/[a-zA-Z0-9\\_\\=\\?\\&\\.\\#\\-\\W]*)*$)*))$')],
+      facebooklink: [''],
+      instagramlink: ['', Validators.required],
+      twitterlink: [''],
+      modelmayhemlink: [''],
       fileservername: [''],
       filelocalname: [''],
       type: [''],
@@ -177,6 +177,7 @@ export class BecomeAModelComponent implements OnInit {
     this.issubmit = 1;
     this.errormsg = '';
     let x: any;
+    // tslint:disable-next-line:forin
     for (x in this.dataForm.controls) {
       this.dataForm.controls[x].markAsTouched();
     }
@@ -206,6 +207,7 @@ export class BecomeAModelComponent implements OnInit {
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
       data.data.profile_img = this.apiService.profileimage;
+      data.data.second_image = this.apiService.second_image;
 
       if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4 ) {
         this.modalRef = this.modal.show(erroemodal, { class: 'modal-md modaldefault'});

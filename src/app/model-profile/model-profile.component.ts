@@ -18,6 +18,8 @@ declare var $: any;
 export class ModelProfileComponent implements OnInit {
 public imgbig1: any;
 public imgbig2: any;
+public arrimg: any;
+public imgmodel: any;
     /*@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;*/
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;
@@ -63,16 +65,56 @@ public model: any;
   }
 
     imgClick(img: any) {
-      console.log('ok');
-      this.imgbig1 = img;
-      console.log(this.imgbig1);
-      console.log(this.imgbig1);
-        /*console.log('img loop');
-        for (const y in this.model.images) {
-            console.log(y);
-        }*/
-
+        console.log('ok');
+        this.imgbig1 = img;
+        console.log(this.imgbig1);
+        console.log(this.imgbig1);
     }
+    modelimg(imgb: any) {
+        console.log('modelimg');
+        console.log(imgb);
+        this.imgmodel = imgb;
+        console.log(this.model.images);
+        console.log(this.model.images.indexOf(imgb));
+        this.arrimg = this.model.images.indexOf(imgb);
+        console.log('outside for loop');
+        console.log(this.arrimg);
+        $('.fullscreenimagewrapper').css('visibility', 'hidden');
+        for (let i = 0;  i < this.arrimg ; i++) {
+            console.log('in for loop' + i);
+
+            setTimeout(() => {
+                this.imgbig.moveRight();
+            }, 800);
+
+        }
+
+        setTimeout(() => {
+            this.imgbig.moveRight();
+            this.imgbig.moveLeft();
+            $('.fullscreenimagewrapper').css('visibility', 'visible');
+        }, 1300);
+    }
+    mimg(im: any) {
+        console.log('mimg');
+        console.log(im);
+        im =  this.imgmodel;
+        console.log('mimg-end');
+        console.log(im);
+        return im;
+    }
+/*
+
+    img1click(imgbig1: any) {
+      console.log('oook');
+      console.log(imgbig1);
+    }
+
+    img1click1(im: any) {
+      console.log('ok');
+      console.log(im);
+    }
+*/
 
 
 
@@ -87,10 +129,12 @@ public model: any;
 
     movebigLeft() {
       this.imgbig.moveLeft();
+      // console.log(ii);
     }
 
     movebigRight() {
         this.imgbig.moveRight();
+        // console.log(jj);
     }
 
     gethttplink(val: any) {

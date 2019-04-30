@@ -3386,15 +3386,24 @@ body{
 
 .newheaderinner{position: relative }
 
-
+.newnavbarright span.newnavclsmenu{
+	color: rgb(255, 255, 255);
+	font-size: 38px;
+	text-transform: uppercase;
+	font-size: 16px;
+	width: 100%;
+	position: absolute;
+	top: 3px;
+}
 .newnavbarright{
 	position: absolute;
 	z-index: 99;
 	right: 5%;
-	top:50%;
-	transform: translateY(-50%);
-	width: 28px;
-	height: 28px;
+	top: 50%;
+	transform: translate(45%, -45%);
+	width: 57px;
+	height: 64px;
+	border: 1px solid rgba(255, 255, 255, 0.6);
 }
 #newmySidenav{
 	z-index: 9999999999;
@@ -3403,8 +3412,15 @@ body{
 	position:absolute;
 }
 
-.newnavbarright span{color: #fff; font-size: 30px; position: absolute;
-	transition: all 0.7s;}
+.newnavbarright span{
+	color: #fff;
+	font-size: 38px;
+	position: absolute;
+	transition: all 0.7s;
+	width: 100%;
+	text-align: center;
+	top: 15px;
+}
 .newnavbarright .closebtn{
 	color: #fff;
 	font-size: 46px;
@@ -3412,6 +3428,8 @@ body{
 	transition: all 0.7s;
 	top: 50%;
 	transform: translateY(-40%);
+	width: 100%;
+	text-align: center;
 }
 
 .newsidenav .closebtn{
@@ -4145,6 +4163,7 @@ body{
 .newhome_footerdiv{
 	background-color: #fff;
 	padding: 50px 0;
+	position: relative;
 }
 
 .newhome_footerdiv_wrapper{
@@ -7976,3 +7995,44 @@ p.headertitlepara{
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
+
+
+.nclsback{
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 999999;
+	border: none;
+	outline: none;
+	background-color: #bb2f2f;
+	color: white;
+	cursor: pointer;
+	padding: 5px 8px;
+	border-radius: 0px;
+	font-size: 18px;
+}
+
+.nclsback a, .nclsback a:hover{
+	color: #fff !important;
+}
+
+.nclsback .tooltiptext {
+	visibility: hidden;
+	width: 161px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 30px;
+	right: 0px;
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+.nclsback:hover .tooltiptext {
+	visibility: visible;
+}
+

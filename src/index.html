@@ -42,12 +42,15 @@
 
       function opensubsidemenu1() {
           document.getElementById("subsidemenuDropdown1").classList.toggle("submenushow");
+        closeNav();
       }
       function opensubsidemenu() {
           document.getElementById("subsidemenuDropdown").classList.toggle("submenushow");
+        closeNav();
       }
       function opensubsidemenu() {
         document.getElementById("subsidemenuDropdown3").classList.toggle("submenushow");
+        closeNav();
       }
 
       window.onclick = function(event) {
@@ -60,8 +63,10 @@
                       openDropdown.classList.remove('submenushow');
                   }
               }
+            //closeNav();
+            menuonload();
           }
-      }
+      };
 
      /* $(document).load($(window).bind("resize", checkPosition));
 

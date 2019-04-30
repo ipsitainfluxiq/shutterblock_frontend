@@ -7,6 +7,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { UploadOutput, UploadInput, UploadFile, humanizeBytes, UploaderOptions, UploadStatus } from 'ngx-uploader';
 // import {UploaderComponent} from "./uploader/uploader.component";
 
+
+
 @Injectable()
 export class ApiService {
 
@@ -17,10 +19,11 @@ export class ApiService {
   public _url = environment['API_URL'];
   public Model_Image_Url = environment['Model_Image_Url'];
   public loginurl = environment['loginurl'];
-  public fb_url = environment['fb_url'];
+/*  public fb_url = environment['fb_url'];
   public twitter_url = environment['twitter_url'];
-  public instagram_url = environment['instagram_url'];
-  public profileimage:any;
+  public instagram_url = environment['instagram_url'];*/
+  public profileimage: any;
+  public second_image: any;
   files: UploadFile[];
   uploadInput: EventEmitter<UploadInput>;
   humanizeBytes: Function;
@@ -83,12 +86,12 @@ export class ApiService {
 
 
 
-  onUploadOutput(output: UploadOutput,arrayval:any,uploadtypec:any,uploadpath:any): void {
-    //this.uploaderInput.nativeElement.value = '';
+  onUploadOutput(output: UploadOutput, arrayval: any, uploadtypec: any, uploadpath: any): void {
+    // this.uploaderInput.nativeElement.value = '';
     if (output.type === 'allAddedToQueue') {
       const event: UploadInput = {
         type: 'uploadAll',
-        url: this.domain_for_fileupload+'uploads',
+        url: this.domain_for_fileupload + 'uploads',
         method: 'POST',
         data: { path: uploadpath }
       };
@@ -121,9 +124,9 @@ export class ApiService {
     }
     console.log('files-');
     console.log(this.files);
-    if(this.files[0]!=null && this.files[0].progress!=null) {
-      if(this.progress[arrayval]==null)this.progress[arrayval]=0;
-      this.inprogress=true;
+    if (this.files[0] != null && this.files[0].progress != null) {
+      if (this.progress[arrayval] == null)this.progress[arrayval] = 0;
+      this.inprogress = true;
       console.log('this.files[0].progress.data.percentage');
       console.log(this.files[0].progress.data.percentage);
       this.progress[arrayval] = (this.files[0].progress.data.percentage);
@@ -145,36 +148,34 @@ export class ApiService {
       // console.log(this.files[0].response);
       console.log(this.files.length);
       console.log(this.files);
-      if (this.fileservername[arrayval] == null) this.fileservername[arrayval] = [];
-     // if(this.files[0].response!=null){
-        if(this.files.length==1) {
-          if(this.files[0] && this.files[0].response!=null && this.files[0].response.error_code==null ) {
+      if (this.fileservername[arrayval] == null) { this.fileservername[arrayval] = []; }
+        if (this.files.length == 1) {
+          if (this.files[0] && this.files[0].response!=null && this.files[0].response.error_code==null ) {
             this.fileservername[arrayval].push(this.files[0].response);
             this.files = [];
-            this.uploaderror='';
+            this.uploaderror = '';
           }
-          if(this.files[0] !=null && this.files[0].response!=null && this.files[0].response.error_code!=null){
-            this.uploaderror='error occured on uploading !!!';
+          if (this.files[0] != null && this.files[0].response != null && this.files[0].response.error_code!=null){
+            this.uploaderror = 'error occured on uploading !!!';
           }
         }
-        if(this.files.length>1)
-        {
+        if (this.files.length > 1) {
           console.log('sdfdsf==== in multiple length ');
-          for(let b in this.files){
-            if(this.files[b].response!=null && this.files[b].response.error_code==null) {
+          for (let b in this.files) {
+            if (this.files[b].response != null && this.files[b].response.error_code == null) {
               this.fileservername[arrayval].push(this.files[b].response);
             }
           }
-          this.files=[];
+          this.files = [];
         }
-      //}
+      // }
     }
     console.log('this.fileservername');
     console.log(this.fileservername);
     console.log(this.uploaderror);
-    //this.uploaderservice.filenamevalc1=this.fileservername;
-    //UploaderComponent.filenamevalc1=87;
-    //console.log(classval);
+    // this.uploaderservice.filenamevalc1=this.fileservername;
+    // UploaderComponent.filenamevalc1=87;
+    // console.log(classval);
 
   }
 

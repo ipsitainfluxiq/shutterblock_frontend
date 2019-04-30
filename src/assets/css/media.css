@@ -5578,6 +5578,10 @@
     /*#fullscreenimgmodal .modal-dialog {
         width: 92%;
     }*/
+    .newnavbarright span.newnavclsmenu{
+        font-size: 12px;
+    }
+
 
     .contactusbannerblock .innerbannertext h1 {
         font-size: 40px;
@@ -5784,6 +5788,7 @@
 }
 
 @media screen and (max-width: 600px){
+
     .btnimgcontent.bottomaudideadlinelogo img {
         margin-left: auto;
         margin-top: 0px;
@@ -5837,9 +5842,28 @@
         bottom: -55%;
         width: 294px;
     }
+    .newnavbarright {
+        position: absolute;
+        z-index: 99;
+        right: 5%;
+        top: 50%;
+        transform: translate(88%, -45%);
+        width: 50px;
+        height: 64px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .innerhead1toplogowrapper {
+        width: 400px;
+    }
 }
 
 @media screen and (max-width: 580px) {
+    .newnavbarright {
+        transform: translate(12%, -45%);
+        width: 50px;
+        height: 54px;
+    }
+
     .modelprofileinfo .btnyellowmt20 .btnyellow {
         width: 90%;
     }
@@ -5973,6 +5997,18 @@
 }
 
 @media screen and (max-width: 510px) {
+    .newnavbarright {
+        position: absolute;
+        z-index: 99;
+        right: 4%;
+        top: 50%;
+        transform: translate(14%, -45%);
+        width: 44px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        background: #000;
+    }
+
     .innerhead1toplogowrapper {
         width: 360px;
     }

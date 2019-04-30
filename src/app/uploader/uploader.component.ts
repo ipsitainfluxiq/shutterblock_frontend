@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
-import {ApiService} from "../api.service";
+import {ApiService} from '../api.service';
 
 @Component({
   selector: 'app-uploader',
@@ -15,6 +15,8 @@ export class UploaderComponent implements OnInit {
   public filepathc;
   public nameis;
   public profileimage: any;
+  public second_image: any;
+  public show_second_image: any = 1 ;
   /// public filenameval;
   @Input()
   set filenameval(filenameval: any) {
@@ -60,8 +62,8 @@ export class UploaderComponent implements OnInit {
     console.log('this.filenamevalc');
     console.log(this.filenamevalc);
     console.log(this.filenamevalc1);
-    //this.filenamevalcChange.emit(this.filenamevalc);
-    //this.lfChange.emit(90);
+    // this.filenamevalcChange.emit(this.filenamevalc);
+    // this.lfChange.emit(90);
   }
   ngOnInit() {
   }
@@ -74,6 +76,13 @@ export class UploaderComponent implements OnInit {
     this.apiService.profileimage = img;
     console.log('profile image');
     console.log(this.profileimage);
+    this.show_second_image = 0;
+  }
+  profileImg2(img1: any) {
+    this.second_image = img1;
+    this.apiService.second_image = img1;
+    console.log('second_image');
+    console.log(this.second_image);
   }
 
 }

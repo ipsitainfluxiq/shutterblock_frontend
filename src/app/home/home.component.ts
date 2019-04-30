@@ -1,8 +1,10 @@
-import { Component, OnInit,TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import {windowCount} from 'rxjs/operators';
-declare var $:any;
+import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+
+declare var $: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,9 +12,18 @@ declare var $:any;
 })
 export class HomeComponent implements OnInit {
   modalRef: BsModalRef;
+  public myForm: FormGroup;
+  public issubmit = 1;
   public mysuccessapplication1: any = false;
-  constructor(private modalService: BsModalService) {}
+  constructor(private modalService: BsModalService, public fb: FormBuilder) {}
   ngOnInit() {
+    this.myForm = this.fb.group({
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      email: ['', Validators.compose([Validators.required, Validators.pattern('/^\\s*[\\w\\-\\+_]+(\\.[\\w\\-\\+_]+)*\\@[\\w\\-\\+_]+\\.[\\w\\-\\+_]+(\\.[\\w\\-\\+_]+)*\\s*$/')])],
+      phone: ['', Validators.compose([Validators.required, Validators.pattern('/^-?(0|[1-9]\d*)(?<!-0)$/')])],
+      message: ['', Validators.required],
+    });
    /* console.log('in ng oninit !!');
     console.log($('.newhome_header').height());
     console.log($('#newmyCarousel').height());
@@ -22,19 +33,33 @@ export class HomeComponent implements OnInit {
     console.log($(window).height());*/
   }
 
-  doclick1(){
-    console.log("dfsg");
+  doclick1() {
+    console.log('dfsg');
     this.mysuccessapplication1 = true;
     console.log(' this.mysuccessapplication1');
     console.log(this.mysuccessapplication1);
     $('.mysuccessapplication').css('modalopen');
   }
-  doclick1close(){
+  doclick1close() {
     this.mysuccessapplication1 = false;
+  }
+  doSubmit(template: TemplateRef<any>) {
+    this.issubmit = 1;
+    console.log('myForm');
+    let x: any;
+    // tslint:disable-next-line:forin
+    for (x in this.myForm.controls) {
+      this.myForm.controls[x].markAsTouched();
+    }
+    if (this.myForm.valid) {
+      console.log('this.myForm.value');
+      console.log(this.myForm.value);
+      this.modalRef = this.modalService.show(template);
+    }
   }
 
 
-  ngAfterViewChecked(){
+  ngAfterViewChecked() {
 
     /*console.log('in ng ngAfterViewChecked !!');
     console.log($('.newhome_header').height());

@@ -49,15 +49,19 @@
                 <label class="control-label">Hips:</label>
                 <span class="form-control">{{model.hips}}</span>
               </div>
-
-              <div class="form-group languagesection">
-                <span class="form-control">(Arabic)</span>
+              <div class="form-group">
+                <label class="control-label">Ethnicity:</label>
+                <span class="form-control">{{model.ethnicity}}</span>
               </div>
+
+              <!-- <div class="form-group languagesection">
+                <span class="form-control">(Arabic)</span>
+              </div>-->
               <div class="form-group instagramsection">
-                <span class="form-control" ><a href="{{gethttplink(model.instagramlink)}}" target="_blank"><i class="fa fa-instagram"></i>{{model.instagramlink}}</a></span>
-                <span class="form-control" *ngIf="model.twitterlink"><a href="{{gethttplink(model.twitterlink)}}" target="_blank"><i class="fa fa-twitter"></i>{{model.twitterlink}}</a></span>
-                <span class="form-control" *ngIf="model.facebooklink"><a href="{{gethttplink(model.facebooklink)}}" target="_blank"><i class="fa fa-facebook"></i>{{model.facebooklink}}</a></span>
-                <span class="form-control" *ngIf="model.modelmayhemlink"><a href="{{gethttplink(model.modelmayhemlink)}}" target="_blank"><img src="../../assets/images/instagram-icon4.png" class="instaicon">{{gethttplink(model.modelmayhemlink)}}</a></span>
+                <span class="form-control" ><a href="https://www.instagram.com/{{(model.instagramlink)}}" target="_blank"><i class="fa fa-instagram"></i>{{model.instagramlink}}</a></span>
+                <span class="form-control" *ngIf="model.twitterlink"><a href="https://twitter.com/{{(model.twitterlink)}}" target="_blank"><i class="fa fa-twitter"></i>@{{model.twitterlink}}</a></span>
+                <span class="form-control" *ngIf="model.facebooklink"><a href="https://www.facebook.com/{{(model.facebooklink)}}" target="_blank"><i class="fa fa-facebook"></i>{{model.facebooklink}}</a></span>
+                <span class="form-control" *ngIf="model.modelmayhemlink"><a href="https://{{(model.modelmayhemlink)}}" target="_blank"><img src="../../assets/images/instagram-icon4.png" class="instaicon">{{(model.modelmayhemlink)}}</a></span>
               </div>
 
             </div>
@@ -79,7 +83,7 @@
           <!-- Full-width images with number text -->
           <div class="modelbigimgouter">
 <!--          <drag-scroll #imgbig>-->
-            <div class="modelbigimginnerwarpper" data-toggle="modal" data-target="#fullscreenimgmodal">
+            <div class="modelbigimginnerwarpper" data-toggle="modal" (click)="modelimg(imgbig1)" data-target="#fullscreenimgmodal">
               <img drag-scroll-item  src="{{apiservice.uplodeimg_url}}{{imgbig1}}" alt="modelmodelbigimg1">
             </div>
 
@@ -202,8 +206,8 @@
 
       <div class="modal-body">
         <drag-scroll #imgbig>
-          <div class="fullscreenimagewrapper" data-toggle="modal" *ngFor="let x of model.images">
-            <img drag-scroll-item src="{{apiservice.uplodeimg_url}}{{x}}" alt="modelmodelbigimg1">
+          <div class="fullscreenimagewrapper" data-toggle="modal" *ngFor="let x of model.images" (click)="mimg(x)">
+            <img drag-scroll-item  src="{{apiservice.uplodeimg_url}}{{x}}" alt="modelmodelbigimg1">
           </div>
           <!-- <div class="fullscreenimagewrapper" data-toggle="modal">
                <img drag-scroll-item src="../assets/images/modelbigimg/modelmodelbigimg2.jpg" alt="modelmodelbigimg2">

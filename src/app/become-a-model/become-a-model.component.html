@@ -90,7 +90,7 @@
             <option value="">Select State</option>
             <option *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</option>
           </select>
-          <span class="error" *ngIf="!dataForm.controls['state'].valid && dataForm.controls['state'].touched">Have to choose any States</span>
+          <span class="error" *ngIf="!dataForm.controls['state'].valid && dataForm.controls['state'].touched">Have to choose a/any state</span>
         </div>
         <div class="form-group col-xs-5">
           <input type="text" class="form-control" name="ethnicity" id="ethnicity" placeholder="Ethnicity*" [formControl]="dataForm.controls['ethnicity']" (keyup)="issubmit=0">
@@ -106,7 +106,7 @@
         </div>
         <div class="form-group col-xs-4 formpaddingright">
           <input type="text" class="form-control" name="eyecolor" id="eyecolor" placeholder="Eye Color*" [formControl]="dataForm.controls['eyecolor']" (keyup)="issubmit=0">
-          <span class="error" *ngIf="!dataForm.controls['eyecolor'].valid && dataForm.controls['eyecolor'].touched && issubmit==1">Eyecolor field is required.</span>
+          <span class="error" *ngIf="!dataForm.controls['eyecolor'].valid && dataForm.controls['eyecolor'].touched && issubmit==1">Eye color field is required.</span>
         </div>
         <div class="form-group col-sm-5 col-xs-12">
           <input type="text" class="form-control" name="haircolor" id="haircolor" placeholder="Hair Color*"  [formControl]="dataForm.controls['haircolor']" (keyup)="issubmit=0">

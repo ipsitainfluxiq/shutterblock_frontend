@@ -52,6 +52,7 @@ import { Resolveservice } from '../app/resolveservice';
 
 import { DragScrollModule } from 'ngx-drag-scroll';
 import {ApiService} from './api.service';
+import {prevroute} from './prevroute';
 import {AuthGuard} from './auth.guard';
 import {NgxUploaderModule} from 'ngx-uploader';
 import { UploaderComponent } from './uploader/uploader.component';
@@ -118,6 +119,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
 
   bootstrap: [AppComponent],
-  providers: [CookieService, Resolveservice, ApiService, AuthGuard],
+  providers: [CookieService, Resolveservice, ApiService, prevroute, AuthGuard],
 })
 export class AppModule { }
