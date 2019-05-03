@@ -2495,6 +2495,7 @@ body{
 .upload_caption{ color:#fff; font-size: 20px; font-family: 'RobotoMedium'; margin-bottom: 15px;}
 
 .thumb_gallery_uploadselect {
+    position: relative;
     width: 25px;
     height: 25px;
     position: absolute;
@@ -2503,12 +2504,28 @@ body{
     top: 5px;
     border-radius: 50%;
     font-size: 18px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding: 1px;
     border: 2px solid #4e504f;  cursor: pointer;
 }
 
 .thumb_gallery_upload{cursor: pointer;}
+.thumb_gallery_upload a:last-child { margin-left: 40px!important;}
 
 .thumb_gallery_upload img{ display: block!important; width: 80%!important; margin: 2% auto!important;}
 .thumb_gallery_uploadselect img{ display: block!important; width: 80%!important; margin: 2% auto!important;}
+
+
+
+.uploadthumimgbox_span a[title]:after{ border-radius: 6px!important;}
+
+/*.uploadthumimgbox_span [title]:hover:after {*/
+/*    content: attr(title);*/
+/*    padding: 4px 8px;*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    top: 100%;*/
+/*    white-space: nowrap;*/
+/*    z-index: 20;*/
+/*    background:red;*/
+/*}*/

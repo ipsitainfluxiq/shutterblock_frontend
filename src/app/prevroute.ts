@@ -5,16 +5,16 @@ import { Router, RouterEvent, NavigationEnd } from '@angular/router';
 @Injectable()
 export class prevroute {
 
-  private previousUrl: string = undefined;
-  private currentUrl: string = undefined;
+  public previousUrl: string = undefined;
+  public currentUrl: string = undefined;
 
-  constructor(private router : Router) {
+  constructor(private router: Router) {
     this.currentUrl = this.router.url;
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.previousUrl = this.currentUrl;
         this.currentUrl = event.url;
-      };
+      }
     });
   }
 
@@ -23,6 +23,6 @@ export class prevroute {
     console.log('prev- ' + this.previousUrl);
     console.log('currnt- ' + this.currentUrl);
     console.log('end');
-    return this.previousUrl;
+      return this.previousUrl;
   }
 }

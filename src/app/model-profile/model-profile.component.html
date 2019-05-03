@@ -199,7 +199,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade modaldefault animated bounceIn" id="fullscreenimgmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div *ngIf="imgflag==true" class="modal fade modaldefault animated bounceIn" id="fullscreenimgmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
     <div class="modal-content">

@@ -20,6 +20,7 @@ public imgbig1: any;
 public imgbig2: any;
 public arrimg: any;
 public imgmodel: any;
+public imgflag: any=true;
     /*@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;*/
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;
@@ -77,44 +78,48 @@ public model: any;
         console.log(this.model.images);
         console.log(this.model.images.indexOf(imgb));
         this.arrimg = this.model.images.indexOf(imgb);
-        console.log('outside for loop');
         console.log(this.arrimg);
+        let i = 0;
+        // tslint:disable-next-line:forin
+        for (let b in this.model.images) {
+            // this.model.images[b]=
+            console.log('hfskj');
+            console.log(b);
+            this.imgbig.moveLeft();
+        }
+
+
+
+
+        // console.log('outside for loop');
+        console.log('outside for loop' + i);
         $('.fullscreenimagewrapper').css('visibility', 'hidden');
-        for (let i = 0;  i < this.arrimg ; i++) {
+        for (i = 0;  i < this.arrimg; i++) {
             console.log('in for loop' + i);
-
             setTimeout(() => {
+                console.log('in for loop TIMEOUT' + i);
                 this.imgbig.moveRight();
-            }, 800);
-
+                console.log('------');
+            }, 1000);
+           // break;
         }
 
         setTimeout(() => {
             this.imgbig.moveRight();
             this.imgbig.moveLeft();
             $('.fullscreenimagewrapper').css('visibility', 'visible');
-        }, 1300);
+
+        }, 1200);
     }
     mimg(im: any) {
         console.log('mimg');
         console.log(im);
         im =  this.imgmodel;
         console.log('mimg-end');
+        console.log(this.imgmodel);
         console.log(im);
         return im;
     }
-/*
-
-    img1click(imgbig1: any) {
-      console.log('oook');
-      console.log(imgbig1);
-    }
-
-    img1click1(im: any) {
-      console.log('ok');
-      console.log(im);
-    }
-*/
 
 
 

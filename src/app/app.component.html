@@ -18,4 +18,14 @@
   </li>
 </ul>
 
-<router-outlet></router-outlet>
+<!--<router-outlet></router-outlet>-->
+<router-outlet *ngIf="loading==false">{{loading}}</router-outlet>
+<div style="width:100vw; height:100vh; display:table-cell; vertical-align:middle; text-align:center;" *ngIf="loading==true">
+<!--  <div style="width:100vw; height:100vh; display:table-cell; vertical-align:middle; text-align:center;">-->
+{{loading}}
+    <img src="assets/images/shaterblockLogo.png"  alt="#" style="margin:0 auto; display: block; margin-bottom:30px; max-width: 280px;"/>
+
+    <div class="loader" style="background-color: white">kghdg</div>
+
+
+  </div>

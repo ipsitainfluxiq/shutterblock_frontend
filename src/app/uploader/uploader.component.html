@@ -17,9 +17,14 @@
                   <span class="uploadthumimgbox" *ngFor="let img of apiService.fileservername[filenamevalc] ;let i=index;">
 
                       <span class="uploadthumimgbox_span" >
-                          <a [ngClass]="img==profileimage ? 'thumb_gallery_uploadselect' : 'thumb_gallery_upload'" (click)="profileImg(img)"> <img src="../../assets/images/upload_image.png"> </a>
+                          <a title="Set Profile Picture" [ngClass]="img==profileimage ? 'thumb_gallery_uploadselect' : 'thumb_gallery_upload'" (click)="profileImg(img)"> <img src="../../assets/images/upload_image.png">
+                          </a>
 
-                           <a *ngIf="!show_second_image"  [ngClass]="img==second_image ? 'thumb_gallery_uploadselect' : 'thumb_gallery_upload'" (click)="profileImg2(img)"> <img src="../../assets/images/upload_image.png"> </a>
+                           <a title="Set Second Picture" class="thumb_gallery_upload2" [ngClass]="img==second_image ? 'thumb_gallery_uploadselect' : 'thumb_gallery_upload '" (click)="profileImg2(img)">
+
+                               <img src="../../assets/images/upload_image.png">
+
+                           </a>
                         <img  src="{{filepathc}}/{{img}}" >
                         <button (click)="delimage(i)">Delete</button>
 <!--                          <span>{{img}}==={{profileimage}}</span>-->

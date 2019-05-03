@@ -16,14 +16,12 @@ export class FooterComponent implements OnInit {
 public loginurl: any;
 public prevroute: any;
 public previousurl: any;
+public error: any;
     @ViewChild('imgbig') imgbig: DragScrollComponent;
     showmodal: any;
 
   constructor(public router: Router, public route: ActivatedRoute, public apiservic: ApiService, public prevrout: prevroute) {
       console.log(router.url);
-      if (router.url == router.url) {
-
-      }
   }
 
   ngOnInit() {
@@ -36,8 +34,16 @@ public previousurl: any;
       );
       this.previousurl = this.prevrout.getPreviousUrl();
       console.log(this.previousurl);
+      console.log('current');
+      console.log(this.prevrout.currentUrl);
+      console.log('prev');
+      console.log(this.prevrout.previousUrl);
+      if (this.prevrout.currentUrl == this.prevrout.previousUrl) {
+          this.error = 'hide';
+      }
   }
     previce() {
+
         this.router.navigate([this.previousurl]);
     }
 

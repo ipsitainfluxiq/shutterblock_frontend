@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  ngAfterViewChecked() {
+  ngAfterViewChecked () {
 
     /*console.log('in ng ngAfterViewChecked !!');
     console.log($('.newhome_header').height());
