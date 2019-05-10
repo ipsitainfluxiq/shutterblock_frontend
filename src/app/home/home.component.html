@@ -351,7 +351,7 @@
                 <div class="form-row">
                     <div class="form-group col-xs-12 text-right">
                         <div class="btncheckshatterproof">
-                            <button type="submit" class="btnyellow" data-toggle="modal" data-target="#mysuccess">Submit</button>
+                            <button type="submit" class="btnyellow" data-toggle="modal">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -360,7 +360,18 @@
     </div>
 </div>
 
+<ng-template #mysuccess>
+    <div class="modal-body brandmanagement_modal">
+        <div class="cross">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">X</button>
+        </div>
+        <div class="logo_wrapper">
+            <img src="../../assets/images/logo.png">
+        </div>
+        <div class="message_success text-center">Successful</div>
 
+    </div>
+</ng-template>
 
 <app-footer></app-footer>
 

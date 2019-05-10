@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   public myForm: FormGroup;
   public issubmit = 1;
   public mysuccessapplication1: any = false;
+  // mysuccess: TemplateRef<any>;
   constructor(private modalService: BsModalService, public fb: FormBuilder) {}
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -43,7 +44,7 @@ export class HomeComponent implements OnInit {
   doclick1close() {
     this.mysuccessapplication1 = false;
   }
-  doSubmit(template: TemplateRef<any>) {
+  doSubmit(mysuccess: TemplateRef<any>) {
     this.issubmit = 1;
     console.log('myForm');
     let x: any;
@@ -54,10 +55,12 @@ export class HomeComponent implements OnInit {
     if (this.myForm.valid) {
       console.log('this.myForm.value');
       console.log(this.myForm.value);
-      this.modalRef = this.modalService.show(template);
+      this.modalRef = this.modalService.show(mysuccess);
     }
   }
-
+  hide() {
+    this.modalRef.hide();
+  }
 
   ngAfterViewChecked () {
 
