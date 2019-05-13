@@ -7924,12 +7924,22 @@ p.headertitlepara{
 
 
 
+.formdivwrapper form .socialmediafieldinner input:focus::-webkit-input-placeholder { color:transparent; }
+
+.formdivwrapper form .socialmediafieldinner input:focus { padding-left: 49%;}
+.formdivwrapper form .socialmediafieldinner ::placeholder{
+	padding-left: 45%;
+}
+
+.formdivwrapper form .socialmediafieldinner .icon_ref{ position: absolute; color: #fff; top: 9px; left: 8%; font-family: "CenturyGothic"; font-size: 18px;
+	letter-spacing: -1px; }
 
 
 
-
-
-
+.formdivwrapper form .socialmediafieldinner #twitterlink { padding-left: 43%!important; }
+.formdivwrapper form .socialmediafieldinner #instagramlink { padding-left: 49%!important; }
+.formdivwrapper form .socialmediafieldinner #facebooklink { padding-left: 49%!important; }
+.formdivwrapper form .socialmediafieldinner #modelmayhemlink { padding-left: 56%!important; }
 
 
 

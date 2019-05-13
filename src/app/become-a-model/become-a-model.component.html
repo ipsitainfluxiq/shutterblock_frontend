@@ -199,14 +199,23 @@
         <div class="form-group col-sm-6 col-xs-12 formpaddingright">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/socialicon-fb.png" alt="socialicon-fb">
-            <input type="url" class="form-control" name="facebooklink" id="facebooklink" placeholder="facebook link" [formControl]="dataForm.controls['facebooklink']" (keyup)="issubmit=0">
+
+            <input type="url" class="form-control" name="facebooklink" id="facebooklink" placeholder="" [formControl]="dataForm.controls['facebooklink']" (keyup)="issubmit=0" >
+            <span class="icon_ref">www.https://facebook.com/</span>
             <span class="error" *ngIf="!dataForm.controls['facebooklink'].valid && dataForm.controls['facebooklink'].touched && issubmit==1">Give proper URL with http or https.</span>
           </div>
-        </div>
+        </div><!--
+        <mat-form-field>
+          <input matInput placeholder="Amount" type="number" class="example-right-align">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>-->
+
         <div class="form-group col-sm-6 col-xs-12">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/socialicon-ins.png" alt="socialicon-ins">
-            <input type="url" class="form-control" name="instagramlink" id="instagramlink" placeholder="instagram link*" [formControl]="dataForm.controls['instagramlink']" (keyup)="issubmit=0">
+            <input type="url" class="form-control" name="instagramlink" id="instagramlink" placeholder=" " [formControl]="dataForm.controls['instagramlink']" (keyup)="issubmit=0">
+            <span class="icon_ref">www.https://instagram.com/</span>
             <span class="error" *ngIf="!dataForm.controls['instagramlink'].valid && dataForm.controls['instagramlink'].touched && issubmit==1">Instagram Link field is required && Give proper URL with http or https.</span>
           </div>
         </div>
@@ -216,14 +225,17 @@
         <div class="form-group col-sm-6 col-xs-12 formpaddingright">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/socialicon-twit.png" alt="socialicon-twit">
-            <input type="url" class="form-control" name="twitterlink" id="twitterlink" placeholder="Twitter Link" [formControl]="dataForm.controls['twitterlink']" (keyup)="issubmit=0">
+            <input type="url" class="form-control" name="twitterlink" id="twitterlink" placeholder="" [formControl]="dataForm.controls['twitterlink']" (keyup)="issubmit=0">
+
+            <span class="icon_ref">www.https://twitter.com/</span>
             <span class="error" *ngIf="!dataForm.controls['twitterlink'].valid && dataForm.controls['twitterlink'].touched && issubmit==1">Give proper URL with http or https.</span>
           </div>
         </div>
         <div class="form-group col-sm-6 col-xs-12">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/modelmayhemlink.png" alt="modelmayhemlink">
-            <input type="url" class="form-control" name="modelmayhemlink" id="modelmayhemlink" placeholder="Model Mayhem Link" [formControl]="dataForm.controls['modelmayhemlink']" (keyup)="issubmit=0">
+            <input type="url" class="form-control" name="modelmayhemlink" id="modelmayhemlink" placeholder=" " [formControl]="dataForm.controls['modelmayhemlink']" (keyup)="issubmit=0">
+            <span class="icon_ref">www.https://modelmayhem.com/</span>
             <span class="error" *ngIf="!dataForm.controls['modelmayhemlink'].valid && dataForm.controls['modelmayhemlink'].touched && issubmit==1">Give proper URL with http or https.</span>
           </div>
         </div>

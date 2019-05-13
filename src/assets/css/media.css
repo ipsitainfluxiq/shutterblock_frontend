@@ -5526,6 +5526,12 @@
         font-size: 50px;
         line-height: 53px;
     }
+
+/*    profile link*/
+    .formdivwrapper form .socialmediafieldinner #facebooklink { padding-left: 39%!important; }
+    .formdivwrapper form .socialmediafieldinner #twitterlink { padding-left: 39%!important; }
+    .formdivwrapper form .socialmediafieldinner #instagramlink { padding-left: 35%!important; }
+    .formdivwrapper form .socialmediafieldinner #modelmayhemlink { padding-left: 46%!important; }
 }
 
 @media screen and (max-width:740px) {
