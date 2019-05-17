@@ -14,32 +14,37 @@
   <div class="formdivwrapper">
     <h2>Contact Us</h2>
     <div class="formdivwrapper_content">
-      <form>
+      <form [formGroup]="myForm" (ngSubmit)="doSubmit(mysuccess)">
         <div class="form-row">
           <div class="form-group col-xs-6 formpaddingright">
-            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name">
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" [formControl]="myForm.controls['firstname']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!myForm.controls['firstname'].valid && myForm.controls['firstname'].touched && issubmit == 1">First Name field is required.</span>
           </div>
           <div class="form-group col-xs-6">
-            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name">
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" [formControl]="myForm.controls['lastname']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!myForm.controls['lastname'].valid && myForm.controls['lastname'].touched && issubmit == 1">Last Name field is required.</span>
           </div>
           <div class="form-group col-xs-6 formpaddingright">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Email *">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email *" [formControl]="myForm.controls['email']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched && issubmit == 1 ">Email field is required Give proper email id.</span>
           </div>
           <div class="form-group col-xs-6">
-            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone *">
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone *" [formControl]="myForm.controls['phone']" (keyup)="issubmit=0">
+            <span class="error" *ngIf="!myForm.controls['phone'].valid && myForm.controls['phone'].touched && issubmit==1">Phone field is required.</span>
           </div>
         </div>
         <div class="clearfix"></div>
         <div class="form-row">
           <div class="form-group col-sm-12 col-xs-12">
-            <textarea class="form-control" name="message" id="validationTextarea" placeholder="Message *" rows="3" required></textarea>
+            <textarea class="form-control" name="message" id="validationTextarea" placeholder="Message *" rows="3" required [formControl]="myForm.controls['message']" (keyup)="issubmit=0"></textarea>
+            <span class="error" *ngIf="!myForm.controls['message'].valid && myForm.controls['message'].touched && issubmit == 1">Message Box field is required.</span>
           </div>
         </div>
         <div class="clearfix"></div>
         <div class="form-row">
           <div class="form-group col-xs-12 text-right">
             <div class="btncheckshatterproof">
-              <button type="submit" class="btnyellow" data-toggle="modal" data-target="#mysuccess">Submit</button>
+              <button type="submit" class="btnyellow" data-toggle="modal" data-target="modal" [disabled]="!myForm.valid">Submit</button>
             </div>
           </div>
         </div>
@@ -48,5 +53,19 @@
   </div>
 </div>
 
+
+<ng-template #mysuccess>
+  <div class="modal-body brandmanagement_modal successmodal">
+    <div class="cross">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">X</button>
+    </div>
+    <div class="logo_wrapper">
+      <img src="../../assets/images/shaterblockLogo.png">
+    </div>
+    <h2 class="message_success text-center">Successful</h2>
+    <p class="text-center">THANK YOU FOR CONTACTING SHATTERBLOK! WE WILL GET BACK TO YOU WITH A RESPONSE AS SOON AS POSSIBLE.</p>
+
+  </div>
+</ng-template>
 
 <app-footer></app-footer>

@@ -207,8 +207,7 @@ export class BecomeAModelComponent implements OnInit {
       data = { source: 'users', data : this.dataForm.value };
       data.data.images = this.apiService.fileservername[this.uploader];
       data.data.profile_img = this.apiService.profileimage;
-      data.data.second_image = this.apiService.second_image;
-
+      data.data.second_img = this.apiService.second_image;
       if (this.apiService.fileservername == null || this.apiService.fileservername[this.uploader] == null || this.apiService.fileservername[this.uploader].length < 4 ) {
         this.modalRef = this.modal.show(erroemodal, { class: 'modal-md modaldefault'});
       } else {

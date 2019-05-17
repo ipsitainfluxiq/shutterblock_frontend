@@ -3,6 +3,7 @@ import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 import {windowCount} from 'rxjs/operators';
 import {FormGroup, FormBuilder, FormControl, Validators} from '@angular/forms';
+import {ApiService} from '../api.service';
 
 declare var $: any;
 @Component({
@@ -15,14 +16,15 @@ export class HomeComponent implements OnInit {
   public myForm: FormGroup;
   public issubmit = 1;
   public mysuccessapplication1: any = false;
+  public endpoint: any = 'addorupdatedata';
   // mysuccess: TemplateRef<any>;
-  constructor(private modalService: BsModalService, public fb: FormBuilder) {}
+  constructor(private modalService: BsModalService, public fb: FormBuilder, public apiService: ApiService) {}
   ngOnInit() {
     this.myForm = this.fb.group({
       firstname: ['', Validators.required],
       lastname: ['', Validators.required],
-      email: ['', Validators.compose([Validators.required, Validators.pattern('/^\\s*[\\w\\-\\+_]+(\\.[\\w\\-\\+_]+)*\\@[\\w\\-\\+_]+\\.[\\w\\-\\+_]+(\\.[\\w\\-\\+_]+)*\\s*$/')])],
-      phone: ['', Validators.compose([Validators.required, Validators.pattern('/^-?(0|[1-9]\d*)(?<!-0)$/')])],
+      email: ['', Validators.compose([Validators.required, Validators.pattern(/^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/)])],
+      phone: ['', Validators.required],
       message: ['', Validators.required],
     });
    /* console.log('in ng oninit !!');
@@ -52,11 +54,19 @@ export class HomeComponent implements OnInit {
     for (x in this.myForm.controls) {
       this.myForm.controls[x].markAsTouched();
     }
-    if (this.myForm.valid) {
       console.log('this.myForm.value');
       console.log(this.myForm.value);
-      this.modalRef = this.modalService.show(mysuccess);
-    }
+      const data = this.myForm.value;
+      const data1 = {source: 'contactUs', data: data};
+      this.apiService.postDatawithottoken(this.endpoint, data1).subscribe(res => {
+        let result: any = {};
+        result = res;
+        console.log(result);
+        if (result.status == 'success') {
+          this.myForm.reset();
+          this.modalRef = this.modalService.show(mysuccess);
+        }
+      });
   }
   hide() {
     this.modalRef.hide();

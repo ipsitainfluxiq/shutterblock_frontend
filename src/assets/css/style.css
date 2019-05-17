@@ -6305,6 +6305,28 @@ body{
 	max-height:100%;
 }
 
+.logo_wrapper img{max-width: 100%;}
+.successmodal .message_success{
+	font-size: 24px;
+	text-transform: uppercase;
+	font-family: "OpenSansSemiBold";
+	color: #7f3c86;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.successmodal p{
+	font-size: 16px;
+	text-transform: inherit;
+	font-family: "OpenSans";
+	color: #000;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	margin: 0px 0px 10px;
+}
 
 /*
 .fullscreenimagewrapper{
@@ -7937,7 +7959,7 @@ p.headertitlepara{
 
 
 .formdivwrapper form .socialmediafieldinner #twitterlink { padding-left: 43%!important; }
-.formdivwrapper form .socialmediafieldinner #instagramlink { padding-left: 49%!important; }
+.formdivwrapper form .socialmediafieldinner #instagramlink { padding-left: 48%!important; }
 .formdivwrapper form .socialmediafieldinner #facebooklink { padding-left: 49%!important; }
 .formdivwrapper form .socialmediafieldinner #modelmayhemlink { padding-left: 56%!important; }
 
