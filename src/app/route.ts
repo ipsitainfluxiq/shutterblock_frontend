@@ -96,8 +96,7 @@ const appRoutes: Routes = [
     {path: 'contact-us', component: ContactUsComponent},
 
 
-
-
+    
     { path: '**', component: HomeComponent},
 
 ];

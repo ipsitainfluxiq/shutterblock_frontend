@@ -17,11 +17,11 @@
       <form [formGroup]="myForm" (ngSubmit)="doSubmit(mysuccess)">
         <div class="form-row">
           <div class="form-group col-xs-6 formpaddingright">
-            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" [formControl]="myForm.controls['firstname']" (keyup)="issubmit=0">
+            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name *" [formControl]="myForm.controls['firstname']" (keyup)="issubmit=0">
             <span class="error" *ngIf="!myForm.controls['firstname'].valid && myForm.controls['firstname'].touched && issubmit == 1">First Name field is required.</span>
           </div>
           <div class="form-group col-xs-6">
-            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" [formControl]="myForm.controls['lastname']" (keyup)="issubmit=0">
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name *" [formControl]="myForm.controls['lastname']" (keyup)="issubmit=0">
             <span class="error" *ngIf="!myForm.controls['lastname'].valid && myForm.controls['lastname'].touched && issubmit == 1">Last Name field is required.</span>
           </div>
           <div class="form-group col-xs-6 formpaddingright">
