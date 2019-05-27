@@ -23,7 +23,6 @@ export class OurModelsComponent implements OnInit {
       console.log(data['results'].results);
       console.log('________');
       console.log(data['results'].results.length);
-      // console.log(data['results'].results[0].images[0]);
       this.model = data['results'].results;
     } else {
         console.log('opps');
