@@ -47,11 +47,4 @@ public error: any;
         this.router.navigate([this.previousurl]);
     }
 
-    /* movebigLeft() {
-       this.imgbig.moveLeft();
-     }
-
-     movebigRight() {
-         this.imgbig.moveRight();
-     }*/
 }
