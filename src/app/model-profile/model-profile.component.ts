@@ -20,7 +20,7 @@ public imgbig1: any;
 public imgbig2: any;
 public arrimg: any;
 public imgmodel: any;
-public imgflag: any=true;
+public imgflag: any = true;
     /*@ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;*/
 
     @ViewChild('imgbig') imgbig: DragScrollComponent;

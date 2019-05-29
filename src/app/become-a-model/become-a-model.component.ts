@@ -22,6 +22,7 @@ export class BecomeAModelComponent implements OnInit {
   public kp;
   public modeluploadpath: any = environment.modelfolder;
   public modelfilepath: any = environment.Model_Image_Url;
+  public profileimg: any = 1;
   public fileservername;
   public uploadInput: EventEmitter<UploadInput>;
   public humanizeBytes: Function;
@@ -58,6 +59,7 @@ export class BecomeAModelComponent implements OnInit {
       public modal: BsModalService,
       public apiService: ApiService,
   ) {
+    // this.profileimg = 1;
     this.kp = kp;
     this.options = { concurrency: 1, maxUploads: 3 };
     this.files = []; // local uploading files array

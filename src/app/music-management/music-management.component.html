@@ -96,41 +96,52 @@
     <h1 class="headertitle">Submission Process</h1>
     <h3 class="headertitle2">Want to share your music with us and have a chance to succeed? </h3>
     <p class="headertitlepara">Fill out the Submission Form below and we will review your content for the chance to move you a step forward to the success you have always wanted. We would love to collaborate and come up with a precise marketing plan that will fit your needs. </p>
-    <form>
+    <form [formGroup]="myForm" (ngSubmit)="doSubmit(successform, error)">
       <div class="form-row">
         <div class="form-group col-xs-6 formpaddingright">
-          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name*">
+          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name*" [formControl]="myForm.controls['firstname']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['firstname'].valid && myForm.controls['firstname'].touched && issubmit==1">First Name field is required.</span>
+        </div>
         </div>
         <div class="form-group col-xs-6">
-          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name*">
+          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name*"[formControl]="myForm.controls['lastname']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['lastname'].valid && myForm.controls['lastname'].touched && issubmit==1">Last Name field is required.</span>
         </div>
-      </div>
       <div class="clearfix"></div>
       <div class="form-row">
         <div class="form-group col-sm-2 col-xs-4 formpaddingright">
-          <input type="text" class="form-control" name="age" id="age" placeholder="Age*">
+          <input type="text" class="form-control" name="age" id="age" placeholder="Age*" [formControl]="myForm.controls['age']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['age'].valid && myForm.controls['age'].touched && issubmit==1">Age field is required.</span>
         </div>
         <div class="form-group col-sm-5 col-xs-8 formpaddingright">
-          <input type="text" class="form-control" name="phone" id="phone" placeholder="phone number*">
+          <input type="text" class="form-control" name="phone" id="phone" placeholder="phone number*" [formControl]="myForm.controls['phone']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['phone'].valid && myForm.controls['phone'].touched && issubmit==1">Phone field is required.</span>
         </div>
         <div class="form-group col-sm-5 col-xs-12">
-          <input type="text" class="form-control" name="email" id="email" placeholder="email address*">
+          <input type="text" class="form-control" name="email" id="email" placeholder="email address*"  [formControl]="myForm.controls['email']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['email'].valid && myForm.controls['email'].touched && issubmit==1">Email field is required.</span>
         </div>
       </div>
       <div class="clearfix"></div>
       <div class="form-row">
         <div class="form-group col-xs-5 formpaddingright">
-          <input type="text" class="form-control" name="city" id="city" placeholder="city">
+          <input type="text" class="form-control" name="city" id="city" placeholder="city"  [formControl]="myForm.controls['city']" (keyup)="issubmit=0">
+          <span class="error" *ngIf="!myForm.controls['city'].valid && myForm.controls['city'].touched && issubmit==1">City field is required.</span>
         </div>
         <div class="form-group col-xs-7">
-          <input type="text" class="form-control" name="state" id="state" placeholder="state">
+          <select class="form-control" [formControl]="myForm.controls['state']">
+            <option value="">Select State</option>
+            <option *ngFor="let item of stateslist" value="{{item.abbreviation}}">{{item.name}}</option>
+          </select>
+          <span class="error" *ngIf="!myForm.controls['state'].valid && myForm.controls['state'].touched">Have to choose a/any state</span>
         </div>
       </div>
 
       <div class="clearfix"></div>
       <div class="form-row">
         <div class="form-group col-xs-12">
-          <textarea class="form-control" name="descriptionbox" id="validationTextarea" placeholder="Description Box" rows="3" required></textarea>
+          <textarea class="form-control" name="descriptionbox" id="validationTextarea" placeholder="Description Box" rows="3" required [formControl]="myForm.controls['descriptionbox']" (keyup)="issubmit=0"></textarea>
+          <span class="error" *ngIf="!myForm.controls['descriptionbox'].valid && myForm.controls['descriptionbox'].touched && issubmit==1">Description Box field is required.</span>
         </div>
       </div>
 
@@ -139,23 +150,30 @@
         <div class="form-group col-sm-6 col-xs-12 formpaddingright">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/socialicon-fb.png" alt="socialicon-fb">
-            <input type="url" class="form-control" name="facebooklink" id="facebooklink" placeholder="facebook link">
+            <input type="url" class="form-control" name="facebooklink" id="facebooklink" placeholder="" [formControl]="myForm.controls['facebooklink']" (keyup)="issubmit=0" >
+            <span class="icon_ref">https://www.facebook.com/</span>
+            <span class="error" *ngIf="!myForm.controls['facebooklink'].valid && myForm.controls['facebooklink'].touched && issubmit==1">Give proper URL with http or https.</span>
           </div>
         </div>
         <div class="form-group col-sm-6 col-xs-12">
           <div class="socialmediafieldinner">
             <img src="../../assets/images/socialicon-soundcloud.png" alt="socialicon-soundcloud">
-            <input type="url" class="form-control" name="soundcloudlink" id="soundcloudlink" placeholder="SoundCloud Link">
+            <input type="url" class="form-control" name="soundcloudlink" id="soundcloudlink" placeholder="" [formControl]="myForm.controls['soundcloud']" (keyup)="issubmit=0" >
+            <span class="icon_ref">https://www.soundcloud.com/</span>
+            <span class="error" *ngIf="!myForm.controls['soundcloud'].valid && myForm.controls['soundcloud'].touched && issubmit==1">Give proper URL with http or https.</span>
           </div>
         </div>
       </div>
 
       <div class="clearfix"></div>
-      <p class="headertitlepara">Upload Images (Upload at least 3 Medias)</p>
+      <p class="headertitlepara">Upload Images (Upload at least 3 Images)</p>
       <div class="form-row">
 
         <div class="form-group col-xs-12">
-          <div class="uploadsection">
+
+          <app-uploader uploadtype="multiple" [uploadpath]="modeluploadpath" [filepath]="modelfilepath"  [filenameval]="uploader" ></app-uploader>
+
+          <!--<div class="uploadsection">
 
 
             <div class="progress">
@@ -171,10 +189,10 @@
               <input id="file-upload" type="file"/>
 
 
-              <!--<input type="file" id="file" (change)="handleFileInput($event.target.files)">-->
+              &lt;!&ndash;<input type="file" id="file" (change)="handleFileInput($event.target.files)">&ndash;&gt;
             </div>
 
-          </div>
+          </div>-->
 
         </div>
       </div>
@@ -184,7 +202,7 @@
       <div class="form-row">
         <div class="form-group col-sm-12 text-right btncheckshatterproofwrappper">
           <div class="btncheckshatterproof">
-            <button class="btnyellow" data-toggle="modal" data-target="#musicmanagementdialog">Submit</button>
+            <button class="btnyellow" data-toggle="modal">Submit</button>
           </div>
         </div>
       </div>
@@ -194,3 +212,25 @@
 </div>
 
 <app-footer></app-footer>
+
+
+
+<ng-template #successform>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closemodal()">&times;</button>
+    <div class="logoshatterblock">
+      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+    </div>
+    <p>Thank you for Submitting your music media for a chance to be a part of Shatter Proof Music Group’s team! We will review your form as soon as possible and respond with details on your opportunity regarding what steps may come next!</p>
+  </div>
+</ng-template>
+
+<ng-template #error>
+  <div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="closemodal()">&times;</button>
+    <div class="logoshatterblock">
+      <img src="../assets/images/shaterblockLogo.png" class="newhomelogo">
+    </div>
+    <p>PLEASE UPLOAD AT LEAST 3 IMAGES AND SELECT ONE IMAGE THAT YOU WANT AS YOUR SHATTERBLOK PROFILE PICTURE.</p>
+  </div>
+</ng-template>

@@ -11,12 +11,14 @@ export class UploaderComponent implements OnInit {
   public filenamevalc;
   public filenamevalc1;
   public uploadtypec;
+  public profileimgval;
   public uploadpathc;
   public filepathc;
   public nameis;
   public profileimage: any;
   public second_image: any;
   public show_second_image: any = 1 ;
+  public ishidden = 0;
   /// public filenameval;
   @Input()
   set filenameval(filenameval: any) {
@@ -46,6 +48,13 @@ export class UploaderComponent implements OnInit {
     console.log('this.uploadtypec');
     console.log(this.uploadtypec);
   }
+  @Input()
+  set profileimg(profileimg: any) {
+    // alert(filenameval);
+    this.profileimgval = profileimg;
+    console.log('this.profileimgval');
+    console.log(this.profileimgval);
+  }
   // @Output() filenamevalcChange = new EventEmitter<any>();
   // @Output() lfChange = new EventEmitter<any>();
 
@@ -66,6 +75,9 @@ export class UploaderComponent implements OnInit {
     // this.lfChange.emit(90);
   }
   ngOnInit() {
+    if (this.profileimgval != null) {
+      this.ishidden = 0;
+    }
   }
   delimage(indexval: any) {
     this.apiService.fileservername[this.filenamevalc].splice(indexval,1);
