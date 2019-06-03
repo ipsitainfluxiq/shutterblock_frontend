@@ -3841,7 +3841,8 @@ body{
 .newhomesproofmodeldivimgright{
 	position: absolute;
 	top: -9%;
-	right: -38%;
+	/*right: -38%;*/
+	right: -40%;
 	z-index: 9;
 	width: 724px;
 	height: auto;
@@ -4145,6 +4146,7 @@ body{
 	margin: 0;
 	color: #515776;
 }
+
 
 .formdivwrapper form .checkbox-inline+.checkbox-inline, .formdivwrapper form .radio-inline+.radio-inline {
 	margin-top: 0;
@@ -5263,8 +5265,9 @@ body{
 	overflow: hidden;
 	position: relative;
 	margin-right: 5px;
+	display:none;
 }
-.testimonialcommentrighticon{width: 53px;height: 48px; overflow: hidden;    position: relative;margin-left: 5px;}
+.testimonialcommentrighticon{width: 53px;height: 48px; overflow: hidden;    position: relative;margin-left: 5px; display: none;}
 
 /*---------End Who we are Page css----*/
 
@@ -5621,7 +5624,8 @@ body{
 
 .becomeamemberbannerblock{
 	position: relative;
-	background: url(../images/becomeamemberbannerbg.jpg) no-repeat center top;
+	/*background: url(../images/becomeamemberbannerbg.jpg) no-repeat center top;*/
+	background: url(../images/become-a-modalTopBG.jpg) no-repeat center top;
 	background-size: cover;
 	padding: 30px;
 	width: 100%;
@@ -5637,7 +5641,8 @@ body{
 }
 
 .becomeamemberbannerblock .becomeamemberbannertext h1 {
-	background: url(../images/becomeamemberbannerblock_titletxt.jpg) center;
+	/*background: url(../images/becomeamemberbannerblock_titletxt.jpg) center;*/
+	background: url(../images/becomeamemberbannerblock_titletxt2.jpg) center;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-family: "OpenSansBold";
@@ -5650,6 +5655,7 @@ body{
 	text-shadow: none !important;
 	display: inline-block;
 	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .becomeamemberbannerblock .becomeamemberbannertext p{
@@ -5677,13 +5683,22 @@ body{
 	position: relative;
 }
 
+/*.becomeamemberblock1_wrapper_img {*/
+	/*width: auto;*/
+	/*height: 840px;*/
+	/*margin-bottom: 0;*/
+	/*position: absolute;*/
+	/*right: -12%;*/
+	/*top: 7%;*/
+/*}*/
+
 .becomeamemberblock1_wrapper_img {
 	width: auto;
-	height: 840px;
+	height: auto;
 	margin-bottom: 0;
 	position: absolute;
-	right: -12%;
-	top: 7%;
+	right: 0%;
+	top: 0%;
 }
 
 
@@ -5692,20 +5707,34 @@ body{
 .becomeamemberblock1_wrapper{ width: 1150px; margin: 128px auto; position: relative;	z-index: 9;}
 
 .becomeamemberblock1_wrapper h1 {
-	background: url(../images/becomeamemberblock1_wrapper_titlebg.jpg) left;
-	background-size: contain;
-	/*background: -webkit-linear-gradient(#eee, #333);*/
+	font-size: 82px;
+	/* background: -webkit-linear-gradient(#fefaf6, #fedbbb, #f13408, #820015); */
+	background-image: linear-gradient(to right, #fefcfa, #ffd7ab, #f64910, #ee2a06, #a90231, #a90231);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-family: "Ralewaybold";
-	font-size: 90px;
-	text-transform: uppercase;
-	line-height: 80px;
-	margin: 0;
-	white-space: normal;
-	word-break: normal;
-	margin-bottom: 30px;
+	font-weight: bold;
+	line-height: 75px;
+	margin-bottom: 60px;
 }
+/*.becomeamemberblock1_wrapper { width: 798px; }*/
+
+/*.becomeamemberblock1_wrapper h1 {*/
+	/*!*background: url(../images/becomeamemberblock1_wrapper_titlebg.jpg) left;*!*/
+	/*background: url(../images/becomeamemberblock1_wrapper_titlebg1.png) left;*/
+	/*!*background-size: contain;*!*/
+	/*background-size: auto;*/
+	/*!*background: -webkit-linear-gradient(#eee, #333);*!*/
+	/*-webkit-background-clip: text;*/
+	/*-webkit-text-fill-color: transparent;*/
+	/*font-family: "Ralewaybold";*/
+	/*font-size: 90px;*/
+	/*text-transform: uppercase;*/
+	/*line-height: 80px;*/
+	/*margin: 0;*/
+	/*white-space: normal;*/
+	/*word-break: normal;*/
+	/*margin-bottom: 30px;*/
+/*}*/
 
 .becomeamemberblock1_wrapper h2{ margin: 0; padding: 0; font-size: 24px; color: #ffffff; font-family: 'CenturyGothicBold'; line-height: 30px;}
 
@@ -7948,14 +7977,13 @@ p.headertitlepara{
 
 .formdivwrapper form .socialmediafieldinner input:focus::-webkit-input-placeholder { color:transparent; }
 
-.formdivwrapper form .socialmediafieldinner input:focus { padding-left: 49%;}
+/*.formdivwrapper form .socialmediafieldinner input:focus { padding-left: 49%;}
 .formdivwrapper form .socialmediafieldinner ::placeholder{
 	padding-left: 45%;
-}
+}*/
 
 .formdivwrapper form .socialmediafieldinner .icon_ref{ position: absolute; color: #fff; top: 9px; left: 8%; font-family: "CenturyGothic"; font-size: 18px;
 	letter-spacing: -1px; }
-
 
 
 .formdivwrapper form .socialmediafieldinner #twitterlink { padding-left: 43%!important; }
@@ -8073,3 +8101,9 @@ p.headertitlepara{
 
 
 .innerloder{ width:120px; margin:0 auto;}
+
+
+.new_socialmedia form .socialmediafieldinner #facebooklink{ padding-left: 49%!important;}
+.new_socialmedia form .socialmediafieldinner #soundcloudlink {
+	padding-left: 46px!important;
+}

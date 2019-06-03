@@ -4,6 +4,9 @@
 
 
 
+@media screen and (max-width: 1860px) {
+    .becomeamemberblock1_wrapper { width: 75%;}
+}
 @media screen and (max-width: 1800px) {
     .musicvideoblock3wrapper {
         width: 96%;
@@ -2552,6 +2555,7 @@
 
 @media screen and (max-width: 1840px) {
 
+.becomeamemberblock1_wrapper h2 { padding: 0 30px 0 0px; }
     .mmbannerblock2imgleft {
         left: -30%;
     }
@@ -2582,8 +2586,11 @@
     .partnersblock1_wrapper_img {
         right: -24%;
     }
+   /*.becomeamemberblock1_wrapper_img {*/
+   	/*right: -16%;*/
+   /*}*/
     .becomeamemberblock1_wrapper_img {
-        right: -16%;
+        right: -1%;
     }
     .newwhoerareblock3wrapper {
         margin-left: 15%;
@@ -2640,10 +2647,10 @@
         height: 754px;
         top: 8%;
     }
+    /*.becomeamemberblock1_wrapper_img { right: -20%; }*/
     .becomeamemberblock1_wrapper_img {
-        right: -20%;
+        right: -4%;
     }
-
     .newhome_sproofmarketdiv_wrapper {
         width: 1065px;
     }
@@ -2664,7 +2671,10 @@
 }
 
 @media screen and (max-width: 1666px) {
-    .contactusbannerblock .innerbannertext h1 {
+    .becomeamemberblock1_wrapper {
+        width: 84%;
+    }
+        .contactusbannerblock .innerbannertext h1 {
         font-size: 110px;
         line-height: 120px;
     }
@@ -2720,9 +2730,7 @@
         top: 11%;
     }
 
-    .becomeamemberblock1_wrapper_img {
-        right: -24%;
-    }
+    /*.becomeamemberblock1_wrapper_img { right: -24%; }*/
     .newwhoerareblock3wrapper {
         margin-left: 6%;
     }
@@ -2903,10 +2911,6 @@
         width: 98%;
     }
 
-    .becomeamemberblock1_wrapper h1.headertitle {
-        font-size: 84px;
-        line-height: 76px;
-    }
 }
 
 @media screen and (max-width: 1540px) {
@@ -2975,8 +2979,9 @@
         font-size: 173px;
         line-height: normal;
     }
+   /*.becomeamemberblock1_wrapper {  width: 916px; }*/
     .becomeamemberblock1_wrapper {
-        width: 916px;
+        width: 75%;
     }
     .becomeamemberblock1_wrapper h1.headertitle {
         font-size: 72px;
@@ -3142,12 +3147,17 @@
         font-size: 57px;
         line-height: 51px;
     }
+
     .becomeamemberblock1_wrapper {
-        width: 798px;
+        width: 70%;
     }
+   /*.becomeamemberblock1_wrapper h1.headertitle {*/
+   	/*font-size: 61px;*/
+   	/*line-height: 54px;*/
+   /*}*/
     .becomeamemberblock1_wrapper h1.headertitle {
-        font-size: 61px;
-        line-height: 54px;
+        font-size: 65px;
+        line-height: 68px;
     }
     .new_shatter_vips_bg5 {
         width: 844px;
@@ -3193,9 +3203,7 @@
     .becomeamemberbannerblock .becomeamemberbannertext p {
         width: 90%;
     }
-    .becomeamemberblock1_wrapper {
-        width: 718px;
-    }
+  /*.becomeamemberblock1_wrapper { width: 718px; }*/
     .becomeamemberblock1_wrapper h1.headertitle {
         font-size: 57px;
         line-height: 51px;
@@ -3304,6 +3312,14 @@
 
 }
 
+@media screen and (max-width: 1406px) {
+    .becomeamemberblock1_wrapper {
+        margin: 110px auto;
+    }
+    .becomeamemberblock1_wrapper h1.headertitle {
+        font-size: 64px;
+    }
+}
 @media screen and (max-width: 1366px) {
     .modelprofileinfo .btnyellowmt20 .btnyellow {
         font-size: 28px;
@@ -3428,10 +3444,7 @@
         font-size: 140px;
         line-height: normal;
     }
-
-    .becomeamemberblock1_wrapper {
-        width: 680px;
-    }
+    /*.becomeamemberblock1_wrapper { width: 680px; }*/
     .becomeamemberblock1_wrapper h1.headertitle {
         font-size: 50px;
         line-height: 48px;
@@ -3599,9 +3612,11 @@
     .becomeamemberbannerblock .becomeamemberbannertext h1 {
         font-size: 142px;
     }
+    /*.becomeamemberblock1_wrapper_img { right: -29%; }*/
     .becomeamemberblock1_wrapper_img {
-        right: -29%;
+            right: -5%;
     }
+        .becomeamemberblock1_wrapper h1.headertitle { font-size: 58px; }
 
     .seeyouthere .newupcomingeventphotolists {
         height: 380px;
@@ -3693,7 +3708,12 @@
 }
 
 @media screen and (max-width: 1199px) {
-
+    .becomeamemberblock1_wrapper h1.headertitle {
+        line-height: 55px;
+    }
+    .becomeamemberblock1_wrapper h2 {
+        padding: 0 0px 0 0px;
+    }
     .sponsorblock {
         margin: 10px;
         width: 22%;
@@ -4842,7 +4862,7 @@
         z-index: 9;
         margin: 0 auto;
         display: block;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
     .newhomesproofmarketdivimgright {
@@ -4852,7 +4872,7 @@
         z-index: 9;
         margin: 20px auto 0px;
         display: block;
-        text-align: center;
+        text-align: left;
         width: 100%;
     }
     .newhome_sproofmodeldiv h2 {

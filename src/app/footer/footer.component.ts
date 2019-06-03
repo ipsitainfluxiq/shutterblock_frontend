@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {NavigationEnd, Router, Event, ActivatedRoute} from '@angular/router';
-import {DragScrollComponent} from 'ngx-drag-scroll/lib';
+import {DragScrollComponent} from 'ngx-drag-scroll';
 import { ApiService } from '../api.service';
 import { prevroute } from '../prevroute';
 

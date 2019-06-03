@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {DragScrollComponent} from 'ngx-drag-scroll/lib';
+import {DragScrollComponent} from 'ngx-drag-scroll';
 import { Router, ActivatedRoute } from '@angular/router';
 import {ApiService} from '../api.service';
 declare var $: any;
