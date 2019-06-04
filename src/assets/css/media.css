@@ -3939,7 +3939,8 @@
     }
 
     .modelmarketingblock1_content_left {
-        margin-top: -8%;
+        /* margin-top: -8%;*/
+        margin-top: 0%;
     }
 
     .modelmarketingblock1_content {
@@ -5798,11 +5799,12 @@
         height: 330px;
         overflow: hidden;
         position: relative;
-        margin: 0 auto;
+        margin: 0;
         display: block;
     }
     .testimonialssingleblockcontent {
         width: 100%;
+        text-align: left;
     }
     .seeyouthere .newupcomingeventphotolists {
         height: 230px;
