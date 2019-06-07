@@ -64,7 +64,8 @@ export class HomeComponent implements OnInit {
         console.log(result);
         if (result.status == 'success') {
           this.myForm.reset();
-          this.modalRef = this.modalService.show(mysuccess);
+          this.modalRef = this.modalService.show(mysuccess, { class: 'modaldefault'});
+
         }
       });
   }

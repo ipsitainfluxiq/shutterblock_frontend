@@ -16,7 +16,7 @@
       <!--<a [routerLink]="['/marketing-management']">Marketing Management <i class="fa fa-chevron-right"></i></a>-->
       <a class="opensubsidemenu">Marketing Division<i class="fa fa-chevron-right"></i></a>
       <ul id="subsidemenuDropdown2" class="newsubsidemenu">
-        <li><a onclick="opensubsidemenu1()" [routerLink]="['']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>
+        <li><a onclick="opensubsidemenu1()" (click)="promoEvent(mysuccess2)" [routerLink]="['']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>
         <li><a onclick="opensubsidemenu1()" [routerLink]="['/clients-campaigns']">Clients & Campaigns<i class="fa fa-chevron-right"></i></a></li>
       </ul>
     </li>
@@ -34,13 +34,13 @@
     </li>
 
     <li>
-      <a onclick="opensubsidemenu1()" [routerLink]="['/music-division']">Music Division<!--Music Management --><i class="fa fa-chevron-right"></i></a>
+      <a onclick="opensubsidemenu1()" [routerLink]="['/music-division']" >Music Division<!--Music Management --><i class="fa fa-chevron-right"></i></a>
 <!--      <ul id="subsidemenuDropdown3" class="newsubsidemenu">-->
 
 <!--        <li><a [routerLink]="['/#']">Media Division&lt;!&ndash;our models&ndash;&gt;<i class="fa fa-chevron-right"></i></a></li>-->
 <!--      </ul>-->
     </li>
-    <li><a onclick="opensubsidemenu1()" [routerLink]="['/']">Media Division<!--our models--><i class="fa fa-chevron-right"></i></a></li>
+    <li><a onclick="opensubsidemenu1()" [routerLink]="['/']" (click)="mediaDivision(mysuccess2)">Media Division<!--our models--><i class="fa fa-chevron-right"></i></a></li>
 <!--    <li><a href="javascript:void(0)">Calendar<i class="fa fa-chevron-right"></i></a></li>-->
     <li><a onclick="opensubsidemenu1()" [routerLink]="['/contact-us']">Contact Us <i class="fa fa-chevron-right"></i></a></li><li><a target="_blank" href="{{apiService.loginurl}}">Login <i class="fa fa-chevron-right"></i></a></li>
   </ul>
@@ -48,3 +48,23 @@
 
 
 </div>
+
+
+
+
+
+
+<ng-template #mysuccess2>
+  <div class="modal-body">
+    <div class="cross">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">X</button>
+    </div>
+    <div class="logo_wrapper">
+      <img src="../../assets/images/shaterblockLogo.png">
+    </div>
+    <h2 class="message_success text-center">Coming Soon....</h2>
+
+
+  </div>
+</ng-template>
+
