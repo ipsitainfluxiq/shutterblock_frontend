@@ -13,6 +13,11 @@
     }
 }
 
+@media screen and (max-width: 1740px) {
+.newhomesproofmodeldivimgright { top: -14%; }
+    .newhomesproofmodeldivimgright img { width: 77%; }
+
+}
 @media screen and (max-width: 1700px) {
 
     .s_modelandtallent_container .s_modelandtallent_content .s_modelandtallent_inner_content .s_model_description {
@@ -53,7 +58,7 @@
     }
 }
 @media screen and (max-width: 1600px) {
-
+    .newhomesproofmodeldivimgright { right: -34%; }
 
     .s_modelandtallent_container .s_modelandtallent_content .s_modelandtallent_inner_content .s_model_description {
         width: 226px;
@@ -109,6 +114,7 @@
     }
 
 }
+
 @media screen and (max-width: 1370px) {
     .s_shatter_nav_icons {
         width: 68%;
@@ -1108,6 +1114,7 @@
     .s_weboook_block3 .s_overview_bg .s_model_overview .s_weboohb4Banner {
         background-position: 99% center;
     }
+    .modelmarketingblock1_content_left { margin-left: -19%; }
 }
 @media screen and (max-width: 1600px) {
     .s_weboook_block1 .s_overview_bg .s_model_overview .s_shatter_webook_content .s_shatter_webook_body .s_shatte_webook_rightbg .s_shatter_webook_left2 .s_shatter_webook_left2_inner::after {
@@ -1115,6 +1122,14 @@
     }
     .s_shatter_left_content {
         padding: 54px 90px;
+    }
+    .modelmarketingblock1_content_left {
+        margin-left: -15%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .modelmarketingblock1_content_left {
+        margin-left: -11%;
     }
 }
 @media screen and (max-width: 1440px) {
@@ -1152,6 +1167,7 @@
     .s_weboook_block3 .s_overview_bg .s_model_overview .s_weboohb3Banner {
         background-position: 40%;
     }
+    .modelmarketingblock1_content_left { margin-left: -7%; }
 }
 @media screen and (max-width: 1366px) {
 
@@ -1196,7 +1212,21 @@
         padding: 35px 54px;
     }
 }
+@media screen and (max-width: 1300px){
+    .modelmarketingblock1_wrapper_img {
+        right: -13%!important;
+    }
+    .modelmarketingblock1_content_left {
+        margin-left: -5%;
+    }
+}
 @media screen and (max-width: 1240px){
+    .modelmarketingblock1_content_left {
+        margin-left: 0%;
+    }
+    .modelmarketingblock1_content_left  img{
+        width: 380px;
+    }
     .s_shatter_left_content {
         padding: 35px 90px;
     }
@@ -1226,7 +1256,19 @@
         background-position: 29%;
     }
 }
+@media screen and (max-width: 1200px) {
+    .modelmarketingblock1_content_left {
+        margin-left: -1%!important;
+    }
+}
 @media screen and (max-width: 1199px) {
+        .modelmarketingblock1_wrapper_img img {
+            display: none;
+        }
+        .modelmarketingblock1_content_left img {
+            width: 50%;
+            margin-bottom: 30px;
+        }
     .instagramsection span, .instagramsection span a {
         font-size: 20px;
     }
@@ -2120,6 +2162,7 @@
         margin: 0 auto !important;
         text-align: center;
     }
+
 }
 @media screen and (max-width: 1130px) {
     .s_trending_model_container .s_trending_model_review_section .s_trending_model_content .s_trending_model_inner_content .s_trending_model_description {
@@ -2129,6 +2172,7 @@
     .s_modelandtallent_container .s_modelandtallent_content .s_modelandtallent_inner_content .s_model_description {
         width: 58%;
     }
+    .newvideodivwrapper {  width: 680px; height: auto; }
 
 }
 @media screen and (max-width: 1100px) {
@@ -3167,6 +3211,9 @@
 }
 
 @media screen and (max-width: 1400px) {
+.modelmarketingblock1_wrapper_img {
+    right: -10%;
+}
     .mmbannerblock2imgleft {
         position: absolute;
         top: 50%;
@@ -3265,10 +3312,11 @@
     }
 
     .newhomesproofmodeldivimgright {
-        top: 3%;
+        top: -5%;
         right: -11%;
         width: 465px;
     }
+    .newhomesproofmodeldivimgright img { width: 100%; }
     #myCarousel .firstcarousal h1 {
         font-size: 130px;
         line-height: 115px;
@@ -3705,6 +3753,7 @@
         bottom: -48%;
         width: 680px;
     }
+    .newhomesproofmodeldivimgright { top: -5%; right: -6%; }
 }
 
 @media screen and (max-width: 1199px) {
@@ -4278,11 +4327,7 @@
         right: -13%;
         width: 460px;
     }
-    .newhomesproofmodeldivimgright {
-        top: 3%;
-        right: -7%;
-        width: 460px;
-    }
+   .newhomesproofmodeldivimgright { top: -10%; right: -3%; }
     .newhome_header .newhomelogo{ width: 80%;}
 
     .newhomeslider .carousel-control{ width: 5%; }
@@ -4345,13 +4390,17 @@
         line-height: normal;
     }
 
-
+    .newvideodivwrapper { width: 680px; }
 }
 
 @media screen and (max-width: 1160px) {
     .modelmarketingblockcontentinnerwrapper {
         width: 840px;
     }
+      .newhomesproofmodeldivimgright {
+            top: -15%;
+            right: -7%;
+        }
 }
 
 @media screen and (max-width: 1120px) {
@@ -4395,6 +4444,7 @@
 }
 
 @media screen and (max-width: 1040px) {
+
     .modelprofileinfo .btnyellowmt20 .btnyellow {
         padding: 9px 15px;
     }

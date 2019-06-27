@@ -12,7 +12,7 @@ export class SidemenuComponent implements OnInit {
 public show: any = 1;
 
   modalRef: BsModalRef;
-   
+
 
   constructor(public modalService: BsModalService, public apiService: ApiService, public router: Router) { }
 

@@ -73,6 +73,11 @@ export class HomeComponent implements OnInit {
     this.modalRef.hide();
   }
 
+  shatterProofMedia(template: TemplateRef<any>){
+    this.modalRef = this.modalService.show(template, { class: ' promoEvent modaldefault '});
+  }
+
+
   ngAfterViewChecked () {
 
     /*console.log('in ng ngAfterViewChecked !!');

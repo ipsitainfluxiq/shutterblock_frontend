@@ -16,7 +16,7 @@
       <!--<a [routerLink]="['/marketing-management']">Marketing Management <i class="fa fa-chevron-right"></i></a>-->
       <a class="opensubsidemenu">Marketing Division<i class="fa fa-chevron-right"></i></a>
       <ul id="subsidemenuDropdown2" class="newsubsidemenu">
-        <li><a onclick="opensubsidemenu1()" (click)="promoEvent(mysuccess2)" [routerLink]="['']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>
+        <li><a onclick="opensubsidemenu1()" (click)="promoEvent(PromEvent)" [routerLink]="['']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>
         <li><a onclick="opensubsidemenu1()" [routerLink]="['/clients-campaigns']">Clients & Campaigns<i class="fa fa-chevron-right"></i></a></li>
       </ul>
     </li>
@@ -24,7 +24,7 @@
       <a class="opensubsidemenu" >Model | Talent Division<!--Model Management--><i class="fa fa-chevron-right"></i></a>
       <ul id="subsidemenuDropdown" class="newsubsidemenu">
 
-        <li><a onclick="opensubsidemenu1()" [routerLink]="['/model-talent-division']">Model | Talent<!--our models--><i class="fa fa-chevron-right"></i></a></li>
+        <li><a onclick="opensubsidemenu1()" [routerLink]="['/model-talent-division']">Why Our Model | Talent<!--our models--><i class="fa fa-chevron-right"></i></a></li>
         <li><a onclick="opensubsidemenu1()" [routerLink]="['/our-models-talent']">Our Models | Talent<!--our models--><i class="fa fa-chevron-right"></i></a></li>
         <li><a onclick="opensubsidemenu1()" [routerLink]="['/join-the-talent-team']">Join The Talent Team<!--Become a Model--><i class="fa fa-chevron-right"></i></a></li>
 <!--        <li><a [routerLink]="['/promo-events']">Promo & Events<i class="fa fa-chevron-right"></i></a></li>-->
@@ -40,7 +40,7 @@
 <!--        <li><a [routerLink]="['/#']">Media Division&lt;!&ndash;our models&ndash;&gt;<i class="fa fa-chevron-right"></i></a></li>-->
 <!--      </ul>-->
     </li>
-    <li><a onclick="opensubsidemenu1()" [routerLink]="['/']" (click)="mediaDivision(mysuccess2)">Media Division<!--our models--><i class="fa fa-chevron-right"></i></a></li>
+    <li><a onclick="opensubsidemenu1()" [routerLink]="['/']" (click)="mediaDivision(MediaDivision)">Media Division<!--our models--><i class="fa fa-chevron-right"></i></a></li>
 <!--    <li><a href="javascript:void(0)">Calendar<i class="fa fa-chevron-right"></i></a></li>-->
     <li><a onclick="opensubsidemenu1()" [routerLink]="['/contact-us']">Contact Us <i class="fa fa-chevron-right"></i></a></li><li><a target="_blank" href="{{apiService.loginurl}}">Login <i class="fa fa-chevron-right"></i></a></li>
   </ul>
@@ -54,7 +54,7 @@
 
 
 
-<ng-template #mysuccess2>
+<ng-template #PromEvent>
   <div class="modal-body">
     <div class="cross">
       <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">X</button>
@@ -62,7 +62,20 @@
     <div class="logo_wrapper">
       <img src="../../assets/images/shaterblockLogo.png">
     </div>
-    <h2 class="message_success text-center">Coming Soon....</h2>
+    <h2 class="message_success text-center">Marketing Division’s Promo and Events Page is coming Soon!</h2>
+
+
+  </div>
+</ng-template>
+<ng-template #MediaDivision>
+  <div class="modal-body">
+    <div class="cross">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="hide()">X</button>
+    </div>
+    <div class="logo_wrapper">
+      <img src="../../assets/images/shaterblockLogo.png">
+    </div>
+    <h2 class="message_success text-center">Media Division is coming soon!</h2>
 
 
   </div>
